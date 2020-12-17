@@ -1,0 +1,7 @@
+name = "tastyfare"
+type = "webpack"
+route = "spentaur.com/*"
+
+[site]
+bucket = "dist"
+entry-point = "workers-site"
