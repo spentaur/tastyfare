@@ -1,6 +1,6 @@
 name = "tastyfare"
 type = "webpack"
-route = "spentaur.com/*"
+route = "tastyfare.app/*"
 
 [site]
 bucket = "dist"
