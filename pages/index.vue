@@ -1,26 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container bg-indigo-100">
     <div>
-      <Logo />
-      <h1 class="title">tastyfare</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <h1 class="title text-indigo-400">tastyfare</h1>
     </div>
   </div>
 </template>
@@ -35,6 +16,7 @@ export default {}
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -42,16 +24,18 @@ export default {}
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'MuseoModerno', cursive;
   display: block;
+  font-style: italic;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
   letter-spacing: 1px;
+  text-shadow: 4px 4px 0px rgba(245, 127, 156, 0.3);
 }
 
 .subtitle {
