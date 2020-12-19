@@ -14,7 +14,7 @@ module.exports = {
         logo: ['MuseoModerno', 'cursive'],
       },
       textShadow: {
-        logo: '2px 2px 0px rgba(249, 168, 212, 0.5);',
+        logo: '3px 3px 0px rgba(249, 168, 212, 0.5);',
       },
     },
   },
