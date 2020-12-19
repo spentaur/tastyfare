@@ -1,49 +1,49 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <footer class="bg-indigo-100">
+  <footer class="bg-indigo-500">
     <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
       <nav
         class="-mx-5 -my-2 flex flex-wrap justify-center"
         aria-label="Footer"
       >
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+          <a href="#" class="text-base text-white hover:text-gray-200">
             About
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+          <a href="#" class="text-base text-white hover:text-gray-200">
             Blog
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+          <a href="#" class="text-base text-white hover:text-gray-200">
             Jobs
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+          <a href="#" class="text-base text-white hover:text-gray-200">
             Press
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+          <a href="#" class="text-base text-white hover:text-gray-200">
             Accessibility
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+          <a href="#" class="text-base text-white hover:text-gray-200">
             Partners
           </a>
         </div>
       </nav>
       <div class="mt-8 flex justify-center space-x-6">
-        <a href="#" class="text-gray-400 hover:text-gray-500">
+        <a href="#" class="text-white hover:text-gray-200">
           <span class="sr-only">Facebook</span>
           <svg
             class="h-6 w-6"
@@ -59,7 +59,7 @@
           </svg>
         </a>
 
-        <a href="#" class="text-gray-400 hover:text-gray-500">
+        <a href="#" class="text-white hover:text-gray-200">
           <span class="sr-only">Instagram</span>
           <svg
             class="h-6 w-6"
@@ -75,7 +75,7 @@
           </svg>
         </a>
 
-        <a href="#" class="text-gray-400 hover:text-gray-500">
+        <a href="#" class="text-white hover:text-gray-200">
           <span class="sr-only">Twitter</span>
           <svg
             class="h-6 w-6"
@@ -89,7 +89,7 @@
           </svg>
         </a>
 
-        <a href="#" class="text-gray-400 hover:text-gray-500">
+        <a href="#" class="text-white hover:text-gray-200">
           <span class="sr-only">GitHub</span>
           <svg
             class="h-6 w-6"
@@ -105,7 +105,7 @@
           </svg>
         </a>
 
-        <a href="#" class="text-gray-400 hover:text-gray-500">
+        <a href="#" class="text-white hover:text-gray-200">
           <span class="sr-only">Dribbble</span>
           <svg
             class="h-6 w-6"
@@ -121,7 +121,7 @@
           </svg>
         </a>
       </div>
-      <p class="mt-8 text-center text-base text-gray-400">
+      <p class="mt-8 text-center text-base text-white">
         &copy; 2020 tastyfare, Inc. All rights reserved.
       </p>
     </div>
