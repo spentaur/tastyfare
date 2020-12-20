@@ -27,7 +27,7 @@
             id="search"
             type="search"
             name="search"
-            class="shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+            class="shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded-md"
             placeholder="Search for Your Favorite Dish"
           />
         </div>
