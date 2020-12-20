@@ -27,7 +27,7 @@
             id="search"
             type="search"
             name="search"
-            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+            class="shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
             placeholder="Search for Your Favorite Dish"
           />
         </div>
@@ -38,27 +38,29 @@
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
+            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow hover:shadow-lg hover:underline divide-y divide-gray-200"
           >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                :src="menuItem.imgUrl"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >{{ menuItem.name }}</a
-              >
-            </div>
+            <a href="#">
+              <div class="flex-1 flex flex-col p-8">
+                <img
+                  class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
+                  :src="menuItem.imgUrl"
+                  alt=""
+                />
+                <a
+                  href="#"
+                  class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
+                  >{{ menuItem.name }}</a
+                >
+              </div>
+            </a>
           </li>
         </ul>
         <Separator text="Feeling Lucky?" />
         <div class="flex justify-center">
           <button
             type="button"
-            class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Add to cart
           </button>
