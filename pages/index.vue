@@ -38,7 +38,7 @@
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow hover:shadow-lg hover:underline divide-y divide-gray-200"
+            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow hover:underline hover:shadow-lg divide-y divide-gray-200"
           >
             <a href="#">
               <div class="flex-1 flex flex-col p-8">
