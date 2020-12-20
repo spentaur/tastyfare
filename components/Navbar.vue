@@ -104,7 +104,7 @@
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
           <button
-            class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <span class="sr-only">View notifications</span>
             <!-- Heroicon name: bell -->
@@ -126,7 +126,7 @@
           </button>
 
           <!-- Profile dropdown -->
-          <div class="ml-3 relative">
+          <!-- <div class="ml-3 relative">
             <div>
               <button
                 id="user-menu"
@@ -136,15 +136,15 @@
                 <span class="sr-only">Open user menu</span>
                 <img class="h-8 w-8 rounded-full" src="me.jpg" alt="" />
               </button>
-            </div>
+            </div> -->
 
-            <!-- Profile dropdown panel, show/hide based on dropdown state. Entering:
+          <!-- Profile dropdown panel, show/hide based on dropdown state. Entering:
             "transition ease-out duration-200" From: "transform opacity-0
             scale-95" To: "transform opacity-100 scale-100" Leaving: "transition
             ease-in duration-75" From: "transform opacity-100 scale-100" To:
             "transform opacity-0 scale-95" -->
 
-            <!-- <div
+          <!-- <div
               class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5"
               role="menu"
               aria-orientation="vertical"
@@ -169,7 +169,7 @@
                 >Sign out</a
               >
             </div> -->
-          </div>
+          <!-- </div> -->
         </div>
       </div>
     </div>
