@@ -3,7 +3,7 @@
     <Navbar />
     <div class="max-w-screen-2xl mx-auto lg:flex lg:flex-row-reverse w-full">
       <div
-        class="w-full lg:border-l lg:border-t lg:border-b rounded-l-md bg-indigo-50 border-gray-200 lg:w-1/3 xl:w-1/4 py-3 px-6 lg:px-2"
+        class="w-full lg:border-l lg:border-t lg:border-b rounded-l-md bg-indigo-50 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
       >
         <svg
           class="rounded-md border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
