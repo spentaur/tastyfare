@@ -199,6 +199,7 @@
 
 <style scoped>
 hr::after {
+  @apply font-bold;
   @apply bg-gray-50;
   @apply text-gray-600;
   @apply px-2;
