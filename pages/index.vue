@@ -2,12 +2,26 @@
   <div class="flex flex-col min-h-screen">
     <Navbar />
     <div class="max-w-screen-2xl mx-auto lg:flex lg:flex-row-reverse w-full">
-      <div class="lg:border-l border-gray-200 w-1/4 px-2 sm:px-6 lg:px-8">
-        side:
-        <p>what should go here?</p>
+      <div
+        class="w-full lg:border-l lg:border-t lg:border-b rounded-l-md bg-indigo-50 border-gray-200 lg:w-1/3 xl:w-1/4 py-3 px-6 lg:px-2"
+      >
+        <svg
+          class="rounded-md border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
+          preserveAspectRatio="none"
+          stroke="currentColor"
+          fill="none"
+          viewBox="0 0 200 200"
+          aria-hidden="true"
+        >
+          <path
+            vector-effect="non-scaling-stroke"
+            stroke-width="2"
+            d="M0 0l200 200M0 200L200 0"
+          ></path>
+        </svg>
       </div>
       <div class="max-w-6xl px-2 sm:px-6 lg:px-8 w-full">
-        <div class="mt-4 mb-12">
+        <div class="mt-4 lg:mt-0 mb-12">
           <label for="search" class="sr-only">Search</label>
           <input
             id="search"
