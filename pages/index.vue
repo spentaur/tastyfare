@@ -142,6 +142,11 @@ export default {
             'https://images.unsplash.com/photo-1604337153691-65d6e238df68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1944&q=80',
           name: 'Desserts',
         },
+        {
+          imgUrl:
+            'https://www.christinascucina.com/wp-content/uploads/2019/08/fullsizeoutput_c00f.jpeg',
+          name: 'Gyros',
+        },
       ],
     }
   },
