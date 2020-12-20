@@ -1,6 +1,6 @@
 <template>
   <nav class="">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button -->
@@ -126,7 +126,7 @@
           </button>
 
           <!-- Profile dropdown -->
-          <!-- <div class="ml-3 relative">
+          <div class="hidden sm:block ml-3 relative">
             <div>
               <button
                 id="user-menu"
@@ -134,17 +134,17 @@
                 aria-haspopup="true"
               >
                 <span class="sr-only">Open user menu</span>
-                <img class="h-8 w-8 rounded-full" src="me.jpg" alt="" />
+                <img class="h-8 w-8 rounded-full shadow" src="me.jpg" alt="" />
               </button>
-            </div> -->
+            </div>
 
-          <!-- Profile dropdown panel, show/hide based on dropdown state. Entering:
+            <!-- Profile dropdown panel, show/hide based on dropdown state. Entering:
             "transition ease-out duration-200" From: "transform opacity-0
             scale-95" To: "transform opacity-100 scale-100" Leaving: "transition
             ease-in duration-75" From: "transform opacity-100 scale-100" To:
             "transform opacity-0 scale-95" -->
 
-          <!-- <div
+            <!-- <div
               class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5"
               role="menu"
               aria-orientation="vertical"
@@ -169,7 +169,7 @@
                 >Sign out</a
               >
             </div> -->
-          <!-- </div> -->
+          </div>
         </div>
       </div>
     </div>
