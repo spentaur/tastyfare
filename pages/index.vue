@@ -3,7 +3,8 @@
     <Navbar />
     <div class="max-w-screen-2xl mx-auto lg:flex lg:flex-row-reverse w-full">
       <div class="lg:border-l border-gray-200 w-1/4 px-2 sm:px-6 lg:px-8">
-        side
+        side:
+        <p>what should go here?</p>
       </div>
       <div class="max-w-6xl px-2 sm:px-6 lg:px-8 w-full">
         <div class="mt-4 mb-12">
@@ -16,172 +17,30 @@
             placeholder="Search for Your Favorite Dish"
           />
         </div>
-        <hr
-          class="border-gray-200 my-12 text-center md:text-2xl"
-          data-hr-content="Or Explore Our Menu"
-          style="--trans-x: -50%; --trans-y: -50%"
-        />
+        <Separator text="Or Explore Our Menu" />
         <ul
           class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
         >
           <li
+            v-for="menuItem in menuItems"
+            :key="menuItem.name"
             class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
           >
             <div class="flex-1 flex flex-col p-8">
               <img
                 class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1575159249868-df58bf5e09ec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+                :src="menuItem.imgUrl"
                 alt=""
               />
               <a
                 href="#"
                 class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Smoothies</a
-              >
-            </div>
-          </li>
-
-          <li
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
-          >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1314&q=80"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Pizzas</a
-              >
-            </div>
-          </li>
-
-          <li
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
-          >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1539252554453-80ab65ce3586?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Sandwiches</a
-              >
-            </div>
-          </li>
-
-          <li
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
-          >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1598908314732-07113901949e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Coffees</a
-              >
-            </div>
-          </li>
-
-          <li
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
-          >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1585703900468-13c7a978ad86?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Chicken Wings</a
-              >
-            </div>
-          </li>
-
-          <li
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
-          >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1594500449280-cd9ab7cb33db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1873&q=80"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Salads</a
-              >
-            </div>
-          </li>
-
-          <li
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
-          >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1566740933430-b5e70b06d2d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Burritos</a
-              >
-            </div>
-          </li>
-
-          <li
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
-          >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1568051243851-f9b136146e97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Breakfast</a
-              >
-            </div>
-          </li>
-
-          <li
-            class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
-          >
-            <div class="flex-1 flex flex-col p-8">
-              <img
-                class="w-full sm:w-48 h-48 object-cover flex-shrink-0 mx-auto bg-black rounded-md"
-                src="https://images.unsplash.com/photo-1535923054316-5f75572def8c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt=""
-              />
-              <a
-                href="#"
-                class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
-                >Noodles</a
+                >{{ menuItem.name }}</a
               >
             </div>
           </li>
         </ul>
-        <hr
-          class="border-gray-200 my-12 text-center md:text-2xl"
-          data-hr-content="Feeling Lucky?"
-          style="--trans-x: -50%; --trans-y: -50%"
-        />
+        <Separator text="Feeling Lucky?" />
         <div class="flex justify-center">
           <button
             type="button"
@@ -197,15 +56,58 @@
   </div>
 </template>
 
-<style scoped>
-hr::after {
-  @apply font-bold;
-  @apply bg-gray-50;
-  @apply text-gray-600;
-  @apply px-2;
-  @apply sm:px-4;
-  @apply absolute;
-  content: attr(data-hr-content);
-  transform: translate(var(--trans-x), var(--trans-y));
+<script>
+export default {
+  data() {
+    return {
+      menuItems: [
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1575159249868-df58bf5e09ec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+          name: 'Smoothies',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1314&q=80',
+          name: 'Pizzas',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1539252554453-80ab65ce3586?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+          name: 'Sandwiches',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1598908314732-07113901949e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Coffees',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1585703900468-13c7a978ad86?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Chicken Wings',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1594500449280-cd9ab7cb33db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1873&q=80',
+          name: 'Salads',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1566740933430-b5e70b06d2d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Burritos',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1568051243851-f9b136146e97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80',
+          name: 'Breakfast',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1535923054316-5f75572def8c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Noodles',
+        },
+      ],
+    }
+  },
 }
-</style>
+</script>
