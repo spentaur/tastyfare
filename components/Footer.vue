@@ -7,43 +7,31 @@
         aria-label="Footer"
       >
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-indigo-300 hover:text-gray-100">
+          <a href="#" class="text-base text-indigo-200 hover:text-gray-100">
             About
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-indigo-300 hover:text-gray-100">
+          <a href="#" class="text-base text-indigo-200 hover:text-gray-100">
             Blog
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-indigo-300 hover:text-gray-100">
+          <a href="#" class="text-base text-indigo-200 hover:text-gray-100">
             Jobs
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base text-indigo-300 hover:text-gray-100">
+          <a href="#" class="text-base text-indigo-200 hover:text-gray-100">
             Press
-          </a>
-        </div>
-
-        <div class="px-5 py-2">
-          <a href="#" class="text-base text-indigo-300 hover:text-gray-100">
-            Accessibility
-          </a>
-        </div>
-
-        <div class="px-5 py-2">
-          <a href="#" class="text-base text-indigo-300 hover:text-gray-100">
-            Partners
           </a>
         </div>
       </nav>
       <div class="mt-8 flex justify-center space-x-6">
-        <a href="#" class="text-indigo-300 hover:text-indigo-100">
+        <a href="#" class="text-indigo-200 hover:text-indigo-100">
           <span class="sr-only">Facebook</span>
           <svg
             class="h-6 w-6"
@@ -59,7 +47,7 @@
           </svg>
         </a>
 
-        <a href="#" class="text-indigo-300 hover:text-indigo-100">
+        <a href="#" class="text-indigo-200 hover:text-indigo-100">
           <span class="sr-only">Instagram</span>
           <svg
             class="h-6 w-6"
@@ -75,7 +63,7 @@
           </svg>
         </a>
 
-        <a href="#" class="text-indigo-300 hover:text-indigo-100">
+        <a href="#" class="text-indigo-200 hover:text-indigo-100">
           <span class="sr-only">Twitter</span>
           <svg
             class="h-6 w-6"
@@ -89,7 +77,7 @@
           </svg>
         </a>
 
-        <a href="#" class="text-indigo-300 hover:text-indigo-100">
+        <a href="#" class="text-indigo-200 hover:text-indigo-100">
           <span class="sr-only">GitHub</span>
           <svg
             class="h-6 w-6"

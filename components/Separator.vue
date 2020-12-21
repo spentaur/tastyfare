@@ -8,7 +8,7 @@
 
 <style scoped lang="postcss">
 hr::after {
-  @apply font-bold bg-indigo-500 shadow text-white border rounded-md border-gray-200 py-1 px-4 absolute;
+  @apply font-bold bg-indigo-500 shadow-lg text-gray-100 rounded-md py-1 px-4 absolute;
   content: attr(data-hr-content);
   transform: translate(var(--trans-x), var(--trans-y));
 }
