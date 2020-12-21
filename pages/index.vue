@@ -2,8 +2,9 @@
   <div class="flex flex-col min-h-screen">
     <Navbar />
     <div class="max-w-screen-2xl mx-auto lg:flex lg:flex-row-reverse w-full">
+      <!-- right side -->
       <div
-        class="w-full lg:border-l lg:border-t lg:border-b rounded-l-md bg-indigo-50 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
+        class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded-md bg-indigo-50 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
       >
         <svg
           class="rounded-md border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
@@ -20,6 +21,7 @@
           ></path>
         </svg>
       </div>
+      <!-- left side -->
       <div class="max-w-6xl px-2 sm:px-6 lg:px-8 w-full">
         <label for="search" class="sr-only">Search</label>
         <div class="relative">
@@ -174,6 +176,16 @@ export default {
           imgUrl:
             'https://images.unsplash.com/photo-1518830686998-b8847466b372?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2168&q=80',
           name: 'Tacos',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1469307517101-0b99d8fb0c33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Soups',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
+          name: 'Vegan',
         },
       ],
     }
