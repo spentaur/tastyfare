@@ -1,6 +1,6 @@
 <template>
   <hr
-    class="border-gray-200 my-12 text-center text-lg md:text-2xl"
+    class="border-indigo-200 border-2 border-dashed my-16 text-center text-lg md:text-xl"
     :data-hr-content="text"
     style="--trans-x: -50%; --trans-y: -50%"
   />
@@ -8,7 +8,7 @@
 
 <style scoped lang="postcss">
 hr::after {
-  @apply font-bold bg-gray-50 text-indigo-500 text-shadow-sep px-4 absolute;
+  @apply font-bold bg-indigo-500 shadow text-white border text-shadow-sep rounded-md border-gray-200 py-1 px-4 absolute;
   content: attr(data-hr-content);
   transform: translate(var(--trans-x), var(--trans-y));
 }
