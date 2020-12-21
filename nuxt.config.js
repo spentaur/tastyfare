@@ -64,4 +64,11 @@ export default {
     },
     display: 'swap',
   },
+
+  pwa: {
+    meta: {
+      nativeUI: true,
+      theme_color: '#6366f1',
+    },
+  },
 }
