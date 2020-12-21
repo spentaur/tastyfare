@@ -69,7 +69,7 @@
                 />
                 <a
                   href="#"
-                  class="mt-6 text-indigo-500 hover:underline text-gray-900 text-sm font-medium"
+                  class="mt-6 text-indigo-500 hover:underline text-gray-900 font-medium"
                   >{{ menuItem.name }}</a
                 >
               </div>
@@ -186,6 +186,11 @@ export default {
           imgUrl:
             'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
           name: 'Vegan',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Pastas',
         },
       ],
     }
