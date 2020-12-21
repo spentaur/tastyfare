@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <Navbar />
-    <div class="max-w-screen-2xl mx-auto lg:flex lg:flex-row-reverse w-full">
+    <div
+      class="max-w-screen-2xl pt-24 mx-auto lg:flex lg:flex-row-reverse w-full"
+    >
       <!-- right side -->
       <div
         class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded-md bg-indigo-50 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
@@ -46,7 +48,7 @@
           <input
             id="search"
             name="search"
-            class="shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded-md py-2 pl-10 pr-3 text-sm"
+            class="shadow focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded-md py-2 pl-10 pr-3 text-sm"
             placeholder="Search for Your Favorite Dish"
             type="search"
           />
