@@ -2,7 +2,7 @@
   <div class="flex flex-col min-h-screen">
     <Navbar />
     <div
-      class="max-w-screen-2xl pt-24 mx-auto lg:flex lg:flex-row-reverse w-full"
+      class="max-w-screen-2xl pt-20 lg:pt-24 mx-auto lg:flex lg:flex-row-reverse w-full"
     >
       <!-- right side -->
       <div
