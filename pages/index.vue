@@ -14,7 +14,9 @@
         <br />
         - tracker
         <br />
-        - fixing mobile issue??
+        - refresh on update
+        <br />
+        - theme color
         <!-- <svg
           class="rounded-md border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
           preserveAspectRatio="none"
