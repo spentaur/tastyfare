@@ -65,9 +65,7 @@
           />
         </div>
         <Separator text="Explore Our Menu" />
-        <ul
-          class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
-        >
+        <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4">
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
