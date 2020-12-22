@@ -65,7 +65,7 @@
           />
         </div>
         <div
-          class="text-gray-600 my-6 sm:my-10 w-full font-bold text-xl text-center"
+          class="text-gray-700 my-6 sm:my-10 w-full font-bold text-xl text-center"
         >
           Explore Our Menu
         </div>
@@ -90,7 +90,7 @@
           </li>
         </ul>
         <div
-          class="text-gray-600 my-6 sm:my-10 w-full font-bold text-xl text-center"
+          class="text-gray-700 my-6 sm:my-10 w-full font-bold text-xl text-center"
         >
           Feeling Lucky?
         </div>
