@@ -72,7 +72,7 @@
             <a href="#" class="hover:underline">
               <div class="flex-1 flex flex-col p-6">
                 <img
-                  class="w-full sm:w-48 h-48 shadow object-cover flex-shrink-0 mx-auto bg-black rounded-md"
+                  class="w-full sm:w-48 h-48 shadow object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded-md"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
