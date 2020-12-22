@@ -1,5 +1,16 @@
 <template>
-  <nav class="fixed w-full bg-gray-50 z-10 border-b shadow">
+  <nav
+    class="fixed w-full bg-gray-50 z-10 border-gray-200 border-t-2 sm:border-t-0 sm:border-b sm:shadow bottom-0 sm:bottom-auto"
+  >
+    <div :class="{ block: open, hidden: !open }" class="sm:hidden">
+      <div class="pt-2 pb-4 space-y-1">
+        <a
+          href="#"
+          class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+          >Dashboard</a
+        >
+      </div>
+    </div>
     <div class="max-w-screen-2xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-12 sm:h-14">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -98,16 +109,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div :class="{ block: open, hidden: !open }" class="sm:hidden">
-      <div class="pt-2 pb-4 space-y-1">
-        <a
-          href="#"
-          class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-          >Dashboard</a
-        >
       </div>
     </div>
   </nav>

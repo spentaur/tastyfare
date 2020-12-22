@@ -2,11 +2,11 @@
   <div class="flex flex-col min-h-screen">
     <Navbar />
     <div
-      class="max-w-screen-2xl pt-20 lg:pt-24 mx-auto lg:flex lg:flex-row-reverse w-full"
+      class="max-w-screen-2xl sm:pt-20 lg:pt-24 mx-auto lg:flex lg:flex-row-reverse w-full"
     >
       <!-- right side -->
       <div
-        class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded-md bg-indigo-50 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
+        class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded-md bg-indigo-100 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
       >
         - alergen info needs to go somewhere
         <br />
@@ -74,11 +74,9 @@
                   :src="menuItem.imgUrl"
                   alt=""
                 />
-                <span
-                  href="#"
-                  class="mt-6 font-bold text-indigo-500 text-gray-900 font-medium"
-                  >{{ menuItem.name }}</span
-                >
+                <span href="#" class="mt-6 font-bold text-indigo-500">{{
+                  menuItem.name
+                }}</span>
               </div>
             </a>
           </li>
