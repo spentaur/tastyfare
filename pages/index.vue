@@ -74,10 +74,10 @@
                   :src="menuItem.imgUrl"
                   alt=""
                 />
-                <a
+                <span
                   href="#"
                   class="mt-6 font-bold text-indigo-500 text-gray-900 font-medium"
-                  >{{ menuItem.name }}</a
+                  >{{ menuItem.name }}</span
                 >
               </div>
             </a>
