@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <Navbar />
+    <Navbar :bag="bag" />
     <div
       class="max-w-screen-2xl sm:pt-20 lg:pt-24 mx-auto lg:flex lg:flex-row-reverse w-full"
     >
@@ -69,7 +69,7 @@
             :key="menuItem.name"
             class="border-2 col-span-1 flex flex-col text-center bg-white rounded-lg shadow-lg divide-y divide-gray-200"
           >
-            <a href="#" class="">
+            <a href="#" class="" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col p-6">
                 <img
                   class="w-full sm:w-48 h-48 shadow object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded-md"
@@ -103,6 +103,7 @@
 export default {
   data() {
     return {
+      bag: false,
       menuItems: [
         {
           imgUrl:
