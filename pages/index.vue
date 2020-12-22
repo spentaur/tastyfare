@@ -71,7 +71,7 @@
             :key="menuItem.name"
             class="sm:border-2 col-span-1 flex flex-col text-center sm:bg-white rounded-lg sm:shadow-lg divide-y divide-gray-200"
           >
-            <a href="#" class="hover:text-shadow" @click.prevent="bag = !bag">
+            <a href="#" class="" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-6">
                 <img
                   class="w-full sm:w-48 h-48 shadow-lg sm:shadow-md sm:border-2 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded-md"
