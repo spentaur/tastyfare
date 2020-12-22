@@ -45,7 +45,7 @@
           class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
         >
           <div class="flex-shrink-0 flex items-center pt-1">
-            <img src="/tastyfare.svg" class="h-7 w-auto" alt="" />
+            <img src="/tastyfare.svg" class="h-6 lg:h-7 w-auto" alt="" />
           </div>
         </div>
         <div
