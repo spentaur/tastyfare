@@ -60,6 +60,9 @@ export default {
   googleFonts: {
     families: {
       Inter: true,
+      MuseoModerno: {
+        wght: [500],
+      },
     },
     display: 'swap',
   },
