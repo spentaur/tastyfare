@@ -69,7 +69,8 @@ export default {
       nativeUI: true,
     },
     manifest: {
-      theme_color: '#fcfcfc',
+      theme_color: '#f3f4f6',
+      background_color: '#f3f4f6',
     },
   },
 }
