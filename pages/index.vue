@@ -74,7 +74,7 @@
             <a href="#" class="" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-6">
                 <img
-                  class="w-full sm:w-48 h-48 shadow-lg sm:shadow-md ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full sm:w-48 h-48 shadow-lg sm:shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />

@@ -44,7 +44,14 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    'nuxt-lazy-load',
+    [
+      'nuxt-lazy-load',
+      {
+        observerConfig: {
+          rootMargin: '300px 0 0 0',
+        },
+      },
+    ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
