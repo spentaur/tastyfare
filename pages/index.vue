@@ -14,7 +14,7 @@
         <br />
         - tracker
         <br />
-        - fixing mobile issue?
+        - fixing mobile issue??
         <!-- <svg
           class="rounded-md border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
           preserveAspectRatio="none"
