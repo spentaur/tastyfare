@@ -1,6 +1,6 @@
 <template>
   <hr
-    class="border-indigo-100 border-2 border-dashed my-16 text-center md:text-xl"
+    class="border-indigo-100 border-2 my-16 text-center md:text-xl"
     :data-hr-content="text"
     style="--trans-x: -50%; --trans-y: -50%"
   />
