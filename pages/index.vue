@@ -65,9 +65,9 @@
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="border-2 col-span-1 flex flex-col text-center bg-white rounded-lg shadow-lg hover:underline divide-y divide-gray-200"
+            class="border-2 col-span-1 flex flex-col text-center bg-white rounded-lg shadow-lg divide-y divide-gray-200"
           >
-            <a href="#">
+            <a href="#" class="hover:underline">
               <div class="flex-1 flex flex-col p-6">
                 <img
                   class="w-full sm:w-48 h-48 shadow object-cover flex-shrink-0 mx-auto bg-black rounded-md"

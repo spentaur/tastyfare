@@ -123,3 +123,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+nav {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+</style>
