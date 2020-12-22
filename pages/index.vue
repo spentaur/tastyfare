@@ -59,21 +59,16 @@
           <input
             id="search"
             name="search"
-            class="sm:shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded py-2 pl-10 pr-3 text-sm"
+            class="focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded py-2 pl-10 pr-3 text-sm"
             placeholder="Search for Your Favorite Dish"
             type="search"
           />
         </div>
-        <div
-          class="text-gray-700 my-6 sm:my-10 w-full font-bold text-xl text-center"
-        >
-          Explore Our Menu
-        </div>
-        <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4">
+        <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4 mt-10">
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="sm:border-2 col-span-1 flex flex-col text-center sm:bg-white rounded sm:shadow-lg divide-y divide-gray-200"
+            class="sm:border-2 col-span-1 flex flex-col text-center sm:bg-white rounded divide-y divide-gray-200"
           >
             <a href="#" class="" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-6">
@@ -89,9 +84,7 @@
             </a>
           </li>
         </ul>
-        <div
-          class="text-gray-700 my-6 sm:my-10 w-full font-bold text-xl text-center"
-        >
+        <div class="text-gray-700 my-6 w-full font-bold text-xl text-center">
           Feeling Lucky?
         </div>
         <div class="flex justify-center">
