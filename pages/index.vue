@@ -59,12 +59,16 @@
           <input
             id="search"
             name="search"
-            class="shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded py-2 pl-10 pr-3 text-sm"
+            class="sm:shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded py-2 pl-10 pr-3 text-sm"
             placeholder="Search for Your Favorite Dish"
             type="search"
           />
         </div>
-        <Separator text="Explore Our Menu" />
+        <div
+          class="text-gray-600 my-6 sm:my-10 w-full font-bold text-xl text-center"
+        >
+          Explore Our Menu
+        </div>
         <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4">
           <li
             v-for="menuItem in menuItems"
@@ -85,7 +89,11 @@
             </a>
           </li>
         </ul>
-        <Separator text="Feeling Lucky?" />
+        <div
+          class="text-gray-600 my-6 sm:my-10 w-full font-bold text-xl text-center"
+        >
+          Feeling Lucky?
+        </div>
         <div class="flex justify-center">
           <button
             type="button"

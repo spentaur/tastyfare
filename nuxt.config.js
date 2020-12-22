@@ -59,7 +59,9 @@ export default {
   // Google Fonts
   googleFonts: {
     families: {
-      Inter: true,
+      Inter: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800],
+      },
       MuseoModerno: {
         wght: [500],
       },

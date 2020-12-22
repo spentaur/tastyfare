@@ -4,8 +4,8 @@
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 html {
-  @apply bg-gray-100;
+  @apply sm:bg-gray-100;
 }
 </style>
