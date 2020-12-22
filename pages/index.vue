@@ -69,7 +69,7 @@
             :key="menuItem.name"
             class="border-2 col-span-1 flex flex-col text-center bg-white rounded-lg shadow-lg divide-y divide-gray-200"
           >
-            <a href="#" class="hover:underline">
+            <a href="#" class="">
               <div class="flex-1 flex flex-col p-6">
                 <img
                   class="w-full sm:w-48 h-48 shadow object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded-md"
