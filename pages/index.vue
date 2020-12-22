@@ -6,7 +6,7 @@
     >
       <!-- right side -->
       <div
-        class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded-md bg-indigo-100 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
+        class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded bg-indigo-100 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
       >
         - alergen info needs to go somewhere
         <br />
@@ -18,7 +18,7 @@
         <br />
         - theme color
         <!-- <svg
-          class="rounded-md border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
+          class="rounded border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
           preserveAspectRatio="none"
           stroke="currentColor"
           fill="none"
@@ -57,7 +57,7 @@
           <input
             id="search"
             name="search"
-            class="shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded-md py-2 pl-10 pr-3 text-sm"
+            class="shadow-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded py-2 pl-10 pr-3 text-sm"
             placeholder="Search for Your Favorite Dish"
             type="search"
           />
@@ -69,12 +69,12 @@
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="sm:border-2 col-span-1 flex flex-col text-center sm:bg-white rounded-lg sm:shadow-lg divide-y divide-gray-200"
+            class="sm:border-2 col-span-1 flex flex-col text-center sm:bg-white rounded sm:shadow-lg divide-y divide-gray-200"
           >
             <a href="#" class="" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-6">
                 <img
-                  class="w-full sm:w-48 h-48 shadow-lg sm:shadow-md sm:border-2 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded-md"
+                  class="w-full sm:w-48 h-48 shadow-lg sm:shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
@@ -89,7 +89,7 @@
         <div class="flex justify-center">
           <button
             type="button"
-            class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded text-gray-700 bg-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Add to cart
           </button>
