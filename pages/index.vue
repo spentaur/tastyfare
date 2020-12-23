@@ -42,7 +42,7 @@
         </svg> -->
       </div>
       <!-- left side -->
-      <div class="max-w-6xl mt-6 mb-6 sm:mt-0 px-2 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-6xl mt-6 mb-6 sm:mt-0 px-4 sm:px-6 lg:px-8 w-full">
         <label for="search" class="sr-only">Search</label>
         <div class="relative">
           <div
