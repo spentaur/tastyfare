@@ -42,7 +42,9 @@
           class="flex sm:flex-grow items-center justify-center sm:items-stretch sm:justify-start"
         >
           <div class="flex items-center pt-1">
-            <Logo class="h-6 lg:h-7 w-auto" />
+            <nuxt-link to="/">
+              <Logo class="h-6 lg:h-7 w-auto" />
+            </nuxt-link>
           </div>
         </div>
         <div
