@@ -68,16 +68,16 @@
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="sm:border-2 col-span-1 flex flex-col text-center sm:bg-white rounded divide-y divide-gray-200"
+            class="sm:border-2 col-span-1 flex flex-col text-center sm:bg-white rounded"
           >
             <a href="#" class="" @click.prevent="bag = !bag">
-              <div class="flex-1 flex flex-col sm:p-6">
+              <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full sm:w-48 h-48 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full sm:w-52 h-52 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
-                <span href="#" class="mt-6 font-bold text-indigo-500">{{
+                <span href="#" class="mt-4 font-bold text-indigo-500">{{
                   menuItem.name
                 }}</span>
               </div>
