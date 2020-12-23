@@ -71,7 +71,7 @@
           <div
             class="flex-grow text-shadow-sm font-extrabold text-gray-900 text-3xl"
           >
-            Beverages
+            Drinks 🥤
           </div>
           <nuxt-link
             to="#"
@@ -118,7 +118,7 @@
           <div
             class="flex-grow text-shadow-sm font-extrabold text-gray-900 text-3xl"
           >
-            Entrées
+            Entrées 🍽
           </div>
           <nuxt-link
             to="#"
@@ -165,7 +165,7 @@
           <div
             class="flex-grow text-shadow-sm font-extrabold text-gray-900 text-3xl"
           >
-            Sides
+            Sides 🍟
           </div>
           <nuxt-link
             to="#"
@@ -212,7 +212,7 @@
           <div
             class="flex-grow text-shadow-sm font-extrabold text-gray-900 text-3xl"
           >
-            Desserts
+            Desserts 🍪
           </div>
         </div>
         <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
