@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed w-full poof bg-gray-50 z-10 border-gray-200 border-t-2 sm:border-t-0 sm:border-b sm:shadow bottom-0 sm:bottom-auto"
+    class="fixed w-full bg-gray-50 z-10 border-gray-200 border-t-2 sm:border-t-0 sm:border-b sm:shadow bottom-0 sm:bottom-auto"
   >
     <!-- menu on mobile? -->
     <div :class="{ block: open, hidden: !open }" class="sm:hidden">
@@ -12,7 +12,8 @@
         >
       </div>
     </div>
-    <div class="max-w-screen-2xl mx-auto px-2 sm:px-6 lg:px-8">
+    <!-- end of mobile menu? -->
+    <div class="max-w-screen-2xl poof mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-12 sm:h-14">
         <div class="flex flex-grow justify-center items-center sm:hidden">
           <button
