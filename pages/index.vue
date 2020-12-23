@@ -62,13 +62,37 @@
           <input
             id="search"
             name="search"
-            class="focus:ring-indigo-500 bg-gray-100 border border-transparent focus:bg-white sm:bg-white shadow rounded-full block w-full font-semibold border-gray-200 py-2 pl-10 pr-3 sm:text-sm"
+            class="focus:ring-indigo-500 bg-gray-100 border border-transparent focus:bg-white sm:bg-white shadow rounded-full block w-full font-semibold border-gray-200 py-2 pl-10 pr-3"
             placeholder="Search for Your Favorites"
             type="search"
           />
         </div>
-        <div class="font-extrabold text-gray-700 text-3xl mt-6 text-shadow-sm">
-          Drinks
+        <div class="mt-6 flex items-center">
+          <div
+            class="flex-grow text-shadow-sm font-extrabold text-gray-900 text-3xl"
+          >
+            Beverages
+          </div>
+          <nuxt-link
+            to="#"
+            class="text-indigo-500 flex text-lg items-center font-bold"
+          >
+            View all
+            <svg
+              class="h-4 w-4 ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </nuxt-link>
         </div>
         <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
           <li
@@ -76,24 +100,46 @@
             :key="menuItem.name"
             class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
-            <a href="#" class="text-gray-700" @click.prevent="bag = !bag">
+            <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
                   class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
-                <span
-                  href="#"
-                  class="mt-4 font-extrabold sm:text-sm text-shadow"
-                  >{{ menuItem.name }}</span
-                >
+                <span href="#" class="mt-4 font-extrabold text-shadow">{{
+                  menuItem.name
+                }}</span>
               </div>
             </a>
           </li>
         </ul>
-        <div class="font-extrabold text-gray-700 text-3xl mt-6 text-shadow-sm">
-          Meals
+        <div class="mt-10 flex items-center">
+          <div
+            class="flex-grow text-shadow-sm font-extrabold text-gray-900 text-3xl"
+          >
+            Entrées
+          </div>
+          <nuxt-link
+            to="#"
+            class="text-indigo-500 flex text-lg items-center font-bold"
+          >
+            View all
+            <svg
+              class="h-4 w-4 ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </nuxt-link>
         </div>
         <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
           <li
@@ -101,24 +147,46 @@
             :key="menuItem.name"
             class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
-            <a href="#" class="text-gray-700" @click.prevent="bag = !bag">
+            <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
                   class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
-                <span
-                  href="#"
-                  class="mt-4 font-extrabold sm:text-sm text-shadow"
-                  >{{ menuItem.name }}</span
-                >
+                <span href="#" class="mt-4 font-extrabold text-shadow">{{
+                  menuItem.name
+                }}</span>
               </div>
             </a>
           </li>
         </ul>
-        <div class="font-extrabold text-3xl text-gray-700 mt-6 text-shadow-sm">
-          Sides
+        <div class="mt-6 flex items-center">
+          <div
+            class="flex-grow text-shadow-sm font-extrabold text-gray-900 text-3xl"
+          >
+            Sides
+          </div>
+          <nuxt-link
+            to="#"
+            class="text-indigo-500 text-lg flex items-center font-bold"
+          >
+            View all
+            <svg
+              class="h-4 w-4 ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </nuxt-link>
         </div>
         <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
           <li
@@ -126,24 +194,26 @@
             :key="menuItem.name"
             class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
-            <a href="#" class="text-gray-700" @click.prevent="bag = !bag">
+            <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
                   class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
-                <span
-                  href="#"
-                  class="mt-4 font-extrabold sm:text-sm text-shadow"
-                  >{{ menuItem.name }}</span
-                >
+                <span href="#" class="mt-4 font-extrabold text-shadow">{{
+                  menuItem.name
+                }}</span>
               </div>
             </a>
           </li>
         </ul>
-        <div class="font-extrabold text-3xl text-gray-700 mt-6 text-shadow-sm">
-          Desserts
+        <div class="mt-6 flex items-center">
+          <div
+            class="flex-grow text-shadow-sm font-extrabold text-gray-900 text-3xl"
+          >
+            Desserts
+          </div>
         </div>
         <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
           <li
@@ -151,18 +221,16 @@
             :key="menuItem.name"
             class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
-            <a href="#" class="text-gray-700" @click.prevent="bag = !bag">
+            <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
                   class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
-                <span
-                  href="#"
-                  class="mt-4 font-extrabold sm:text-sm text-shadow"
-                  >{{ menuItem.name }}</span
-                >
+                <span href="#" class="mt-4 font-extrabold text-shadow">{{
+                  menuItem.name
+                }}</span>
               </div>
             </a>
           </li>
@@ -205,8 +273,13 @@ export default {
         },
         {
           imgUrl:
+            'https://images.unsplash.com/photo-1527960392543-80cd0fa46382?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=882&q=80',
+          name: 'Soft Drinks',
+        },
+        {
+          imgUrl:
             'https://images.unsplash.com/photo-1606943932434-2f21e1c54ef2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1288&q=80',
-          name: 'Drinks',
+          name: 'Lemonade',
         },
       ],
       meals: [
@@ -215,66 +288,66 @@ export default {
             'https://images.unsplash.com/photo-1539252554453-80ab65ce3586?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
           name: 'Sandwiches',
         },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1594500449280-cd9ab7cb33db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1873&q=80',
-          name: 'Salads',
-        },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1594500449280-cd9ab7cb33db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1873&q=80',
+        //   name: 'Salads',
+        // },
         {
           imgUrl:
             'https://images.unsplash.com/photo-1566740933430-b5e70b06d2d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
           name: 'Burritos',
         },
-        {
-          imgUrl:
-            'https://www.christinascucina.com/wp-content/uploads/2019/08/fullsizeoutput_c00f.jpeg',
-          name: 'Gyros',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
-          name: 'Vegan',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1469307517101-0b99d8fb0c33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Soups',
-        },
+        // {
+        //   imgUrl:
+        //     'https://www.christinascucina.com/wp-content/uploads/2019/08/fullsizeoutput_c00f.jpeg',
+        //   name: 'Gyros',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
+        //   name: 'Vegan',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1469307517101-0b99d8fb0c33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Soups',
+        // },
         {
           imgUrl:
             'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1314&q=80',
           name: 'Pizzas',
         },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1568051243851-f9b136146e97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80',
-          name: 'Breakfast',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1535923054316-5f75572def8c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Noodles',
-        },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1568051243851-f9b136146e97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80',
+        //   name: 'Breakfast',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1535923054316-5f75572def8c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Noodles',
+        // },
         {
           imgUrl:
             'https://images.unsplash.com/photo-1575980726530-4e673bfa0ad8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
           name: 'Burgers',
         },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1605291581926-df4bf7ee3e89?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Chicken Strips',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1518830686998-b8847466b372?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2168&q=80',
-          name: 'Tacos',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Pastas',
-        },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1605291581926-df4bf7ee3e89?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Chicken Strips',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1518830686998-b8847466b372?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2168&q=80',
+        //   name: 'Tacos',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Pastas',
+        // },
       ],
       sides: [
         {
@@ -287,23 +360,38 @@ export default {
             'https://images.unsplash.com/photo-1594500449280-cd9ab7cb33db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1873&q=80',
           name: 'Salads',
         },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
-          name: 'Vegan',
-        },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
+        //   name: 'Vegan',
+        // },
         {
           imgUrl:
             'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Sides',
+          name: 'French Fries',
+        },
+        {
+          imgUrl:
+            'https://www.thespruceeats.com/thmb/EjjrKgHSMofkEU7UCYbexw8goTY=/1500x844/smart/filters:no_upscale()/air-fryer-onion-rings-4771524-12-7434d703a21b47d28ebc88bca3c55498.jpg',
+          name: 'Onion Rings',
         },
       ],
       desserts: [
         {
           imgUrl:
-            'https://images.unsplash.com/photo-1604337153691-65d6e238df68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1944&q=80',
-          name: 'Desserts',
+            'https://images.unsplash.com/photo-1590080962330-747c6aba8028?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80',
+          name: 'Ice Cream',
         },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
+          name: 'Cookies',
+        },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1604337153691-65d6e238df68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1944&q=80',
+        //   name: 'Desserts',
+        // },
       ],
       menuItems: [
         // {
