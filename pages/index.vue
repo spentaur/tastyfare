@@ -33,7 +33,7 @@
         </svg> -->
       </div>
       <!-- left side -->
-      <div class="max-w-6xl my-8 lg:mt-0 px-2 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-6xl my-6 lg:mt-0 px-2 sm:px-6 lg:px-8 w-full">
         <label for="search" class="sr-only">Search</label>
         <div class="relative">
           <div
@@ -62,7 +62,7 @@
             type="search"
           />
         </div>
-        <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4 mt-8">
+        <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-6">
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
@@ -71,7 +71,7 @@
             <a href="#" class="text-gray-600" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full sm:w-40 h-40 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full sm:w-44 h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
