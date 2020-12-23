@@ -103,7 +103,7 @@
             <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-transparent flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
@@ -150,7 +150,7 @@
             <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-transparent flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
@@ -197,7 +197,7 @@
             <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-transparent flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
@@ -224,7 +224,7 @@
             <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-transparent flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
