@@ -7,6 +7,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  purge: {
+    options: {
+      safelist: ['lazyLoad', 'isLoaded'],
+    },
+  },
   theme: {
     extend: {
       padding: {
