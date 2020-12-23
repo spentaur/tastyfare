@@ -15,7 +15,7 @@
       <div class="relative flex justify-between h-12 sm:h-14">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <button
-            class="p-1 rounded-full text-indigo-400 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="p-1 rounded-full text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             aria-expanded="false"
             @click="open = !open"
           >
@@ -48,7 +48,7 @@
         >
           <span class="inline-block relative">
             <button
-              class="p-1 rounded-full text-indigo-400 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              class="p-1 rounded-full text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               <span class="sr-only">View shopping bag</span>
               <svg
@@ -77,7 +77,7 @@
             <div>
               <button
                 id="user-menu"
-                class="p-1 rounded-full text-indigo-400 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                class="p-1 rounded-full text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 aria-haspopup="true"
               >
                 <span class="sr-only">Open user menu</span>
