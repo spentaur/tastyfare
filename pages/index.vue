@@ -19,6 +19,9 @@
         - start working on drilling down pages
         <br />
         - this side is going to be recent orders, ads, tracker? news?
+        <br />
+        - i kinda wanna split this up.. into like food and drinks maybe or
+        dinner, breakfast, lunch, drinks, sides, dessert
         <!-- <svg
           class="rounded border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
           preserveAspectRatio="none"
@@ -64,9 +67,33 @@
             type="search"
           />
         </div>
-        <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-6">
+        <div class="font-extrabold text-2xl mt-6 text-shadow-sm">Drinks</div>
+        <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
           <li
-            v-for="menuItem in menuItems"
+            v-for="menuItem in menuItems.slice(0, 4)"
+            :key="menuItem.name"
+            class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
+          >
+            <a href="#" class="text-gray-600" @click.prevent="bag = !bag">
+              <div class="flex-1 flex flex-col sm:p-4">
+                <img
+                  class="w-full sm:w-44 h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  :src="menuItem.imgUrl"
+                  alt=""
+                />
+                <span
+                  href="#"
+                  class="mt-4 font-extrabold sm:text-sm text-shadow"
+                  >{{ menuItem.name }}</span
+                >
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="font-extrabold text-2xl mt-6 text-shadow-sm">Desserts</div>
+        <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
+          <li
+            v-for="menuItem in menuItems.slice(0, 4)"
             :key="menuItem.name"
             class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
