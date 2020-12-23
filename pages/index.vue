@@ -121,7 +121,7 @@
             Entrées 🍽
           </div>
           <nuxt-link
-            to="#"
+            to="test"
             class="text-indigo-500 flex text-lg items-center font-bold"
           >
             View all
@@ -494,3 +494,24 @@ export default {
   },
 }
 </script>
+
+<style lang="postcss" scoped>
+.lazyLoad,
+[data-src] {
+  opacity: 0;
+  transition: opacity 400ms;
+  img {
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+}
+
+.lazyLoad.isLoaded,
+.lazyLoad[data-src=''],
+svg[data-src] {
+  opacity: 1;
+  img {
+    opacity: 1;
+  }
+}
+</style>
