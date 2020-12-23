@@ -2,11 +2,11 @@
   <div class="flex flex-col min-h-screen">
     <Navbar :bag="bag" />
     <div
-      class="max-w-screen-2xl sm:pt-20 lg:pt-24 mx-auto lg:flex lg:flex-row-reverse w-full"
+      class="max-w-screen-2xl sm:pt-20 mx-auto lg:flex lg:flex-row-reverse w-full"
     >
       <!-- right side -->
       <div
-        class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded bg-indigo-100 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
+        class="lg:mr-4 mb-6 lg:mb-0 w-full lg:border rounded bg-indigo-100 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
       >
         - alergen info needs to go somewhere
         <br />
@@ -59,16 +59,16 @@
           <input
             id="search"
             name="search"
-            class="focus:ring-indigo-500 bg-gray-100 focus:bg-white sm:bg-white shadow rounded-full block w-full font-semibold border-gray-200 py-2 pl-10 pr-3 sm:text-sm"
+            class="focus:ring-indigo-500 bg-gray-100 border border-transparent focus:bg-white sm:bg-white shadow rounded-full block w-full font-semibold border-gray-200 py-2 pl-10 pr-3 sm:text-sm"
             placeholder="Search for Your Favorite Dish"
             type="search"
           />
         </div>
-        <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4 mt-10">
+        <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4 mt-6">
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="border-gray-200 col-span-1 shadow flex flex-col text-center sm:bg-white rounded"
+            class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
             <a
               href="#"
