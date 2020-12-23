@@ -4,7 +4,7 @@
     <div class="max-w-screen-2xl sm:pt-22 mx-auto lg:flex lg:flex-row w-full">
       <!-- left side -->
       <div
-        class="lg:ml-4 mb-8 w-full hidden lg:block border-4 shadow-2xl border-indigo-300 text-white sm:rounded-2xl bg-indigo-500 lg:w-1/3 xl:w-1/4 p-4"
+        class="lg:ml-4 mb-8 w-full hidden lg:block border-8 shadow-2xl border-indigo-300 text-white sm:rounded-2xl bg-indigo-500 lg:w-1/3 xl:w-1/4 p-4"
       >
         - alergen info needs to go somewhere
         <br />
