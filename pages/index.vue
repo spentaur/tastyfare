@@ -85,7 +85,7 @@
           </li>
         </ul>
         <div
-          class="text-indigo-500 mt-12 mb-2 w-full font-bold text-xl text-center"
+          class="text-indigo-500 mt-12 mb-2 w-full font-bold text-lg text-center"
         >
           Feeling Lucky?
         </div>
