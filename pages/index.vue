@@ -63,21 +63,23 @@
             id="search"
             name="search"
             class="focus:ring-indigo-500 bg-gray-100 border border-transparent focus:bg-white sm:bg-white shadow rounded-full block w-full font-semibold border-gray-200 py-2 pl-10 pr-3 sm:text-sm"
-            placeholder="Search for Your Favorite Dish"
+            placeholder="Search for Your Favorites"
             type="search"
           />
         </div>
-        <div class="font-extrabold text-2xl mt-6 text-shadow-sm">Drinks</div>
+        <div class="font-extrabold text-gray-700 text-3xl mt-6 text-shadow-sm">
+          Drinks
+        </div>
         <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
           <li
-            v-for="menuItem in menuItems.slice(0, 4)"
+            v-for="menuItem in drinks"
             :key="menuItem.name"
             class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
-            <a href="#" class="text-gray-600" @click.prevent="bag = !bag">
+            <a href="#" class="text-gray-700" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full sm:w-44 h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
@@ -90,17 +92,69 @@
             </a>
           </li>
         </ul>
-        <div class="font-extrabold text-2xl mt-6 text-shadow-sm">Desserts</div>
+        <div class="font-extrabold text-gray-700 text-3xl mt-6 text-shadow-sm">
+          Meals
+        </div>
         <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
           <li
-            v-for="menuItem in menuItems.slice(0, 4)"
+            v-for="menuItem in meals"
             :key="menuItem.name"
             class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
-            <a href="#" class="text-gray-600" @click.prevent="bag = !bag">
+            <a href="#" class="text-gray-700" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full sm:w-44 h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  :src="menuItem.imgUrl"
+                  alt=""
+                />
+                <span
+                  href="#"
+                  class="mt-4 font-extrabold sm:text-sm text-shadow"
+                  >{{ menuItem.name }}</span
+                >
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="font-extrabold text-3xl text-gray-700 mt-6 text-shadow-sm">
+          Sides
+        </div>
+        <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
+          <li
+            v-for="menuItem in sides"
+            :key="menuItem.name"
+            class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
+          >
+            <a href="#" class="text-gray-700" @click.prevent="bag = !bag">
+              <div class="flex-1 flex flex-col sm:p-4">
+                <img
+                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  :src="menuItem.imgUrl"
+                  alt=""
+                />
+                <span
+                  href="#"
+                  class="mt-4 font-extrabold sm:text-sm text-shadow"
+                  >{{ menuItem.name }}</span
+                >
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="font-extrabold text-3xl text-gray-700 mt-6 text-shadow-sm">
+          Desserts
+        </div>
+        <ul class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 mt-2">
+          <li
+            v-for="menuItem in desserts"
+            :key="menuItem.name"
+            class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
+          >
+            <a href="#" class="text-gray-700" @click.prevent="bag = !bag">
+              <div class="flex-1 flex flex-col sm:p-4">
+                <img
+                  class="w-full h-28 sm:w-44 sm:h-44 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
@@ -138,21 +192,11 @@ export default {
   data() {
     return {
       bag: false,
-      menuItems: [
+      drinks: [
         {
           imgUrl:
             'https://images.unsplash.com/photo-1575159249868-df58bf5e09ec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
           name: 'Smoothies',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1314&q=80',
-          name: 'Pizzas',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1539252554453-80ab65ce3586?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-          name: 'Sandwiches',
         },
         {
           imgUrl:
@@ -161,8 +205,15 @@ export default {
         },
         {
           imgUrl:
-            'https://images.unsplash.com/photo-1585703900468-13c7a978ad86?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Chicken Wings',
+            'https://images.unsplash.com/photo-1606943932434-2f21e1c54ef2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1288&q=80',
+          name: 'Drinks',
+        },
+      ],
+      meals: [
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1539252554453-80ab65ce3586?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+          name: 'Sandwiches',
         },
         {
           imgUrl:
@@ -173,6 +224,26 @@ export default {
           imgUrl:
             'https://images.unsplash.com/photo-1566740933430-b5e70b06d2d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
           name: 'Burritos',
+        },
+        {
+          imgUrl:
+            'https://www.christinascucina.com/wp-content/uploads/2019/08/fullsizeoutput_c00f.jpeg',
+          name: 'Gyros',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
+          name: 'Vegan',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1469307517101-0b99d8fb0c33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Soups',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1314&q=80',
+          name: 'Pizzas',
         },
         {
           imgUrl:
@@ -191,26 +262,6 @@ export default {
         },
         {
           imgUrl:
-            'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Sides',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1606943932434-2f21e1c54ef2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1288&q=80',
-          name: 'Drinks',
-        },
-        {
-          imgUrl:
-            'https://images.unsplash.com/photo-1604337153691-65d6e238df68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1944&q=80',
-          name: 'Desserts',
-        },
-        {
-          imgUrl:
-            'https://www.christinascucina.com/wp-content/uploads/2019/08/fullsizeoutput_c00f.jpeg',
-          name: 'Gyros',
-        },
-        {
-          imgUrl:
             'https://images.unsplash.com/photo-1605291581926-df4bf7ee3e89?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
           name: 'Chicken Strips',
         },
@@ -221,8 +272,20 @@ export default {
         },
         {
           imgUrl:
-            'https://images.unsplash.com/photo-1469307517101-0b99d8fb0c33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Soups',
+            'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Pastas',
+        },
+      ],
+      sides: [
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1585703900468-13c7a978ad86?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Chicken Wings',
+        },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1594500449280-cd9ab7cb33db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1873&q=80',
+          name: 'Salads',
         },
         {
           imgUrl:
@@ -231,9 +294,113 @@ export default {
         },
         {
           imgUrl:
-            'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-          name: 'Pastas',
+            'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+          name: 'Sides',
         },
+      ],
+      desserts: [
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1604337153691-65d6e238df68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1944&q=80',
+          name: 'Desserts',
+        },
+      ],
+      menuItems: [
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1575159249868-df58bf5e09ec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+        //   name: 'Smoothies',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1314&q=80',
+        //   name: 'Pizzas',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1539252554453-80ab65ce3586?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+        //   name: 'Sandwiches',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1598908314732-07113901949e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Coffees',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1585703900468-13c7a978ad86?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Chicken Wings',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1594500449280-cd9ab7cb33db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1873&q=80',
+        //   name: 'Salads',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1566740933430-b5e70b06d2d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Burritos',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1568051243851-f9b136146e97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80',
+        //   name: 'Breakfast',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1535923054316-5f75572def8c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Noodles',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1575980726530-4e673bfa0ad8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Burgers',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Sides',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1606943932434-2f21e1c54ef2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1288&q=80',
+        //   name: 'Drinks',
+        // },
+        {
+          imgUrl:
+            'https://images.unsplash.com/photo-1604337153691-65d6e238df68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1944&q=80',
+          name: 'Desserts',
+        },
+        // {
+        //   imgUrl:
+        //     'https://www.christinascucina.com/wp-content/uploads/2019/08/fullsizeoutput_c00f.jpeg',
+        //   name: 'Gyros',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1605291581926-df4bf7ee3e89?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Chicken Strips',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1518830686998-b8847466b372?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2168&q=80',
+        //   name: 'Tacos',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1469307517101-0b99d8fb0c33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Soups',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
+        //   name: 'Vegan',
+        // },
+        // {
+        //   imgUrl:
+        //     'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        //   name: 'Pastas',
+        // },
       ],
     }
   },
