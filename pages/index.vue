@@ -2,11 +2,11 @@
   <div class="flex flex-col min-h-screen">
     <Navbar :bag="bag" />
     <div
-      class="max-w-screen-2xl sm:pt-20 mx-auto lg:flex lg:flex-row-reverse w-full"
+      class="max-w-screen-2xl sm:pt-22 mx-auto lg:flex lg:flex-row-reverse w-full"
     >
       <!-- right side -->
       <div
-        class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded bg-indigo-100 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
+        class="lg:mr-4 w-full hidden sm:block text-white sm:rounded bg-indigo-500 lg:w-1/3 xl:w-1/4 py-2 px-2"
       >
         - alergen info needs to go somewhere
         <br />
@@ -35,7 +35,7 @@
         </svg> -->
       </div>
       <!-- left side -->
-      <div class="max-w-6xl px-2 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-6xl mt-8 lg:mt-0 px-2 sm:px-6 lg:px-8 w-full">
         <label for="search" class="sr-only">Search</label>
         <div class="relative">
           <div
@@ -70,11 +70,7 @@
             :key="menuItem.name"
             class="border border-transparent col-span-1 sm:shadow flex flex-col text-center sm:bg-white rounded"
           >
-            <a
-              href="#"
-              class="text-gray-600 hover:text-gray-600 sm:text-gray-500"
-              @click.prevent="bag = !bag"
-            >
+            <a href="#" class="text-gray-600" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
                   class="w-full sm:w-40 h-40 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"

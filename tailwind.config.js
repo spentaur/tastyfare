@@ -9,6 +9,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   theme: {
     extend: {
+      padding: {
+        22: '5.5rem',
+      },
       fontFamily: {
         sans: ['Nunito', ...defaultTheme.fontFamily.sans],
         logo: ['MuseoModerno', 'cursive'],
