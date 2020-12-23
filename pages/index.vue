@@ -495,23 +495,13 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-.lazyLoad,
-[data-src] {
+<style scoped>
+.lazyLoad img {
   opacity: 0;
   transition: opacity 400ms;
-  img {
-    opacity: 0;
-    transition: opacity 400ms;
-  }
 }
 
-.lazyLoad.isLoaded,
-.lazyLoad[data-src=''],
-svg[data-src] {
+.lazyLoad.isLoaded img {
   opacity: 1;
-  img {
-    opacity: 1;
-  }
 }
 </style>
