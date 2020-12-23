@@ -11,3 +11,19 @@ body {
 .page-leave-to {
   opacity: 0;
 }
+
+.lazyLoad {
+  opacity: 0;
+  transition: opacity 400ms;
+  img {
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+}
+
+.lazyLoad.isLoaded {
+  opacity: 1;
+  img {
+    opacity: 1;
+  }
+}
