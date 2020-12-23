@@ -32,7 +32,7 @@
         >
           <path
             vector-effect="non-scaling-stroke"
-            stroke-width="2"
+            stroke-width="4"
             d="M0 0l200 200M0 200L200 0"
           ></path>
         </svg> -->
@@ -88,7 +88,7 @@
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
+                stroke-width="4"
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
@@ -135,7 +135,7 @@
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
+                stroke-width="4"
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
@@ -182,7 +182,7 @@
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
+                stroke-width="4"
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
