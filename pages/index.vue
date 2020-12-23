@@ -59,7 +59,7 @@
           <input
             id="search"
             name="search"
-            class="focus:ring-indigo-500 shadow-md rounded-full focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 py-2 pl-10 pr-3 text-sm"
+            class="focus:ring-indigo-500 bg-gray-100 focus:bg-white sm:bg-white shadow-md rounded-full block w-full font-semibold border-2 border-gray-200 py-2 pl-10 pr-3 sm:text-sm"
             placeholder="Search for Your Favorite Dish"
             type="search"
           />
@@ -68,18 +68,24 @@
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="sm:border-2 col-span-1 flex flex-col text-center sm:bg-white rounded"
+            class="sm:border-2 border-gray-200 col-span-1 flex flex-col text-center sm:bg-white rounded"
           >
-            <a href="#" class="" @click.prevent="bag = !bag">
+            <a
+              href="#"
+              class="text-gray-600 hover:text-gray-600 sm:text-gray-500"
+              @click.prevent="bag = !bag"
+            >
               <div class="flex-1 flex flex-col sm:p-4">
                 <img
-                  class="w-full sm:w-52 h-52 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full sm:w-40 h-40 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
-                <span href="#" class="mt-4 font-bold text-indigo-500">{{
-                  menuItem.name
-                }}</span>
+                <span
+                  href="#"
+                  class="mt-4 font-extrabold sm:text-sm text-shadow"
+                  >{{ menuItem.name }}</span
+                >
               </div>
             </a>
           </li>
