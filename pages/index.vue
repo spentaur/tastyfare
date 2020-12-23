@@ -84,7 +84,9 @@
             </a>
           </li>
         </ul>
-        <div class="text-gray-700 my-6 w-full font-bold text-xl text-center">
+        <div
+          class="text-indigo-500 mt-12 mb-2 w-full font-bold text-xl text-center"
+        >
           Feeling Lucky?
         </div>
         <div class="flex justify-center">
