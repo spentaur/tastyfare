@@ -59,7 +59,7 @@
           <input
             id="search"
             name="search"
-            class="focus:ring-indigo-500 bg-gray-100 focus:bg-white sm:bg-white shadow-md rounded-full block w-full font-semibold border-2 border-gray-200 py-2 pl-10 pr-3 sm:text-sm"
+            class="focus:ring-indigo-500 bg-gray-100 focus:bg-white sm:bg-white shadow rounded-full block w-full font-semibold border-gray-200 py-2 pl-10 pr-3 sm:text-sm"
             placeholder="Search for Your Favorite Dish"
             type="search"
           />
@@ -68,7 +68,7 @@
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
-            class="sm:border-2 border-gray-200 col-span-1 flex flex-col text-center sm:bg-white rounded"
+            class="border-gray-200 col-span-1 shadow flex flex-col text-center sm:bg-white rounded"
           >
             <a
               href="#"
@@ -98,7 +98,7 @@
         <div class="flex justify-center">
           <button
             type="button"
-            class="inline-flex items-center px-6 py-2 border border-indigo-300 shadow-md text-base font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="inline-flex items-center px-6 py-2 border border-indigo-300 shadow-md text-base font-semibold rounded-full text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Random Meal
           </button>
