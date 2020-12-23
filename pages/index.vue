@@ -6,7 +6,7 @@
     >
       <!-- right side -->
       <div
-        class="lg:mr-4 mb-6 lg:mb-0 w-full lg:border rounded bg-indigo-100 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
+        class="lg:mr-4 mb-8 lg:mb-0 w-full lg:border rounded bg-indigo-100 border-gray-200 lg:w-1/3 xl:w-1/4 py-2 px-2"
       >
         - alergen info needs to go somewhere
         <br />
@@ -64,7 +64,7 @@
             type="search"
           />
         </div>
-        <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4 mt-6">
+        <ul class="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4 mt-8">
           <li
             v-for="menuItem in menuItems"
             :key="menuItem.name"
