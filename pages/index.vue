@@ -22,6 +22,8 @@
         <br />
         - i kinda wanna split this up.. into like food and drinks maybe or
         dinner, breakfast, lunch, drinks, sides, dessert
+        <br />
+        - i need to get a full menu written up
         <!-- <svg
           class="rounded border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
           preserveAspectRatio="none"
