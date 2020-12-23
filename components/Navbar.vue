@@ -2,6 +2,7 @@
   <nav
     class="fixed w-full bg-gray-50 z-10 border-gray-200 border-t-2 sm:border-t-0 sm:border-b sm:shadow bottom-0 sm:bottom-auto"
   >
+    <!-- menu on mobile? -->
     <div :class="{ block: open, hidden: !open }" class="sm:hidden">
       <div class="pt-2 pb-4 space-y-1">
         <a
@@ -13,13 +14,13 @@
     </div>
     <div class="max-w-screen-2xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-12 sm:h-14">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <div class="flex flex-grow justify-center items-center sm:hidden">
           <button
             class="p-1 rounded-full text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             aria-expanded="false"
             @click="open = !open"
           >
-            <span class="sr-only">Open main menu</span>
+            <span class="sr-only">Open user menu</span>
             <svg
               class="h-6 w-6"
               xmlns="http://www.w3.org/2000/svg"
@@ -36,15 +37,16 @@
             </svg>
           </button>
         </div>
+
         <div
-          class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+          class="flex sm:flex-grow items-center justify-center sm:items-stretch sm:justify-start"
         >
-          <div class="flex-shrink-0 flex items-center pt-1">
+          <div class="flex items-center pt-1">
             <Logo class="h-6 lg:h-7 w-auto" />
           </div>
         </div>
         <div
-          class="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          class="flex sm:flex-grow-0 flex-grow justify-center items-center sm:ml-6 sm:pr-0"
         >
           <span class="inline-block relative">
             <button

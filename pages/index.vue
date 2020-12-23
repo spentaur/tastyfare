@@ -4,7 +4,7 @@
     <div class="max-w-screen-2xl sm:pt-22 mx-auto lg:flex lg:flex-row w-full">
       <!-- left side -->
       <div
-        class="lg:ml-4 mb-8 w-full hidden sm:block border-4 shadow-2xl border-indigo-300 text-white sm:rounded-2xl bg-indigo-500 lg:w-1/3 xl:w-1/4 p-4"
+        class="lg:ml-4 mb-8 w-full hidden lg:block border-4 shadow-2xl border-indigo-300 text-white sm:rounded-2xl bg-indigo-500 lg:w-1/3 xl:w-1/4 p-4"
       >
         - alergen info needs to go somewhere
         <br />
@@ -17,6 +17,8 @@
         - theme color
         <br />
         - start working on drilling down pages
+        <br />
+        - this side is going to be recent orders, ads, tracker? news?
         <!-- <svg
           class="rounded border-2 border-dashed border-gray-300 bg-white h-full w-full text-gray-200"
           preserveAspectRatio="none"
@@ -33,7 +35,7 @@
         </svg> -->
       </div>
       <!-- left side -->
-      <div class="max-w-6xl my-6 lg:mt-0 px-2 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-6xl mt-6 mb-6 sm:mt-0 px-2 sm:px-6 lg:px-8 w-full">
         <label for="search" class="sr-only">Search</label>
         <div class="relative">
           <div
