@@ -59,7 +59,7 @@
           <input
             id="search"
             name="search"
-            class="focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 rounded py-2 pl-10 pr-3 text-sm"
+            class="focus:ring-indigo-500 shadow-md rounded-full focus:border-indigo-500 block w-full sm:text-sm border-2 border-indigo-400 py-2 pl-10 pr-3 text-sm"
             placeholder="Search for Your Favorite Dish"
             type="search"
           />
@@ -73,7 +73,7 @@
             <a href="#" class="" @click.prevent="bag = !bag">
               <div class="flex-1 flex flex-col sm:p-6">
                 <img
-                  class="w-full sm:w-48 h-48 shadow-lg sm:shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
+                  class="w-full sm:w-48 h-48 shadow-md sm:ring-2 ring-gray-100 object-cover bg-indigo-50 flex-shrink-0 mx-auto rounded"
                   :src="menuItem.imgUrl"
                   alt=""
                 />
@@ -90,9 +90,9 @@
         <div class="flex justify-center">
           <button
             type="button"
-            class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded text-gray-700 bg-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="inline-flex items-center px-6 py-2 border border-indigo-300 shadow-md text-base font-medium rounded-full text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-            Add to cart
+            Random Meal
           </button>
         </div>
       </div>
