@@ -1,12 +1,10 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <Navbar :bag="bag" />
-    <div
-      class="max-w-screen-2xl sm:pt-22 mx-auto lg:flex lg:flex-row-reverse w-full"
-    >
-      <!-- right side -->
+    <div class="max-w-screen-2xl sm:pt-22 mx-auto lg:flex lg:flex-row w-full">
+      <!-- left side -->
       <div
-        class="lg:mr-4 w-full hidden sm:block text-white sm:rounded bg-indigo-500 lg:w-1/3 xl:w-1/4 py-2 px-2"
+        class="lg:ml-4 mb-8 w-full hidden sm:block border-4 shadow-2xl border-indigo-300 text-white sm:rounded-2xl bg-indigo-500 lg:w-1/3 xl:w-1/4 p-4"
       >
         - alergen info needs to go somewhere
         <br />
@@ -35,7 +33,7 @@
         </svg> -->
       </div>
       <!-- left side -->
-      <div class="max-w-6xl mt-8 lg:mt-0 px-2 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-6xl my-8 lg:mt-0 px-2 sm:px-6 lg:px-8 w-full">
         <label for="search" class="sr-only">Search</label>
         <div class="relative">
           <div
