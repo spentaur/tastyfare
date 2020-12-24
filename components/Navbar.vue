@@ -74,7 +74,7 @@
             </button>
             <span
               :class="{ hidden: !bag, block: bag }"
-              class="absolute w-2 h-2 bg-red-400 rounded-full top-0.5 right-0.5 ring-2 ring-white"
+              class="absolute w-2 h-2 bg-red-400 rounded-full top-1 right-1 ring-2 ring-white"
             ></span>
           </span>
 
