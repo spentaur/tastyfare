@@ -1,6 +1,6 @@
 <template>
   <!-- TODO my css is awful and inconsistent -->
-  <div class="flex flex-col select-text">
+  <div class="flex flex-col select-none">
     <!-- TODO this should be redone, not a prop, using vuex most likely-->
     <Navbar :bag="bag" />
 
