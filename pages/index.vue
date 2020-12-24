@@ -108,7 +108,7 @@
             <li
               v-for="menuItem in section.data"
               :key="menuItem.name"
-              class="flex flex-col col-span-1 text-center transition-all duration-100 border-gray-200 rounded transform-none sm:transform-gpu hover:scale-105 hover:rotate-1 sm:hover:shadow-2xl sm:border sm:shadow sm:bg-white"
+              class="flex flex-col col-span-1 text-center transition-all duration-100 border-gray-200 rounded transform-none sm:transform-gpu hover:scale-105 sm:hover:shadow-2xl sm:border sm:shadow sm:bg-white"
             >
               <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
                 <div class="flex flex-col flex-1 sm:p-4">
