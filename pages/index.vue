@@ -32,6 +32,14 @@
         - i need to get a full menu written up
         <br />
         - uhhh
+        <br />
+        - i think i like this layout, but i might make it more like door dash,
+        like instead of entrees - sides ++ i'll do like sandwiches -> view all
+        pizza -> view all smoothies -> view all etc
+        <br />
+        - ^ so in order to do that, i need to have a menu fully fleshed out
+        <br />
+        - make buttons more consistent?
       </div>
       <!-- end of left side -->
       <!-- right side -->
@@ -100,7 +108,7 @@
             <li
               v-for="menuItem in section.data"
               :key="menuItem.name"
-              class="flex flex-col col-span-1 text-center border-gray-200 rounded sm:border sm:shadow sm:bg-white"
+              class="flex flex-col col-span-1 text-center transition-all duration-200 border-gray-200 rounded sm:hover:shadow-2xl sm:border sm:shadow sm:bg-white"
             >
               <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
                 <div class="flex flex-col flex-1 sm:p-4">
