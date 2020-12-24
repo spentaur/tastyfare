@@ -23,7 +23,7 @@
           >
             <span class="sr-only">Open user menu</span>
             <svg
-              class="h-7 w-7 sm:h-6 sm:w-6"
+              class="h-7 w-7 sm:h-6 sm:w-6 filter-logo"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -57,7 +57,7 @@
             >
               <span class="sr-only">View shopping bag</span>
               <svg
-                class="h-7 w-7 sm:h-6 sm:w-6"
+                class="h-7 w-7 sm:h-6 sm:w-6 filter-logo"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -87,7 +87,7 @@
               >
                 <span class="sr-only">Open user menu</span>
                 <svg
-                  class="h-7 w-7 sm:h-6 sm:w-6"
+                  class="h-7 w-7 sm:h-6 sm:w-6 filter-logo"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"

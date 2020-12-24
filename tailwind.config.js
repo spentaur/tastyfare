@@ -5,6 +5,7 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   purge: {
@@ -28,5 +29,17 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('@tailwindcss/forms'), require('tailwindcss-textshadow')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwindcss-textshadow'),
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        '.filter-logo': {
+          filter: 'drop-shadow(3px 3px 0px rgba(249, 168, 212, 0.5))',
+        },
+      }
+
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    }),
+  ],
 }
