@@ -40,6 +40,9 @@
         - ^ so in order to do that, i need to have a menu fully fleshed out
         <br />
         - make buttons more consistent?
+        <br />
+        - i need some way to display locations? or have some feed back based on
+        locations
       </div>
       <!-- end of left side -->
       <!-- right side -->
@@ -68,7 +71,7 @@
           <input
             id="search"
             name="search"
-            class="block w-full py-2 pl-10 pr-3 font-semibold transition-colors duration-100 bg-gray-100 border border-gray-200 rounded-full shadow focus:ring-indigo-500 focus:bg-white sm:bg-white"
+            class="block w-full py-2 pl-10 pr-3 font-semibold transition-colors duration-100 bg-gray-200 border border-gray-200 rounded-full shadow focus:ring-indigo-500 focus:bg-white"
             placeholder="Search for Your Favorites"
             type="search"
           />
@@ -104,16 +107,16 @@
               </svg>
             </nuxt-link>
           </div>
-          <ul class="grid grid-cols-2 gap-3 mt-4 md:grid-cols-3 xl:grid-cols-4">
+          <ul class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 xl:grid-cols-4">
             <li
               v-for="menuItem in section.data"
               :key="menuItem.name"
-              class="flex flex-col col-span-1 text-center transition-all duration-100 border-gray-200 rounded transform-none sm:transform-gpu hover:scale-105 sm:hover:shadow-2xl sm:border sm:shadow sm:bg-white"
+              class="flex flex-col col-span-1 text-center transition-all duration-100 card transform-none sm:transform-gpu hover:scale-105"
             >
               <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
                 <div class="flex flex-col flex-1 sm:p-4">
                   <img
-                    class="object-cover w-full mx-auto bg-transparent rounded shadow-md h-28 sm:w-44 sm:h-44"
+                    class="object-cover w-full mx-auto transition-shadow duration-100 bg-transparent rounded shadow-md h-28 sm:w-44 sm:h-44"
                     :src="menuItem.imgUrl"
                     alt=""
                   />
@@ -249,3 +252,11 @@ export default {
   },
 }
 </script>
+
+<style lang="postcss" scoped>
+.card:hover {
+  img {
+    @apply shadow-lg;
+  }
+}
+</style>

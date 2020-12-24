@@ -6,6 +6,6 @@
 
 <style lang="postcss">
 html {
-  @apply bg-white sm:bg-gray-100;
+  @apply bg-gray-50;
 }
 </style>
