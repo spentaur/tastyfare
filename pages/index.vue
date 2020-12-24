@@ -68,7 +68,7 @@
           <input
             id="search"
             name="search"
-            class="block w-full py-2 pl-10 pr-3 font-semibold bg-gray-100 border border-gray-200 rounded-full shadow focus:ring-indigo-500 focus:bg-white sm:bg-white"
+            class="block w-full py-2 pl-10 pr-3 font-semibold transition-colors duration-100 bg-gray-100 border border-gray-200 rounded-full shadow focus:ring-indigo-500 focus:bg-white sm:bg-white"
             placeholder="Search for Your Favorites"
             type="search"
           />
@@ -85,7 +85,7 @@
             <nuxt-link
               v-if="section.name != 'Desserts 🍪'"
               to="#"
-              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-300 bg-gray-200 rounded-full shadow w-9 h-9 hover:bg-indigo-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-white"
+              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-100 bg-gray-200 rounded-full shadow w-9 h-9 hover:bg-indigo-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-white"
             >
               <div class="hidden sm:block">See all</div>
               <svg
@@ -108,7 +108,7 @@
             <li
               v-for="menuItem in section.data"
               :key="menuItem.name"
-              class="flex flex-col col-span-1 text-center transition-all duration-300 border-gray-200 rounded sm:hover:shadow-2xl sm:border sm:shadow sm:bg-white"
+              class="flex flex-col col-span-1 text-center transition-all duration-100 border-gray-200 rounded transform-none sm:transform-gpu hover:scale-105 hover:rotate-1 sm:hover:shadow-2xl sm:border sm:shadow sm:bg-white"
             >
               <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
                 <div class="flex flex-col flex-1 sm:p-4">
@@ -136,7 +136,7 @@
         <div class="flex justify-center">
           <button
             type="button"
-            class="inline-flex items-center px-6 py-2 font-semibold text-white transition-all duration-300 bg-indigo-500 rounded-full shadow hover:bg-indigo-600"
+            class="inline-flex items-center px-6 py-2 font-semibold text-white transition-all duration-100 bg-indigo-500 rounded-full shadow hover:bg-indigo-600"
           >
             Random Meal
           </button>

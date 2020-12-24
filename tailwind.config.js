@@ -27,7 +27,11 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      transform: ['hover'],
+    },
+  },
   plugins: [
     require('@tailwindcss/forms'),
     require('tailwindcss-textshadow'),
