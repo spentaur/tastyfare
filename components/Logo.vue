@@ -2,7 +2,7 @@
   <div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="w-auto h-7 sm:h-6"
+      class="w-auto h-8 sm:h-6"
       viewBox="100 -100 13440 3240"
     >
       <g fill="#6366f1" fill-rule="evenodd">
