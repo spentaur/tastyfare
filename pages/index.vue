@@ -1,13 +1,16 @@
 <template>
+  <!-- TODO my css is awful and inconsistent -->
   <div class="flex flex-col">
     <!-- TODO this should be redone, not a prop, using vuex most likely-->
     <Navbar :bag="bag" />
 
     <!-- main content  -->
-    <div class="flex flex-row w-full mx-auto max-w-screen-2xl sm:pt-22">
+    <div
+      class="flex flex-row w-full pt-6 pb-12 mx-auto max-w-screen-2xl sm:pt-22"
+    >
       <!-- left side -->
       <div
-        class="hidden w-full p-4 mb-8 text-white bg-indigo-500 border-8 border-indigo-300 shadow-2xl lg:ml-4 lg:block sm:rounded-2xl lg:w-1/3 xl:w-1/4"
+        class="hidden w-1/3 p-4 mb-8 ml-4 text-white bg-indigo-500 border-8 border-indigo-300 shadow-2xl lg:block rounded-2xl xl:w-1/4"
       >
         - alergen info needs to go somewhere
         <br />
@@ -29,23 +32,11 @@
         - i need to get a full menu written up
         <br />
         - uhhh
-        <!-- <svg
-          class="w-full h-full text-gray-200 bg-white border-2 border-gray-300 border-dashed rounded"
-          preserveAspectRatio="none"
-          stroke="currentColor"
-          fill="none"
-          viewBox="0 0 200 200"
-          aria-hidden="true"
-        >
-          <path
-            vector-effect="non-scaling-stroke"
-            stroke-width="4"
-            d="M0 0l200 200M0 200L200 0"
-          ></path>
-        </svg> -->
       </div>
-      <!-- left side -->
-      <div class="w-full max-w-6xl px-4 mt-6 mb-6 sm:mt-0 sm:px-6 lg:px-8">
+      <!-- end of left side -->
+      <!-- right side -->
+      <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <!-- search -->
         <label for="search" class="sr-only">Search</label>
         <div class="relative">
           <div
@@ -69,11 +60,13 @@
           <input
             id="search"
             name="search"
-            class="block w-full py-2 pl-10 pr-3 font-semibold bg-gray-100 border border-transparent border-gray-200 rounded-full shadow focus:ring-indigo-500 focus:bg-white sm:bg-white"
+            class="block w-full py-2 pl-10 pr-3 font-semibold bg-gray-100 border border-gray-200 rounded-full shadow focus:ring-indigo-500 focus:bg-white sm:bg-white"
             placeholder="Search for Your Favorites"
             type="search"
           />
         </div>
+        <!-- end of search -->
+        <!-- sections -->
         <div v-for="section in sections" :key="section.name">
           <div class="flex items-center mt-10">
             <div
@@ -84,7 +77,7 @@
             <nuxt-link
               v-if="section.name != 'Desserts 🍪'"
               to="#"
-              class="flex items-center justify-center text-base font-bold text-gray-900 bg-gray-200 rounded-full shadow sm:bg-indigo-500 sm:px-3 sm:py-2 h-7 w-7 sm:h-auto sm:w-auto sm:text-white"
+              class="flex items-center justify-center font-bold text-gray-900 bg-gray-200 rounded-full shadow hover:bg-indigo-600 sm:bg-indigo-500 sm:px-3 sm:py-2 h-7 w-7 sm:h-auto sm:w-auto sm:text-white"
             >
               <div class="hidden sm:block">See all</div>
               <svg
@@ -107,12 +100,12 @@
             <li
               v-for="menuItem in section.data"
               :key="menuItem.name"
-              class="flex flex-col col-span-1 text-center border border-transparent rounded sm:shadow sm:bg-white"
+              class="flex flex-col col-span-1 text-center border-gray-200 rounded sm:border sm:shadow sm:bg-white"
             >
               <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
                 <div class="flex flex-col flex-1 sm:p-4">
                   <img
-                    class="flex-shrink-0 object-cover w-full mx-auto bg-transparent rounded shadow-md h-28 sm:w-44 sm:h-44 sm:ring-2 ring-gray-100"
+                    class="object-cover w-full mx-auto bg-transparent rounded shadow-md h-28 sm:w-44 sm:h-44"
                     :src="menuItem.imgUrl"
                     alt=""
                   />
@@ -124,6 +117,9 @@
             </li>
           </ul>
         </div>
+        <!-- end of sections -->
+        <!-- feeling lucky button -->
+        <!-- TODO i dont know if this should be a button or what -->
         <div
           class="w-full mt-12 mb-2 text-lg font-bold text-center text-indigo-500"
         >
@@ -132,7 +128,7 @@
         <div class="flex justify-center">
           <button
             type="button"
-            class="inline-flex items-center px-6 py-2 text-base font-semibold text-white bg-indigo-500 border-4 border-indigo-300 rounded-full shadow-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="inline-flex items-center px-6 py-2 font-semibold text-white bg-indigo-500 rounded-full shadow hover:bg-indigo-600"
           >
             Random Meal
           </button>
@@ -245,5 +241,3 @@ export default {
   },
 }
 </script>
-
-<style lang="postcss" scoped></style>

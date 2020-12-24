@@ -24,7 +24,6 @@ module.exports = {
       },
       textShadow: {
         logo: '7px 7px 0px rgba(249, 168, 212, 0.5);',
-        sep: '2px 2px 0px rgba(249, 168, 212, 0.5);',
       },
     },
   },
