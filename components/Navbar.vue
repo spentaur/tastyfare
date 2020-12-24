@@ -71,11 +71,11 @@
                   d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                 />
               </svg>
+              <span
+                :class="{ 'opacity-0': !bag, 'opacity-80': bag }"
+                class="absolute w-3 h-3 transition-all duration-300 bg-red-400 rounded-full top-1 right-1 ring-2 ring-white"
+              ></span>
             </button>
-            <span
-              :class="{ hidden: !bag, block: bag }"
-              class="absolute w-3 h-3 bg-red-400 rounded-full opacity-80 top-1 right-1 ring-2 ring-white"
-            ></span>
           </span>
 
           <div class="relative hidden ml-3 sm:block">
