@@ -77,7 +77,7 @@
             <nuxt-link
               v-if="section.name != 'Desserts 🍪'"
               to="#"
-              class="flex items-center justify-center font-bold text-gray-900 bg-gray-200 rounded-full shadow hover:bg-indigo-600 sm:bg-indigo-500 sm:px-3 sm:py-2 h-7 w-7 sm:h-auto sm:w-auto sm:text-white"
+              class="flex items-center justify-center w-8 h-8 font-bold text-gray-900 bg-gray-200 rounded-full shadow hover:bg-indigo-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-white"
             >
               <div class="hidden sm:block">See all</div>
               <svg
