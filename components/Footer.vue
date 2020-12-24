@@ -1,9 +1,9 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <footer class="bg-indigo-500 pb-12 sm:pb-0">
-    <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+  <footer class="hidden pb-12 bg-indigo-500 sm:block sm:pb-0">
+    <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
       <nav
-        class="-mx-5 -my-2 flex flex-wrap justify-center"
+        class="flex flex-wrap justify-center -mx-5 -my-2"
         aria-label="Footer"
       >
         <div class="px-5 py-2">
@@ -30,11 +30,11 @@
           </a>
         </div>
       </nav>
-      <div class="mt-8 flex justify-center space-x-6">
+      <div class="flex justify-center mt-8 space-x-6">
         <a href="#" class="text-indigo-200 hover:text-indigo-100">
           <span class="sr-only">Facebook</span>
           <svg
-            class="h-6 w-6"
+            class="w-6 h-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -50,7 +50,7 @@
         <a href="#" class="text-indigo-200 hover:text-indigo-100">
           <span class="sr-only">Instagram</span>
           <svg
-            class="h-6 w-6"
+            class="w-6 h-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -66,7 +66,7 @@
         <a href="#" class="text-indigo-200 hover:text-indigo-100">
           <span class="sr-only">Twitter</span>
           <svg
-            class="h-6 w-6"
+            class="w-6 h-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -80,7 +80,7 @@
         <a href="#" class="text-indigo-200 hover:text-indigo-100">
           <span class="sr-only">GitHub</span>
           <svg
-            class="h-6 w-6"
+            class="w-6 h-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -93,7 +93,7 @@
           </svg>
         </a>
       </div>
-      <p class="mt-8 text-center text-base text-indigo-400">
+      <p class="mt-8 text-base text-center text-indigo-400">
         &copy; 2020 tastyfare, Inc. All rights reserved.
       </p>
     </div>
