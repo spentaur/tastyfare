@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed bottom-0 z-10 w-full border-t-2 border-gray-200 bg-gray-50 sm:border-t-0 sm:border-b sm:shadow sm:bottom-auto"
+    class="fixed bottom-0 z-10 w-full border-t-2 border-gray-200 select-none bg-gray-50 sm:border-t-0 sm:border-b sm:shadow sm:bottom-auto"
   >
     <!-- menu on mobile? -->
     <div :class="{ block: open, hidden: !open }" class="sm:hidden">
@@ -43,7 +43,7 @@
           class="flex items-center justify-center sm:flex-grow sm:items-stretch sm:justify-start"
         >
           <div class="flex items-center pt-1">
-            <nuxt-link to="/">
+            <nuxt-link class="focus:outline-none" to="/">
               <Logo />
             </nuxt-link>
           </div>
