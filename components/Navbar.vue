@@ -23,7 +23,7 @@
           >
             <span class="sr-only">Open user menu</span>
             <svg
-              class="h-6 w-6"
+              class="h-7 w-7 sm:h-6 sm:w-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -44,7 +44,7 @@
         >
           <div class="flex items-center pt-1">
             <nuxt-link to="/">
-              <Logo class="h-6 lg:h-7 w-auto" />
+              <Logo class="h-7 sm:h-6 w-auto" />
             </nuxt-link>
           </div>
         </div>
@@ -57,7 +57,7 @@
             >
               <span class="sr-only">View shopping bag</span>
               <svg
-                class="h-6 w-6"
+                class="h-7 w-7 sm:h-6 sm:w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -87,7 +87,7 @@
               >
                 <span class="sr-only">Open user menu</span>
                 <svg
-                  class="h-6 w-6"
+                  class="h-7 w-7 sm:h-6 sm:w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
