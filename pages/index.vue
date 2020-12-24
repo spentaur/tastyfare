@@ -81,7 +81,7 @@
             >
               <div class="hidden sm:block">See all</div>
               <svg
-                class="w-3 h-3 sm:h-4 sm:w-4 sm:ml-2"
+                class="w-4 h-4 sm:ml-2"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
