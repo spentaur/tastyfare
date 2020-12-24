@@ -79,11 +79,11 @@
           </div>
           <nuxt-link
             to="#"
-            class="text-indigo-500 flex text-lg items-center font-bold"
+            class="bg-gray-200 sm:bg-transparent rounded-full shadow sm:shadow-none h-7 w-7 sm:h-auto sm:w-auto justify-center text-gray-900 sm:text-indigo-500 flex text-lg items-center font-bold"
           >
-            View all
+            <div class="hidden sm:block">View all</div>
             <svg
-              class="h-4 w-4 ml-2"
+              class="h-3 w-3 sm:h-4 sm:w-4 sm:ml-2"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -126,11 +126,11 @@
           </div>
           <nuxt-link
             to="test"
-            class="text-indigo-500 flex text-lg items-center font-bold"
+            class="bg-gray-200 sm:bg-transparent rounded-full shadow sm:shadow-none h-7 w-7 sm:h-auto sm:w-auto justify-center text-gray-900 sm:text-indigo-500 flex text-lg items-center font-bold"
           >
-            View all
+            <div class="hidden sm:block">View all</div>
             <svg
-              class="h-4 w-4 ml-2"
+              class="h-3 w-3 sm:h-4 sm:w-4 sm:ml-2"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -173,11 +173,11 @@
           </div>
           <nuxt-link
             to="#"
-            class="text-indigo-500 text-lg flex items-center font-bold"
+            class="bg-gray-200 sm:bg-transparent rounded-full shadow sm:shadow-none h-7 w-7 sm:h-auto sm:w-auto justify-center text-gray-900 sm:text-indigo-500 flex text-lg items-center font-bold"
           >
-            View all
+            <div class="hidden sm:block">View all</div>
             <svg
-              class="h-4 w-4 ml-2"
+              class="h-3 w-3 sm:h-4 sm:w-4 sm:ml-2"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
