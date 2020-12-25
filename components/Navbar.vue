@@ -46,7 +46,7 @@
           >
             <div
               v-show="$store.state.menu.open"
-              class="relative flex flex-col flex-1 w-full pt-2 pb-4 mt-5 bg-white shadow-2xl rounded-t-xl sm:mt-0 sm:rounded-none sm:max-w-xs"
+              class="relative flex flex-col flex-1 w-full pt-2 pb-4 mt-5 bg-white shadow-2xl dark:bg-gray-600 rounded-t-xl sm:mt-0 sm:rounded-none sm:max-w-xs"
             >
               <transition
                 enter-active-class="transition-opacity duration-300 ease-linear"
@@ -65,7 +65,7 @@
                       <span class="sr-only">Close sidebar</span>
                       <!-- Heroicon name: x -->
                       <svg
-                        class="w-6 h-6 text-gray-900"
+                        class="w-6 h-6 text-gray-900 dark:text-gray-300"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
