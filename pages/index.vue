@@ -88,7 +88,7 @@
             <nuxt-link
               v-if="section.name != 'Desserts 🍪'"
               to="#"
-              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-100 bg-gray-300 rounded-full shadow w-9 h-9 sm:hover:bg-indigo-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
+              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-100 bg-gray-300 rounded-full shadow dark:text-gray-400 dark:bg-gray-700 w-9 h-9 sm:hover:bg-indigo-600 sm:dark:bg-gray-700 sm:dark:hover:bg-gray-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
             >
               <div class="hidden sm:block">See all</div>
               <svg
@@ -120,7 +120,7 @@
               >
                 <div class="flex flex-col flex-1 sm:p-4">
                   <img
-                    class="object-cover w-full mx-auto transition-all duration-100 bg-transparent rounded-lg shadow-md transform-none sm:transform-gpu h-28 sm:w-44 sm:h-44"
+                    class="object-cover w-full mx-auto transition-all duration-100 bg-transparent rounded-lg shadow-md transform-none sm:transform-gpu sm:w-44 h-44"
                     :src="menuItem.imgUrl"
                     alt=""
                   />
