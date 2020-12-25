@@ -37,6 +37,7 @@ module.exports = {
   variants: {
     extend: {
       transform: ['hover'],
+      opacity: ['dark'],
     },
   },
   plugins: [
