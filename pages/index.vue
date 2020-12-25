@@ -71,7 +71,7 @@
           <input
             id="search"
             name="search"
-            class="block w-full py-2 pl-10 pr-3 font-semibold placeholder-gray-400 transition-colors duration-100 bg-gray-200 border border-gray-200 rounded-full shadow dark:border-gray-800 dark:bg-gray-900 focus:ring-indigo-500 dark:focus:bg-white focus:bg-white"
+            class="block w-full py-2 pl-10 pr-3 font-semibold placeholder-gray-400 transition-colors duration-100 bg-gray-200 border border-gray-200 rounded-full shadow dark:border-gray-600 dark:bg-gray-700 focus:ring-indigo-500 dark:focus:bg-white focus:bg-white"
             placeholder="Search for Your Favorites"
             type="search"
           />
