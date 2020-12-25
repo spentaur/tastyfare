@@ -8,7 +8,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  darkMode: 'media',
+  darkMode: 'class',
   purge: {
     options: {
       safelist: ['lazyLoad', 'isLoaded'],
@@ -46,7 +46,7 @@ module.exports = {
         },
       }
 
-      addUtilities(newUtilities, ['responsive', 'hover'])
+      addUtilities(newUtilities, ['responsive', 'dark'])
     }),
   ],
 }

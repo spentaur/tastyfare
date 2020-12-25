@@ -1,11 +1,17 @@
 <template>
-  <div>
-    <Nuxt />
+  <div :class="{ dark: dark }">
+    <div class="bg-gray-50 dark:bg-gray-800">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
-<style lang="postcss">
-html {
-  @apply bg-gray-50 dark:bg-gray-800;
+<script>
+export default {
+  computed: {
+    dark() {
+      return this.$store.state.dark.enabled
+    },
+  },
 }
-</style>
+</script>
