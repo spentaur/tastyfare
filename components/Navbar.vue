@@ -46,7 +46,7 @@
           >
             <div
               v-show="$store.state.menu.open"
-              class="relative flex flex-col flex-1 w-full pt-1 pb-4 mt-2 bg-white rounded-t-lg sm:mt-0 sm:pt-2 sm:rounded-none sm:max-w-xs"
+              class="relative flex flex-col flex-1 w-full pt-1 pb-4 mt-3 bg-white rounded-t-lg sm:mt-0 sm:pt-2 sm:rounded-none sm:max-w-xs"
             >
               <transition
                 enter-active-class="transition-opacity duration-300 ease-linear"
