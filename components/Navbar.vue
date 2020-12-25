@@ -1,6 +1,6 @@
 <template>
   <!-- TODO no scroll when menu is open -->
-  <div @keyup.esc="$store.commit('menu/toggle')">
+  <div>
     <transition duration="300">
       <div v-show="$store.state.menu.open" class="">
         <div class="fixed inset-0 z-40 flex">
@@ -46,42 +46,8 @@
           >
             <div
               v-show="$store.state.menu.open"
-              class="relative flex flex-col flex-1 w-full pt-1 pb-4 mt-2 bg-white rounded-t-lg sm:mt-0 sm:pt-5 sm:rounded-none sm:max-w-xs"
+              class="relative flex flex-col flex-1 w-full pt-1 pb-4 mt-2 bg-white rounded-t-lg sm:mt-0 sm:pt-2 sm:rounded-none sm:max-w-xs"
             >
-              <div class="absolute top-0 right-0 hidden pt-2 -mr-12 sm:block">
-                <transition
-                  enter-active-class="transition-opacity duration-100 ease-linear"
-                  enter-class="opacity-0"
-                  enter-to-class="opacity-100"
-                  leave-active-class="transition-opacity duration-100 ease-linear"
-                  leave-class="opacity-100"
-                  leave-to-class="opacity-0"
-                >
-                  <button
-                    v-show="$store.state.menu.open"
-                    class="flex items-center justify-center w-10 h-10 ml-1 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    @click="$store.commit('menu/toggle')"
-                  >
-                    <span class="sr-only">Close sidebar</span>
-                    <!-- Heroicon name: x -->
-                    <svg
-                      class="w-6 h-6 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="3"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </transition>
-              </div>
               <transition
                 enter-active-class="transition-opacity duration-300 ease-linear"
                 enter-class="opacity-0"
@@ -90,8 +56,8 @@
                 leave-class="opacity-100"
                 leave-to-class="opacity-0"
               >
-                <div v-show="$store.state.menu.open" class="sm:px-4">
-                  <div class="sm:hidden">
+                <div v-show="$store.state.menu.open" class="sm:px-3">
+                  <div>
                     <button
                       class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                       @click="$store.commit('menu/toggle')"
@@ -114,11 +80,6 @@
                         />
                       </svg>
                     </button>
-                  </div>
-                  <div
-                    class="px-3 text-3xl font-extrabold text-gray-900 text-shadow"
-                  >
-                    Menu
                   </div>
                 </div>
               </transition>
