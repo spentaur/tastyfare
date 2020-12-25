@@ -22,7 +22,7 @@
               @click="menu = false"
             >
               <div
-                class="absolute inset-0 bg-black opacity-75 sm:bg-gray-600"
+                class="absolute inset-0 bg-gray-500 opacity-75 dark:bg-gray-800 sm:bg-gray-600"
               ></div>
             </div>
           </transition>
@@ -82,37 +82,46 @@
                   </button>
                 </transition>
               </div>
-              <div class="sm:px-4">
-                <div class="sm:hidden">
-                  <button
-                    class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    @click="menu = false"
-                  >
-                    <span class="sr-only">Close sidebar</span>
-                    <!-- Heroicon name: x -->
-                    <svg
-                      class="w-6 h-6 text-gray-900"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
+              <transition
+                enter-active-class="transition-opacity duration-300 ease-linear"
+                enter-class="opacity-0"
+                enter-to-class="opacity-100"
+                leave-active-class="transition-opacity duration-300 ease-linear"
+                leave-class="opacity-100"
+                leave-to-class="opacity-0"
+              >
+                <div v-show="menu" class="sm:px-4">
+                  <div class="sm:hidden">
+                    <button
+                      class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                      @click="menu = false"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="3"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
+                      <span class="sr-only">Close sidebar</span>
+                      <!-- Heroicon name: x -->
+                      <svg
+                        class="w-6 h-6 text-gray-900"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="3"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div
+                    class="px-3 text-3xl font-extrabold text-gray-900 text-shadow"
+                  >
+                    Menu
+                  </div>
                 </div>
-                <div
-                  class="px-3 text-3xl font-extrabold text-gray-900 text-shadow"
-                >
-                  Menu
-                </div>
-              </div>
+              </transition>
             </div>
           </transition>
           <div class="flex-shrink-0 hidden sm:block w-14" aria-hidden="true">
