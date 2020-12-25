@@ -262,7 +262,7 @@ export default {
 <style lang="postcss" scoped>
 .card:hover {
   img {
-    @apply sm:shadow-2xl scale-105;
+    @apply sm:shadow-xl scale-105;
   }
 }
 /* .card:nth-child(odd):hover {
