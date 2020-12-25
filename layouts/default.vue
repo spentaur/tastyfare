@@ -9,7 +9,7 @@
     <div
       :class="[
         $store.state.menu.open
-          ? 'bg-black sm:dark:bg-gray-800 sm:bg-transparent'
+          ? 'bg-black sm:dark:bg-gray-800 sm:bg-gray-50'
           : 'dark:bg-gray-800',
       ]"
       class="transition-all duration-300"
@@ -24,7 +24,7 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: 'dark:bg-gray-700',
+        class: 'bg-gray-50 dark:bg-gray-700',
       },
     }
   },
