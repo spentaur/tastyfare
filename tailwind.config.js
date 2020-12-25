@@ -32,6 +32,9 @@ module.exports = {
       gridAutoRows: {
         0: '0',
       },
+      scale: {
+        99: '.99',
+      },
     },
   },
   variants: {

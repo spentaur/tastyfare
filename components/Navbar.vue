@@ -22,7 +22,7 @@
               @click="$store.commit('menu/toggle')"
             >
               <div
-                class="absolute inset-0 bg-gray-500 opacity-75 dark:bg-gray-800 sm:bg-gray-600"
+                class="absolute inset-0 bg-gray-500 opacity-20 sm:opacity-75 dark:bg-gray-800 sm:bg-gray-600"
               ></div>
             </div>
           </transition>
