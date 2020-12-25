@@ -2,7 +2,7 @@
   <!-- TODO no scroll when menu is open -->
   <div @keyup.esc="menu = false">
     <transition duration="300">
-      <div v-show="menu" class="lg:hidden">
+      <div v-show="menu" class="">
         <div class="fixed inset-0 z-40 flex">
           <!--
           Off-canvas menu overlay, show/hide based on off-canvas menu state.
