@@ -8,6 +8,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
+  darkMode: 'media',
   purge: {
     options: {
       safelist: ['lazyLoad', 'isLoaded'],
@@ -24,6 +25,9 @@ module.exports = {
       },
       textShadow: {
         logo: '7px 7px 0px rgba(249, 168, 212, 0.5);',
+      },
+      gridAutoRows: {
+        0: '0',
       },
     },
   },

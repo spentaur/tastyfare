@@ -10,7 +10,7 @@
     >
       <!-- left side -->
       <div
-        class="hidden w-1/3 p-4 mb-8 ml-4 text-white bg-indigo-500 border-8 border-indigo-300 shadow-2xl lg:block rounded-2xl xl:w-1/4"
+        class="hidden w-1/3 p-4 mb-8 ml-4 text-white bg-indigo-500 border-8 border-indigo-300 shadow-2xl dark:border-indigo-800 dark:bg-indigo-900 lg:block rounded-2xl xl:w-1/4"
       >
         - alergen info needs to go somewhere
         <br />
@@ -71,7 +71,7 @@
           <input
             id="search"
             name="search"
-            class="block w-full py-2 pl-10 pr-3 font-semibold transition-colors duration-100 bg-gray-200 border border-gray-200 rounded-full shadow focus:ring-indigo-500 focus:bg-white"
+            class="block w-full py-2 pl-10 pr-3 font-semibold transition-colors duration-100 bg-gray-200 border border-gray-200 rounded-full shadow dark:placeholder-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-indigo-500 focus:bg-white"
             placeholder="Search for Your Favorites"
             type="search"
           />
@@ -81,14 +81,14 @@
         <div v-for="section in sections" :key="section.name">
           <div class="flex items-center mt-10">
             <div
-              class="flex-grow text-3xl font-extrabold text-gray-900 text-shadow-sm"
+              class="flex-grow text-3xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
             >
               {{ section.name }}
             </div>
             <nuxt-link
               v-if="section.name != 'Desserts 🍪'"
               to="#"
-              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-100 bg-gray-200 rounded-full shadow w-9 h-9 sm:hover:bg-indigo-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-white"
+              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-100 bg-gray-200 rounded-full shadow dark:bg-gray-400 w-9 h-9 sm:hover:bg-indigo-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
             >
               <div class="hidden sm:block">See all</div>
               <svg
@@ -111,12 +111,16 @@
             <li
               v-for="menuItem in section.data"
               :key="menuItem.name"
-              class="flex flex-col col-span-1 text-center transition-all duration-100 card transform-none sm:transform-gpu hover:scale-105"
+              class="flex flex-col col-span-1 text-center transition-all duration-100 card"
             >
-              <a href="#" class="text-gray-900" @click.prevent="bag = !bag">
+              <a
+                href="#"
+                class="text-gray-900 dark:text-gray-200"
+                @click.prevent="bag = !bag"
+              >
                 <div class="flex flex-col flex-1 sm:p-4">
                   <img
-                    class="object-cover w-full mx-auto transition-shadow duration-100 bg-transparent rounded shadow-md h-28 sm:w-44 sm:h-44"
+                    class="object-cover w-full mx-auto transition-all duration-100 bg-transparent rounded-lg shadow-md transform-none sm:transform-gpu h-28 sm:w-44 sm:h-44"
                     :src="menuItem.imgUrl"
                     alt=""
                   />
@@ -139,7 +143,7 @@
         <div class="flex justify-center">
           <button
             type="button"
-            class="inline-flex items-center px-6 py-2 font-semibold text-white transition-all duration-100 bg-indigo-500 rounded-full shadow hover:bg-indigo-600"
+            class="inline-flex items-center px-6 py-2 font-semibold transition-all duration-100 bg-indigo-500 rounded-full shadow text-pink-50 hover:bg-indigo-600"
           >
             Random Meal
           </button>
@@ -256,7 +260,17 @@ export default {
 <style lang="postcss" scoped>
 .card:hover {
   img {
-    @apply shadow-lg;
+    @apply shadow-2xl scale-105;
+  }
+}
+.card:nth-child(odd):hover {
+  img {
+    @apply rotate-3;
+  }
+}
+.card:nth-child(even):hover {
+  img {
+    @apply -rotate-3;
   }
 }
 </style>

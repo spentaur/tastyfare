@@ -1,6 +1,8 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <footer class="hidden pb-12 bg-indigo-500 sm:block sm:pb-0">
+  <footer
+    class="hidden pb-12 bg-indigo-500 dark:bg-indigo-900 sm:block sm:pb-0"
+  >
     <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
       <nav
         class="flex flex-wrap justify-center -mx-5 -my-2"
