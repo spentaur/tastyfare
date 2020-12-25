@@ -107,7 +107,9 @@
               </svg>
             </nuxt-link>
           </div>
-          <ul class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 xl:grid-cols-4">
+          <ul
+            class="grid grid-cols-2 grid-rows-1 gap-4 mt-4 overflow-hidden auto-rows-0 sm:grid-cols-3 xl:grid-cols-4"
+          >
             <li
               v-for="menuItem in section.data"
               :key="menuItem.name"
