@@ -17,13 +17,13 @@
       <div class="relative flex justify-between h-12 sm:h-14">
         <div class="flex items-center justify-center flex-grow sm:hidden">
           <button
-            class="p-1 text-indigo-500 rounded-full dark:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            class="p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             aria-expanded="false"
             @click="open = !open"
           >
             <span class="sr-only">Open user menu</span>
             <svg
-              class="w-7 h-7 sm:h-6 sm:w-6 filter-logo"
+              class="w-7 h-7 sm:h-6 sm:w-6 dark:filter-logo-dark filter-logo"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -53,11 +53,11 @@
         >
           <span class="relative inline-block">
             <button
-              class="p-1 text-indigo-500 rounded-full dark:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              class="p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               <span class="sr-only">View shopping bag</span>
               <svg
-                class="w-7 h-7 sm:h-6 sm:w-6 filter-logo"
+                class="w-7 h-7 sm:h-6 sm:w-6 dark:filter-logo-dark filter-logo"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -82,12 +82,12 @@
             <div>
               <button
                 id="user-menu"
-                class="p-1 text-indigo-500 rounded-full dark:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                class="p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 aria-haspopup="true"
               >
                 <span class="sr-only">Open user menu</span>
                 <svg
-                  class="w-7 h-7 sm:h-6 sm:w-6 filter-logo"
+                  class="w-7 h-7 sm:h-6 sm:w-6 dark:filter-logo-dark filter-logo"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"

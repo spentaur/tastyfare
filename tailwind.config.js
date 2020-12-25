@@ -26,6 +26,9 @@ module.exports = {
       textShadow: {
         logo: '7px 7px 0px rgba(249, 168, 212, 0.5);',
       },
+      textColor: {
+        'pink-dark-logo': 'rgba(252, 231, 243, 0.25)',
+      },
       gridAutoRows: {
         0: '0',
       },
@@ -43,6 +46,9 @@ module.exports = {
       const newUtilities = {
         '.filter-logo': {
           filter: 'drop-shadow(3px 3px 0px rgba(249, 168, 212, 0.5))',
+        },
+        '.filter-logo-dark': {
+          filter: 'drop-shadow(3px 3px 0px rgba(252, 231, 243, 0.25))',
         },
       }
 
