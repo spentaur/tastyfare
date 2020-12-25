@@ -136,7 +136,7 @@
         <!-- feeling lucky button -->
         <!-- TODO i dont know if this should be a button or what -->
         <div
-          class="w-full mt-12 mb-2 text-lg font-bold text-center text-indigo-500"
+          class="w-full mt-12 mb-2 text-lg font-bold text-center text-indigo-500 dark:text-indigo-400"
         >
           Feeling Lucky?
         </div>

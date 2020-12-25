@@ -94,7 +94,7 @@
         </a>
         <button
           class="text-indigo-200 hover:text-indigo-100 focus:outline-none"
-          @click.prevent="toggleDark"
+          @click.prevent="$store.commit('dark/toggle')"
         >
           <span class="sr-only">Dark Mode</span>
           <svg
@@ -119,15 +119,3 @@
     </div>
   </footer>
 </template>
-
-<script>
-import { mapMutations } from 'vuex'
-
-export default {
-  methods: {
-    ...mapMutations({
-      toggleDark: 'dark/toggle',
-    }),
-  },
-}
-</script>
