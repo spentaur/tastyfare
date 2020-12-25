@@ -37,6 +37,9 @@ module.exports = {
         98: '.98',
         98.5: '.985',
       },
+      spacing: {
+        18: '4.5rem',
+      },
     },
   },
   variants: {
