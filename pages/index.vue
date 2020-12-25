@@ -123,7 +123,7 @@
               >
                 <div class="flex flex-col flex-1 sm:p-4">
                   <img
-                    class="object-cover w-full mx-auto transition-all duration-100 bg-transparent rounded-lg shadow-md transform-none sm:transform-gpu sm:w-44 h-44"
+                    class="object-cover w-full mx-auto transition-all duration-100 bg-transparent shadow-md rounded-xl transform-none sm:transform-gpu sm:w-44 h-44"
                     :src="menuItem.imgUrl"
                     alt=""
                   />
