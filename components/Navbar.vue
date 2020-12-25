@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed bottom-0 z-10 w-full border-t-2 border-gray-200 dark:border-gray-800 dark:bg-gray-700 bg-gray-50 sm:border-t-0 sm:border-b sm:shadow sm:bottom-auto"
+    class="fixed bottom-0 z-10 w-full border-t-2 border-gray-200 dark:border-gray-900 dark:bg-black bg-gray-50 sm:border-t-0 sm:border-b sm:shadow sm:bottom-auto"
   >
     <!-- menu on mobile? -->
     <div :class="{ block: open, hidden: !open }" class="sm:hidden">
