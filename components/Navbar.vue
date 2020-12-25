@@ -1,8 +1,8 @@
 <template>
   <!-- TODO no scroll when menu is open -->
-  <div @keyup.esc="menu = false">
+  <div @keyup.esc="$store.commit('menu/toggle')">
     <transition duration="300">
-      <div v-show="menu" class="">
+      <div v-show="$store.state.menu.open" class="">
         <div class="fixed inset-0 z-40 flex">
           <!--
           Off-canvas menu overlay, show/hide based on off-canvas menu state.
@@ -16,10 +16,10 @@
             leave-to-class="opacity-0"
           >
             <div
-              v-show="menu"
+              v-show="$store.state.menu.open"
               class="fixed inset-0"
               aria-hidden="true"
-              @click="menu = false"
+              @click="$store.commit('menu/toggle')"
             >
               <div
                 class="absolute inset-0 bg-gray-500 opacity-75 dark:bg-gray-800 sm:bg-gray-600"
@@ -45,7 +45,7 @@
             leave-to-class="translate-y-full sm:translate-y-0 sm:-translate-x-full"
           >
             <div
-              v-show="menu"
+              v-show="$store.state.menu.open"
               class="relative flex flex-col flex-1 w-full pt-1 pb-4 mt-4 bg-white rounded-t-lg sm:mt-0 sm:pt-5 sm:rounded-none sm:max-w-xs"
             >
               <div class="absolute top-0 right-0 hidden pt-2 -mr-12 sm:block">
@@ -58,9 +58,9 @@
                   leave-to-class="opacity-0"
                 >
                   <button
-                    v-show="menu"
+                    v-show="$store.state.menu.open"
                     class="flex items-center justify-center w-10 h-10 ml-1 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    @click="menu = false"
+                    @click="$store.commit('menu/toggle')"
                   >
                     <span class="sr-only">Close sidebar</span>
                     <!-- Heroicon name: x -->
@@ -90,11 +90,11 @@
                 leave-class="opacity-100"
                 leave-to-class="opacity-0"
               >
-                <div v-show="menu" class="sm:px-4">
+                <div v-show="$store.state.menu.open" class="sm:px-4">
                   <div class="sm:hidden">
                     <button
                       class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                      @click="menu = false"
+                      @click="$store.commit('menu/toggle')"
                     >
                       <span class="sr-only">Close sidebar</span>
                       <!-- Heroicon name: x -->
@@ -144,7 +144,7 @@
                 id="side-menu"
                 class="p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
-                @click="menu = true"
+                @click="$store.commit('menu/toggle')"
               >
                 <span class="sr-only">Open side menu</span>
                 <svg
@@ -222,6 +222,13 @@ export default {
   data() {
     return {
       menu: false,
+    }
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.$store.state.menu.open ? 'overflow-hidden h-full' : '',
+      },
     }
   },
 }
