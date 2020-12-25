@@ -72,8 +72,8 @@
                 />
               </svg>
               <span
-                :class="{ 'opacity-0': !bag, 'opacity-80': bag }"
-                class="absolute w-3 h-3 transition-all duration-300 bg-red-400 rounded-full top-1 right-1 ring-2 ring-white"
+                :class="{ 'opacity-0': !bag, 'opacity-100': bag }"
+                class="absolute w-3 h-3 transition-all duration-300 bg-red-400 rounded-full top-1 right-1 ring-2 ring-pink-200"
               ></span>
             </button>
           </span>

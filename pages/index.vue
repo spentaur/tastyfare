@@ -71,7 +71,7 @@
           <input
             id="search"
             name="search"
-            class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-400 transition-colors duration-100 bg-gray-200 border border-gray-200 rounded-full shadow focus:text-gray-800 dark:border-gray-600 dark:bg-gray-700 dark:focus:ring-gray-600 focus:ring-indigo-500 dark:focus:bg-white focus:bg-white"
+            class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-400 transition-colors duration-100 bg-gray-200 border border-gray-200 rounded-full shadow focus:text-gray-800 dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 focus:ring-indigo-500 dark:focus:bg-white focus:bg-gray-50"
             placeholder="Search for Your Favorites"
             type="search"
           />
@@ -88,7 +88,7 @@
             <nuxt-link
               v-if="section.name != 'Desserts 🍪'"
               to="#"
-              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-100 bg-gray-300 rounded-full shadow dark:text-gray-400 dark:bg-gray-700 w-9 h-9 sm:hover:bg-indigo-600 sm:dark:bg-gray-700 sm:dark:hover:bg-gray-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
+              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-100 bg-gray-300 rounded-full shadow dark:text-gray-300 dark:bg-gray-700 w-9 h-9 sm:hover:bg-indigo-600 sm:dark:bg-gray-700 sm:dark:hover:bg-gray-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
             >
               <div class="hidden sm:block">See all</div>
               <svg
@@ -260,10 +260,10 @@ export default {
 <style lang="postcss" scoped>
 .card:hover {
   img {
-    @apply shadow-2xl scale-105;
+    @apply sm:shadow-2xl scale-105;
   }
 }
-.card:nth-child(odd):hover {
+/* .card:nth-child(odd):hover {
   img {
     @apply rotate-3;
   }
@@ -272,5 +272,5 @@ export default {
   img {
     @apply -rotate-3;
   }
-}
+} */
 </style>

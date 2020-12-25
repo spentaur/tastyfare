@@ -52,7 +52,7 @@
           </button>
         </div>
       </nav>
-      <p class="mt-8 text-base text-center text-indigo-400">
+      <p class="mt-8 text-base text-center text-indigo-400 dark:text-gray-700">
         &copy; 2020 tastyfare, Inc. All rights reserved.
       </p>
     </div>
