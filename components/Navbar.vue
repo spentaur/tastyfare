@@ -115,7 +115,7 @@
     </transition>
 
     <nav
-      class="fixed bottom-0 z-10 w-full border-t-2 border-gray-200 dark:border-gray-800 dark:bg-gray-700 bg-gray-50 sm:border-t-0 sm:border-b sm:shadow-md sm:bottom-auto"
+      class="fixed bottom-0 z-10 w-full border-t-2 border-gray-200 dark:border-gray-700 dark:bg-gray-700 bg-gray-50 sm:border-t-0 sm:border-b sm:shadow-md sm:bottom-auto"
     >
       <div class="mx-auto max-w-screen-2xl">
         <div class="relative flex justify-between h-12 sm:h-14">
