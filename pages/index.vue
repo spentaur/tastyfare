@@ -7,7 +7,8 @@
     <!-- main content  -->
     <div
       :class="{
-        'scale-90 -translate-y-26 transform': $store.state.menu.open,
+        'scale-90 -translate-y-26 sm:-translate-y-10 transform':
+          $store.state.menu.open,
       }"
       class="flex flex-row w-full pt-6 mx-auto transition-all duration-200 bg-white sm:bg-gray-50 dark:bg-gray-800 rounded-xl pb-22 sm:pb-12 max-w-screen-2xl sm:pt-22"
     >
