@@ -1,8 +1,12 @@
 <template>
-  <div class="flex h-screen overflow-hidden bg-white" @keyup.esc="menu = false">
+  <div
+    tabindex="0"
+    class="flex h-screen overflow-hidden bg-white"
+    @keyup.esc="menu = false"
+  >
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
     <transition duration="300">
-      <div v-show="menu" class="lg:hidden">
+      <div v-show="menu">
         <div class="fixed inset-0 z-40 flex">
           <!--
           Off-canvas menu overlay, show/hide based on off-canvas menu state.
@@ -99,11 +103,11 @@
     <div class="flex flex-col flex-1 w-0 overflow-hidden">
       <!-- Search header -->
       <div
-        class="relative z-10 flex flex-shrink-0 h-16 bg-white border-b border-gray-200 lg:hidden"
+        class="relative z-10 flex flex-shrink-0 h-16 bg-white border-b border-gray-200"
       >
         <!-- Sidebar toggle, controls the 'sidebarOpen' sidebar state. -->
         <button
-          class="px-4 text-gray-500 border-r border-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 lg:hidden"
+          class="px-4 text-gray-500 border-r border-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
           @click="menu = true"
         >
           <span class="sr-only">Open sidebar</span>

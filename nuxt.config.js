@@ -84,6 +84,7 @@ export default {
   pwa: {
     meta: {
       nativeUI: true,
+      appleStatusBarStyle: 'black-translucent',
     },
     manifest: {
       theme_color: '#f3f4f6',
