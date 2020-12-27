@@ -7,10 +7,10 @@
     <!-- main content  -->
     <div
       :class="{
-        'scale-90 -translate-y-26 sm:-translate-y-10 transform':
+        'scale-90 -translate-y-8 sm:-translate-y-10 transform':
           $store.state.menu.open,
       }"
-      class="flex flex-row w-full pt-6 mx-auto transition-all duration-200 bg-white sm:bg-gray-50 dark:bg-gray-800 rounded-xl pb-22 sm:pb-12 max-w-screen-2xl sm:pt-22"
+      class="flex flex-row w-full h-screen pt-6 mx-auto overflow-scroll transition-all duration-200 bg-white sm:h-auto sm:bg-gray-50 dark:bg-gray-800 rounded-xl pb-22 sm:pb-12 max-w-screen-2xl sm:pt-22"
     >
       <!-- left side -->
       <div
@@ -152,6 +152,7 @@
             Random Meal
           </button>
         </div>
+        <div class="w-full h-24 sm:hidden"></div>
       </div>
     </div>
 
