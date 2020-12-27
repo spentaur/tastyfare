@@ -10,7 +10,7 @@
         'scale-90 -translate-y-26 sm:-translate-y-10 transform':
           $store.state.menu.open,
       }"
-      class="flex flex-row w-full pt-6 mx-auto transition-all duration-200 bg-white sm:bg-gray-50 dark:bg-gray-800 rounded-xl pb-22 sm:pb-12 max-w-screen-2xl sm:pt-22"
+      class="flex flex-row w-full pt-6 mx-auto transition-all duration-300 bg-white sm:bg-gray-50 dark:bg-gray-800 rounded-xl pb-22 sm:pb-12 max-w-screen-2xl sm:pt-22"
     >
       <!-- left side -->
       <div
@@ -75,7 +75,7 @@
           <input
             id="search"
             name="search"
-            class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-400 transition-colors duration-100 bg-gray-200 border border-gray-200 rounded-full shadow focus:text-gray-800 dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 focus:ring-indigo-500 dark:focus:bg-white focus:bg-gray-50"
+            class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-400 transition-colors duration-300 bg-gray-200 border border-gray-200 rounded-full shadow focus:text-gray-800 dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 focus:ring-indigo-500 dark:focus:bg-white focus:bg-gray-50"
             placeholder="Search for Your Favorites"
             type="search"
           />
@@ -92,7 +92,7 @@
             <nuxt-link
               v-if="section.name != 'Desserts 🍪'"
               to="#"
-              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-100 bg-gray-300 rounded-full shadow dark:text-gray-300 dark:bg-gray-700 w-9 h-9 sm:hover:bg-indigo-600 sm:dark:bg-gray-700 sm:dark:hover:bg-gray-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
+              class="flex items-center justify-center font-bold text-gray-900 transition-all duration-300 bg-gray-300 rounded-full shadow dark:text-gray-300 dark:bg-gray-700 w-9 h-9 sm:hover:bg-indigo-600 sm:dark:bg-gray-700 sm:dark:hover:bg-gray-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
             >
               <div class="hidden sm:block">See all</div>
               <svg
@@ -115,7 +115,7 @@
             <li
               v-for="menuItem in section.data"
               :key="menuItem.name"
-              class="flex flex-col col-span-1 text-center transition-all duration-100 card"
+              class="flex flex-col col-span-1 text-center transition-all duration-300 card"
             >
               <a
                 href="#"
@@ -124,7 +124,7 @@
               >
                 <div class="flex flex-col flex-1 sm:p-4">
                   <img
-                    class="object-cover w-full mx-auto transition-all duration-100 bg-transparent shadow-md rounded-xl transform-none sm:transform-gpu sm:w-44 h-44"
+                    class="object-cover w-full mx-auto transition-all duration-300 bg-transparent shadow-md rounded-xl transform-none sm:transform-gpu sm:w-44 h-44"
                     :src="menuItem.imgUrl"
                     alt=""
                   />
@@ -147,7 +147,7 @@
         <div class="flex justify-center">
           <button
             type="button"
-            class="inline-flex items-center px-6 py-2 font-semibold transition-all duration-100 bg-indigo-500 rounded-full shadow text-pink-50 hover:bg-indigo-600"
+            class="inline-flex items-center px-6 py-2 font-semibold transition-all duration-300 bg-indigo-500 rounded-full shadow text-pink-50 hover:bg-indigo-600"
           >
             Random Meal
           </button>
