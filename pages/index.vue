@@ -16,7 +16,7 @@
       <div
         class="hidden w-1/3 p-4 mb-8 ml-4 text-white bg-indigo-500 border-8 border-indigo-300 shadow-2xl dark:text-gray-200 dark:border-gray-700 dark:bg-gray-900 lg:block rounded-2xl xl:w-1/4"
       >
-        - alergen info needs to go somewhere
+        <!-- - alergen info needs to go somewhere -->
         <br />
         - recent orders
         <br />
