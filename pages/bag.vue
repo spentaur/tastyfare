@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full max-w-xl mx-auto">
     {{ $store.state.bag.items }}
     <div>
       <button
@@ -17,7 +17,6 @@
 export default {
   transition: {
     name: 'slide-right',
-    mode: 'out-in',
   },
 }
 </script>
