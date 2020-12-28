@@ -17,7 +17,7 @@
               aria-hidden="true"
               @click="$store.commit('menu/toggle')"
             >
-              <div class="absolute inset-0 sm:bg-gray-800 sm:opacity-75"></div>
+              <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
             </div>
           </transition>
           <transition
