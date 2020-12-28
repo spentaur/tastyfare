@@ -7,7 +7,7 @@
   >
     <Menu />
     <div
-      class="transition-all duration-200 bg-white select-none dark:bg-gray-800"
+      class="h-screen transition-all duration-200 bg-white select-none dark:bg-gray-800"
     >
       <Navbar />
       <Nuxt
