@@ -12,7 +12,7 @@
       <Navbar />
       <Nuxt
         :class="{
-          'translate-y-1/4 sm:-translate-y-0 sm:translate-x-80 transform':
+          'translate-y-1/4 scale-0 sm:scale-100 sm:-translate-y-0 sm:translate-x-80 transform':
             $store.state.menu.open,
         }"
         class="pt-6 transition-all duration-500 bg-white sm:duration-300 dark:bg-gray-800 pb-22 sm:pb-12 sm:pt-22"
