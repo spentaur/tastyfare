@@ -2,7 +2,13 @@
   <nav
     class="fixed bottom-0 z-10 w-full bg-white border-t-2 border-gray-200 sm:top-0 dark:border-gray-700 sm:bottom-auto dark:bg-gray-700 sm:border-t-0 sm:border-b sm:shadow-md"
   >
-    <div class="mx-auto max-w-screen-2xl">
+    <div
+      :class="{
+        '-translate-y-full sm:-translate-y-0 sm:translate-x-1/4 transform':
+          $store.state.menu.open,
+      }"
+      class="mx-auto transition-all duration-300 max-w-screen-2xl"
+    >
       <div class="relative flex justify-between h-12 sm:h-14">
         <div
           class="flex items-center justify-center flex-grow sm:justify-start"

@@ -48,6 +48,9 @@ module.exports = {
           '0 -10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05);',
       },
       translate: { '-1/25': '-4%' },
+      rotate: {
+        360: '360deg',
+      },
     },
   },
   variants: {
