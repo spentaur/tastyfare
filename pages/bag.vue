@@ -12,3 +12,12 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  transition: {
+    name: 'slide-right',
+    mode: 'out-in',
+  },
+}
+</script>

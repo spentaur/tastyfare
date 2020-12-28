@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed bottom-0 z-10 w-full bg-white border-t-2 border-gray-200 sm:top-0 dark:border-gray-700 sm:bottom-auto dark:bg-gray-700 sm:border-t-0 sm:border-b sm:shadow-md"
+    class="fixed bottom-0 z-10 w-screen bg-white border-t-2 border-gray-200 sm:top-0 dark:border-gray-700 sm:bottom-auto dark:bg-gray-700 sm:border-t-0 sm:border-b sm:shadow-md"
   >
     <div
       :class="{
