@@ -75,7 +75,7 @@
                     'opacity-0': bag.items.length == 0,
                     'opacity-100': bag.items.length > 0,
                   }"
-                  class="absolute w-2 h-2 transition-all duration-300 bg-red-400 rounded-full top-1 right-1 ring-2 ring-pink-200"
+                  class="absolute w-2 h-2 transition-all duration-300 bg-red-400 rounded-full animate-bounce top-1 right-1 ring-2 ring-pink-200"
                 ></span>
               </nuxt-link>
             </span>
