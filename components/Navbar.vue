@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="relative z-10 w-full border-t-2 border-gray-200 dark:border-gray-700 dark:bg-gray-700 bg-gray-50 sm:border-t-0 sm:border-b sm:shadow-md"
+    class="z-10 w-full border-t-2 border-gray-200 sm:relative dark:border-gray-700 dark:bg-gray-700 bg-gray-50 sm:border-t-0 sm:border-b sm:shadow-md"
   >
     <div class="mx-auto max-w-screen-2xl">
       <div class="relative flex justify-between h-12 sm:h-14">
@@ -102,7 +102,7 @@ export default {
 <style scoped>
 /* TODO I need to find a better way to handle this stupid notch */
 nav {
-  margin: env(safe-area-inset-top) env(safe-area-inset-right)
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 </style>
