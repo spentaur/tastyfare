@@ -12,7 +12,7 @@
         'scale-90 -translate-y-1/25 sm:translate-y-0 rounded-xl sm:rounded-t-xl':
           $store.state.menu.open,
       }"
-      class="flex flex-col-reverse h-screen overflow-hidden transition-all duration-300 transform rounded-t-xl sm:rounded-t-none sm:flex-col"
+      class="flex flex-col-reverse h-screen overflow-scroll transition-all duration-300 transform rounded-t-xl sm:rounded-t-none sm:flex-col"
     />
   </div>
 </template>
