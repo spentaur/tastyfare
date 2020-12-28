@@ -4,10 +4,10 @@
       <div v-show="$store.state.menu.open">
         <div class="fixed inset-0 z-40 flex">
           <transition
-            enter-active-class="transition-opacity duration-300 ease-linear"
+            enter-active-class="transition-opacity duration-200 ease-linear"
             enter-class="opacity-0"
             enter-to-class="opacity-100"
-            leave-active-class="transition-opacity duration-300 ease-linear"
+            leave-active-class="transition-opacity duration-200 ease-linear"
             leave-class="opacity-100"
             leave-to-class="opacity-0"
           >
@@ -17,9 +17,7 @@
               aria-hidden="true"
               @click="$store.commit('menu/toggle')"
             >
-              <div
-                class="absolute inset-0 bg-gray-800 opacity-0 sm:opacity-75"
-              ></div>
+              <div class="absolute inset-0 sm:bg-gray-800 sm:opacity-75"></div>
             </div>
           </transition>
           <transition
@@ -32,7 +30,7 @@
           >
             <div
               v-show="$store.state.menu.open"
-              class="relative flex flex-col flex-1 w-full pt-2 pb-4 bg-gray-50 sm:shadow-2xl dark:bg-gray-700 sm:max-w-xs"
+              class="relative flex flex-col flex-1 w-full pt-2 pb-4 sm:shadow-2xl dark:bg-gray-700 sm:max-w-xs"
             >
               <transition
                 enter-active-class="transition-opacity duration-300 ease-linear"
