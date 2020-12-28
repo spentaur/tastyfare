@@ -4,8 +4,7 @@
   >
     <div
       :class="{
-        '-translate-y-full sm:-translate-y-0 sm:translate-x-80 transform':
-          $store.state.menu.open,
+        'sm:translate-x-80 transform': $store.state.menu.open,
       }"
       class="mx-auto transition-all duration-300 max-w-screen-2xl"
     >
