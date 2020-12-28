@@ -18,7 +18,7 @@
               @click="$store.commit('menu/toggle')"
             >
               <div
-                class="absolute inset-0 bg-gray-500 opacity-0 sm:opacity-75 dark:bg-gray-800 sm:bg-gray-600"
+                class="absolute inset-0 bg-gray-800 opacity-0 sm:opacity-75"
               ></div>
             </div>
           </transition>
@@ -32,7 +32,7 @@
           >
             <div
               v-show="$store.state.menu.open"
-              class="relative flex flex-col flex-1 w-full pt-2 pb-4 mt-5 bg-white shadow-lg-top sm:shadow-2xl dark:bg-gray-600 rounded-t-xl sm:mt-0 sm:rounded-none sm:max-w-xs"
+              class="relative flex flex-col flex-1 w-full pt-2 pb-4 bg-gray-50 sm:shadow-2xl dark:bg-gray-700 sm:max-w-xs"
             >
               <transition
                 enter-active-class="transition-opacity duration-300 ease-linear"

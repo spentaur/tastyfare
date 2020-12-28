@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed relative bottom-0 z-10 w-full border-t-2 border-gray-200 sm:top-0 dark:border-gray-700 sm:bottom-auto dark:bg-gray-700 bg-gray-50 sm:border-t-0 sm:border-b sm:shadow-md"
+    class="fixed bottom-0 z-10 w-full bg-white border-t-2 border-gray-200 sm:top-0 dark:border-gray-700 sm:bottom-auto dark:bg-gray-700 sm:border-t-0 sm:border-b sm:shadow-md"
   >
     <div class="mx-auto max-w-screen-2xl">
       <div class="relative flex justify-between h-12 sm:h-14">
@@ -46,6 +46,7 @@
             <span class="relative inline-block">
               <button
                 class="p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none"
+                @click.prevent="$store.commit('bag/empty')"
               >
                 <span class="sr-only">View shopping bag</span>
                 <svg
@@ -64,7 +65,11 @@
                   />
                 </svg>
                 <span
-                  :class="{ 'opacity-0': !bag, 'opacity-100': bag }"
+                  v-show="$store.state.bag.status"
+                  :class="{
+                    'opacity-0': bag.items.length == 0,
+                    'opacity-100': bag.items.length > 0,
+                  }"
                   class="absolute w-2 h-2 transition-all duration-300 bg-red-400 rounded-full top-1 right-1 ring-2 ring-pink-200"
                 ></span>
               </button>
@@ -78,16 +83,15 @@
 
 <script>
 export default {
-  props: {
-    bag: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       menu: false,
     }
+  },
+  computed: {
+    bag() {
+      return this.$store.state.bag
+    },
   },
   head() {
     return {

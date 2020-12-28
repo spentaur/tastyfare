@@ -48,7 +48,8 @@ export default {
     [
       'nuxt-vuex-localstorage',
       {
-        localStorage: ['dark'],
+        mode: 'debug',
+        localStorage: ['dark', 'bag'],
       },
     ],
   ],
