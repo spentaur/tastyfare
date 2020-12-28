@@ -102,7 +102,7 @@ export default {
 <style scoped>
 /* TODO I need to find a better way to handle this stupid notch */
 nav {
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+  margin: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 </style>

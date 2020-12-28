@@ -16,3 +16,13 @@
     />
   </div>
 </template>
+
+<script>
+export default {
+  head: {
+    bodyAttrs: {
+      class: 'bg-black',
+    },
+  },
+}
+</script>
