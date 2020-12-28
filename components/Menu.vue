@@ -3,10 +3,10 @@
     <transition duration="300">
       <div v-show="$store.state.menu.open" class="fixed inset-0 z-40 flex">
         <transition
-          enter-active-class="transition-opacity duration-500 ease-linear sm:duration-400 sm:duration-200"
+          enter-active-class="transition-opacity duration-300 ease-linear sm:duration-200"
           enter-class="opacity-0"
           enter-to-class="opacity-100"
-          leave-active-class="transition-opacity duration-500 ease-linear sm:duration-400 sm:duration-200"
+          leave-active-class="transition-opacity duration-300 ease-linear sm:duration-200"
           leave-class="opacity-100"
           leave-to-class="opacity-0"
         >
@@ -31,7 +31,7 @@
         >
           <div
             v-show="$store.state.menu.open"
-            class="relative flex flex-col flex-1 w-full pt-2 pb-4 bg-white rounded-t-xl sm:rounded-none sm:shadow-2xl dark:bg-gray-700 sm:max-w-xs"
+            class="relative flex flex-col flex-1 w-full pt-2 pb-4 bg-white rounded-t-3xl sm:rounded-none sm:shadow-2xl dark:bg-gray-700 sm:max-w-xs"
           >
             <transition
               enter-active-class="transition-opacity duration-300 ease-linear"
