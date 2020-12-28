@@ -1,20 +1,18 @@
 <template>
   <div
     v-show="$store.state.dark.status"
-    class=""
+    class="bg-black select-none"
     :class="{
       dark: $store.state.dark.enabled,
     }"
   >
-    <div
-      class="transition-all duration-300"
-      :class="[
-        $store.state.menu.open
-          ? 'bg-black sm:dark:bg-gray-800 sm:bg-gray-50'
-          : 'dark:bg-gray-800 bg-gray-50',
-      ]"
-    >
-      <Nuxt />
-    </div>
+    <Menu />
+    <Nuxt
+      :class="{
+        'scale-90 -translate-y-1/25 sm:translate-y-0 rounded-xl sm:rounded-t-xl':
+          $store.state.menu.open,
+      }"
+      class="flex flex-col-reverse h-screen overflow-hidden transition-all duration-300 transform rounded-t-xl sm:rounded-t-none sm:flex-col"
+    />
   </div>
 </template>
