@@ -23,10 +23,7 @@
             v-show="$store.state.menu.open && $store.state.menu.name === name"
             class="relative flex flex-col flex-1 w-full pt-2 pb-4 bg-white rounded-t-3xl sm:rounded-none sm:shadow-2xl dark:bg-gray-700 sm:max-w-xs"
           >
-            <div
-              v-show="$store.state.menu.open && $store.state.menu.name === name"
-              class="px-1 sm:px-3"
-            >
+            <div class="px-1 sm:px-3">
               <div>
                 <button
                   class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
