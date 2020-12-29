@@ -57,9 +57,9 @@
           >
             <div class="flex items-center h-full px-2 sm:px-6">
               <span class="relative inline-block">
-                <button
-                  class="p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none"
-                  @click="$store.commit('menu/toggle', ['right', 'bag'])"
+                <nuxt-link
+                  class="block p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none"
+                  to="bag"
                 >
                   <span class="sr-only">View shopping bag</span>
                   <svg
@@ -85,7 +85,7 @@
                     }"
                     class="absolute w-2 h-2 transition-all duration-300 bg-red-400 rounded-full animate-bounce top-1 right-1 ring-2 ring-pink-200"
                   ></span>
-                </button>
+                </nuxt-link>
               </span>
             </div>
           </div>
