@@ -72,10 +72,10 @@
           >
             {{ section.name }}
           </div>
-          <button
+          <nuxt-link
             v-if="section.name != 'Desserts 🍪'"
+            to="#"
             class="flex items-center justify-center font-bold text-gray-900 transition-all duration-300 bg-gray-300 rounded-full shadow dark:text-gray-300 dark:bg-gray-700 w-9 h-9 sm:hover:bg-indigo-600 sm:dark:bg-gray-700 sm:dark:hover:bg-gray-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
-            @click.prevent="$nuxt.$emit('open-modal')"
           >
             <div class="hidden sm:block">See all</div>
             <svg
@@ -92,7 +92,7 @@
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-          </button>
+          </nuxt-link>
         </div>
         <ul class="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3 md:grid-cols-4">
           <li
@@ -100,9 +100,9 @@
             :key="menuItem.name"
             class="flex flex-col col-span-1 text-center transition-all duration-300 card"
           >
-            <nuxt-link
-              to="#"
-              class="text-gray-900 transition transform dark:text-gray-200 focus:scale-110"
+            <a
+              href="#"
+              class="text-gray-900 transition duration-100 transform dark:text-gray-200 focus:scale-110"
               @click.prevent="addToBag(menuItem.name)"
             >
               <div class="flex flex-col flex-1 sm:p-4">
@@ -115,7 +115,7 @@
                   menuItem.name
                 }}</span>
               </div>
-            </nuxt-link>
+            </a>
           </li>
         </ul>
       </div>
