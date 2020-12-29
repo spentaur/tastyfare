@@ -100,8 +100,7 @@
             :key="menuItem.name"
             class="flex flex-col col-span-1 text-center transition-all duration-300 card"
           >
-            <a
-              href="#"
+            <button
               class="text-gray-900 transition duration-100 transform dark:text-gray-200 focus:scale-110"
               @click.prevent="addToBag(menuItem.name)"
             >
@@ -115,7 +114,7 @@
                   menuItem.name
                 }}</span>
               </div>
-            </a>
+            </button>
           </li>
         </ul>
       </div>
