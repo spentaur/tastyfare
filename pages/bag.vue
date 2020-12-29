@@ -9,11 +9,6 @@
       >
         Empty Cart
       </button>
-      <nuxt-link
-        class="inline-flex items-center px-6 py-2 font-semibold transition-all duration-300 bg-indigo-500 rounded-full shadow focus:outline-none text-pink-50 hover:bg-indigo-600"
-        to="test"
-        >test</nuxt-link
-      >
     </div>
   </div>
 </template>

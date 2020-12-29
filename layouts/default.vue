@@ -8,11 +8,11 @@
     <div
       class="flex flex-col min-h-screen transition-all duration-200 bg-white select-none dark:bg-gray-800"
     >
+      <Modal />
       <Navbar />
       <Nuxt
         :class="{
-          'translate-y-3/4  sm:-translate-y-0 transform':
-            $store.state.menu.open,
+          transform: $store.state.menu.open,
           'sm:translate-x-80': $store.state.menu.direction === 'left',
           'sm:-translate-x-80': $store.state.menu.direction === 'right',
         }"

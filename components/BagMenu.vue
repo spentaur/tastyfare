@@ -1,5 +1,10 @@
 <template>
   <Menu name="bag">
+    <div
+      class="text-xl font-semibold text-gray-900 dark:text-gray-200 text-shadow-sm"
+    >
+      Your order
+    </div>
     <div class="text-gray-900 dark:text-gray-200">
       <div>{{ $store.state.bag.items }}</div>
       <button
