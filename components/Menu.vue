@@ -76,7 +76,7 @@ export default {
 <style lang="postcss" scoped>
 .overlay-enter-active,
 .overlay-leave-active {
-  @apply transition duration-300 ease-in-out;
+  @apply transition-opacity duration-300;
 }
 
 .overlay-leave-to,
@@ -93,7 +93,7 @@ export default {
 .slide-right-leave-active,
 .slide-left-leave-active,
 .slide-left-enter-active {
-  @apply transition duration-300 ease-in-out transform;
+  @apply transition-transform duration-300 ease-in-out transform;
 }
 
 .slide-left-enter,

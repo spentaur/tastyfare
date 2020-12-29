@@ -248,14 +248,4 @@ export default {
     @apply sm:shadow-xl scale-105;
   }
 }
-/* .card:nth-child(odd):hover {
-  img {
-    @apply rotate-3;
-  }
-}
-.card:nth-child(even):hover {
-  img {
-    @apply -rotate-3;
-  }
-} */
 </style>
