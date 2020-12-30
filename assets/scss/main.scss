@@ -38,6 +38,16 @@ body {
   @apply opacity-0;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  @apply transition-opacity;
+  @apply duration-500;
+}
+.fade-enter,
+.fade-leave-to {
+  @apply opacity-0;
+}
+
 .lazyLoad {
   @apply opacity-0;
   @apply transition-opacity;
