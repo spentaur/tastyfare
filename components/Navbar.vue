@@ -12,7 +12,7 @@
           'sm:-translate-x-80 transform':
             $store.state.menu.open && $store.state.menu.direction === 'right',
         }"
-        class="mx-auto transition-all duration-300 max-w-screen-2xl"
+        class="mx-auto transition-all duration-500 max-w-screen-2xl"
       >
         <div class="relative flex justify-between h-12 sm:h-14">
           <div

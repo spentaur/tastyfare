@@ -16,7 +16,7 @@
 <script>
 export default {
   transition: {
-    name: 'slide-right',
+    name: 'page-slide-right',
   },
 }
 </script>

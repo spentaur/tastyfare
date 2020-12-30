@@ -16,7 +16,7 @@
           'sm:translate-x-80': $store.state.menu.direction === 'left',
           'sm:-translate-x-80': $store.state.menu.direction === 'right',
         }"
-        class="flex-grow pt-6 pb-32 transition-all duration-300 bg-white sm:duration-300 dark:bg-gray-800 sm:pb-12 sm:pt-22"
+        class="flex-grow pt-6 pb-32 transition-all duration-500 bg-white dark:bg-gray-800 sm:pb-12 sm:pt-22"
       />
       <Footer />
     </div>
