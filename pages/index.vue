@@ -101,8 +101,13 @@
             class="flex flex-col col-span-1 text-center transition-all duration-300 card"
           >
             <button
-              class="text-gray-900 transition duration-100 transform dark:text-gray-200 focus:scale-110"
+              class="text-gray-900 transition duration-100 transform dark:text-gray-200"
+              :class="{
+                'animate-small-ping-1-200':
+                  animated && clicked === menuItem.name,
+              }"
               @click.prevent="addToBag(menuItem.name)"
+              @animationend="animated = false"
             >
               <div class="flex flex-col flex-1 sm:p-4">
                 <img
@@ -140,6 +145,8 @@ export default {
   data() {
     return {
       bag: false,
+      animated: false,
+      clicked: '',
       sections: [
         {
           name: 'Drinks 🥤',
@@ -236,6 +243,8 @@ export default {
   },
   methods: {
     addToBag(itemName) {
+      this.animated = true
+      this.clicked = itemName
       this.$store.commit('bag/add', itemName)
     },
   },

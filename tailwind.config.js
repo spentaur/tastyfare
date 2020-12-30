@@ -16,6 +16,22 @@ module.exports = {
   },
   theme: {
     extend: {
+      animation: {
+        'bounce-1-500': 'bounce .5s ease-in-out',
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        'wiggle-1-500': 'wiggle .5s ease-in-out',
+        'small-ping-1-200': 'small-ping .2s cubic-bezier(0, 0, 0.2, 1)',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        'small-ping': {
+          '0%': { transform: 'scale(1)' },
+          '75%, 100%': { transform: 'scale(1.1)' },
+        },
+      },
       padding: {
         22: '5.5rem',
       },
