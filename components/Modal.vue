@@ -140,16 +140,16 @@ export default {
 
 .modal-enter-active,
 .modal-leave-active {
-  @apply ease-out duration-500;
+  @apply transition duration-500 ease-in-out transform;
 }
 
 .modal-leave-to,
 .modal-enter {
-  @apply opacity-0 translate-y-full sm:translate-y-0 sm:scale-95;
+  @apply sm:opacity-0 translate-y-full sm:translate-y-0 sm:scale-95;
 }
 
 .modal-enter-to,
 .modal-leave {
-  @apply opacity-100 translate-y-0 sm:scale-100;
+  @apply sm:opacity-100 translate-y-0 sm:scale-100;
 }
 </style>
