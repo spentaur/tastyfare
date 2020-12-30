@@ -102,13 +102,6 @@ export default {
       return this.$store.state.bag
     },
   },
-  head() {
-    return {
-      bodyAttrs: {
-        class: this.$store.state.menu.open ? 'overflow-hidden h-full' : '',
-      },
-    }
-  },
 }
 </script>
 

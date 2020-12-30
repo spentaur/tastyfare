@@ -25,10 +25,30 @@
 
 <script>
 export default {
-  head: {
-    bodyAttrs: {
-      class: 'bg-black',
+  data() {
+    return {
+      modalOpen: false,
+    }
+  },
+  computed: {
+    opened() {
+      return this.$store.state.menu.open || this.modalOpen
     },
+  },
+  created() {
+    this.$nuxt.$on('open-modal', () => {
+      this.modalOpen = true
+    })
+    this.$nuxt.$on('close-modal', () => {
+      this.modalOpen = false
+    })
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.opened ? 'overflow-hidden h-full' : '',
+      },
+    }
   },
 }
 </script>

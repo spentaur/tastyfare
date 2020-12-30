@@ -1,7 +1,7 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
-    <transition duration="300">
+    <transition duration="500">
       <div v-show="open" class="fixed inset-0 z-50 overflow-y-auto">
         <div
           class="flex items-end justify-center min-h-screen text-center sm:px-4 sm:pt-4 sm:pb-20 sm:block sm:p-0"
@@ -11,9 +11,11 @@
               v-show="open"
               class="fixed inset-0 transition-opacity"
               aria-hidden="true"
-              @click="open = !open"
+              @click="$nuxt.$emit('close-modal')"
             >
-              <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+              <div
+                class="absolute inset-0 bg-black sm:bg-gray-500 sm:opacity-75"
+              ></div>
             </div>
           </transition>
 
@@ -26,7 +28,7 @@
           <transition name="modal">
             <div
               v-show="open"
-              class="inline-block px-3 pt-4 pb-3 overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl rounded-t-3xl sm:rounded-lg sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6"
+              class="inline-block px-3 pt-4 pb-3 overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl rounded-t-3xl sm:rounded-lg sm:my-2 sm:align-middle sm:max-w-lg sm:w-full sm:p-6"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
@@ -34,13 +36,14 @@
               <div>
                 <div class="flex flex-row-reverse items-center justify-end">
                   <div
-                    class="flex-grow text-xl font-semibold text-center text-gray-900 dark:text-gray-200 text-shadow-sm"
+                    v-if="menuItem"
+                    class="flex-grow text-2xl font-semibold text-center text-gray-900 dark:text-gray-200 text-shadow-sm"
                   >
-                    Your order
+                    {{ menuItem.name }}
                   </div>
                   <button
                     class="absolute flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    @click="open = !open"
+                    @click="$nuxt.$emit('close-modal')"
                   >
                     <span class="sr-only">Close sidebar</span>
                     <!-- Heroicon name: x -->
@@ -62,26 +65,22 @@
                   </button>
                 </div>
                 <div class="mt-3 text-center sm:mt-5">
-                  <h3
-                    id="modal-headline"
-                    class="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Payment successful
-                  </h3>
-                  <div class="mt-2">
-                    <p class="text-sm text-gray-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Consequatur amet labore.
-                    </p>
-                  </div>
+                  <img
+                    class="object-cover w-full mx-auto transition-all duration-500 bg-transparent shadow-md rounded-xl transform-none sm:transform-gpu sm:w-44 h-44"
+                    :src="menuItem.imgUrl"
+                    alt=""
+                  />
+                  <div class="w-full my-3 bg-red-200 h-96">test</div>
+                  <div class="w-full my-3 bg-green-200 h-96">test</div>
                 </div>
               </div>
               <div class="mt-5 sm:mt-6">
                 <button
                   type="button"
-                  class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-500 border border-transparent rounded-full shadow-sm text-shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                  class="inline-flex items-center justify-center w-full px-6 py-2 font-semibold text-center transition-all duration-300 bg-indigo-500 rounded-full shadow text-pink-50 hover:bg-indigo-600"
+                  @click="addToBag"
                 >
-                  Checkout
+                  Add to order
                 </button>
               </div>
             </div>
@@ -97,22 +96,28 @@ export default {
   data() {
     return {
       open: false,
+      menuItem: {},
     }
   },
   created() {
-    this.$nuxt.$on('open-modal', () => {
-      this.open = !this.open
+    this.$nuxt.$on('open-modal', ({ menuItem }) => {
+      this.open = true
+      this.menuItem = menuItem
+    })
+    this.$nuxt.$on('close-modal', () => {
+      this.open = false
     })
   },
   beforeDestroy() {
     this.$nuxt.$off('open-modal')
+    this.$nuxt.$off('close-modal')
+    this.menuItem = {}
   },
-  head() {
-    return {
-      bodyAttrs: {
-        class: this.open ? 'overflow-hidden h-full' : '',
-      },
-    }
+  methods: {
+    addToBag() {
+      this.$store.commit('bag/add', this.menuItem.name)
+      this.$nuxt.$emit('close-modal', this.menuItem)
+    },
   },
 }
 </script>
@@ -120,7 +125,7 @@ export default {
 <style lang="postcss" scoped>
 .overlay-enter-active,
 .overlay-leave-active {
-  @apply transition duration-300 ease-in-out;
+  @apply transition duration-500 ease-in-out;
 }
 
 .overlay-leave-to,
@@ -135,12 +140,12 @@ export default {
 
 .modal-enter-active,
 .modal-leave-active {
-  @apply ease-out duration-300;
+  @apply ease-out duration-500;
 }
 
 .modal-leave-to,
 .modal-enter {
-  @apply opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95;
+  @apply opacity-0 translate-y-full sm:translate-y-0 sm:scale-95;
 }
 
 .modal-enter-to,
