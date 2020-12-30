@@ -28,7 +28,7 @@
           <transition name="modal">
             <div
               v-show="open"
-              class="inline-block px-3 pt-4 pb-3 overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl rounded-t-3xl sm:rounded-lg sm:my-2 sm:align-middle sm:max-w-lg sm:w-full sm:p-6"
+              class="inline-block w-full px-3 pt-4 pb-3 overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl rounded-t-3xl sm:rounded-lg sm:my-2 sm:align-middle sm:max-w-lg sm:p-6"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
