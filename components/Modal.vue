@@ -15,7 +15,7 @@
               @click="$nuxt.$emit('close-modal')"
             >
               <div
-                class="absolute inset-0 bg-gray-500 dark:bg-gray-800 opacity-90"
+                class="absolute inset-0 bg-black sm:bg-gray-500 sm:dark:bg-gray-800 opacity-80"
               ></div>
             </div>
           </transition>

@@ -10,4 +10,7 @@ export const mutations = {
     state.name = name
     state.direction = direction
   },
+  close(state) {
+    state.open = false
+  },
 }
