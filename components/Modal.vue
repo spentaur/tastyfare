@@ -5,7 +5,7 @@
       <div v-show="open" ref="modal" class="fixed inset-0 z-50 overflow-y-auto">
         <div
           id="modal"
-          class="flex items-center justify-center min-h-screen p-2 text-center sm:p-0"
+          class="flex items-center justify-center min-h-screen text-center sm:p-0"
         >
           <transition name="overlay">
             <div
@@ -135,10 +135,10 @@ export default {
 
 <style lang="postcss" scoped>
 #modal {
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+  /* padding: env(safe-area-inset-top) env(safe-area-inset-right)
       env(safe-area-inset-bottom) env(safe-area-inset-left),
-    0.5rem;
-  @apply p-2;
+    0.5rem; */
+  @apply px-2 py-12;
 }
 .overlay-enter-active,
 .overlay-leave-active {
