@@ -19,7 +19,7 @@
             <div class="flex items-center h-full px-2 sm:px-6">
               <button
                 id="side-menu"
-                class="p-1 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
+                class="p-3 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
                 @click="$store.commit('menu/open', ['left', 'main'])"
               >
@@ -66,7 +66,9 @@
             <div class="flex items-center h-full px-2 sm:px-6">
               <span class="relative inline-block">
                 <button
-                  class="block p-1 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
+                  id="bag"
+                  class="p-3 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
+                  aria-haspopup="true"
                   @click="$store.commit('menu/open', ['right', 'bag'])"
                 >
                   <span class="sr-only">View shopping bag</span>
