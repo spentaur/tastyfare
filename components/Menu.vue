@@ -22,8 +22,6 @@
           <div
             v-show="$store.state.menu.open && $store.state.menu.name === name"
             class="relative flex flex-col flex-1 w-full px-3 pt-4 pb-6 bg-white sm:shadow-2xl dark:bg-gray-800 sm:max-w-xs"
-            @mousemove="mouseMove"
-            @touchmove="touchMove"
           >
             <div class="">
               <!-- <div
@@ -56,7 +54,6 @@
                 </button>
               </div> -->
               <div class="p-2">
-                {{ touchX }}
                 <slot></slot>
               </div>
             </div>
@@ -73,22 +70,6 @@ export default {
     name: {
       type: String,
       default: 'right',
-    },
-  },
-  data() {
-    return {
-      touchX: 0,
-      touchY: 0,
-    }
-  },
-  methods: {
-    touchMove(e) {
-      this.touchX = e.touches[0].clientX
-      this.touchY = e.touches[0].clientY
-    },
-    mouseMove(e) {
-      this.touchX = e.clientX
-      this.touchY = e.clientY
     },
   },
 }

@@ -1,5 +1,12 @@
 <template>
-  <Menu name="main">
+  <Menu
+    v-touch:swipe.left="
+      () => {
+        $store.commit('menu/close')
+      }
+    "
+    name="main"
+  >
     <button
       class="text-indigo-200 hover:text-indigo-100 focus:outline-none"
       @click.prevent="$store.commit('dark/toggle')"
