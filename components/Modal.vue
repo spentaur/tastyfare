@@ -142,7 +142,7 @@ export default {
 
 <style lang="postcss" scoped>
 #modal {
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+  margin: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 .overlay-enter-active,
