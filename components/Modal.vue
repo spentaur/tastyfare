@@ -166,11 +166,11 @@ export default {
 }
 
 .modal-leave-to {
-  @apply scale-110;
+  @apply scale-125;
 }
 
 .modal-enter {
-  @apply scale-90;
+  @apply scale-75;
 }
 
 .modal-enter-to,
