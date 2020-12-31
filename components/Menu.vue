@@ -55,7 +55,6 @@
               </div> -->
               <div class="p-2">
                 {{ touchX }}
-                {{ touchY }}
                 <slot></slot>
               </div>
             </div>
