@@ -51,7 +51,7 @@
           >
             <div class="flex items-center pt-1">
               <nuxt-link
-                class="focus:outline-none sm:opacity-100"
+                class="p-2 focus:outline-none sm:opacity-100"
                 :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
                 to="/"
                 @click.native="$store.commit('menu/close')"

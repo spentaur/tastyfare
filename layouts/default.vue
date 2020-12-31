@@ -5,7 +5,7 @@
       dark: $store.state.dark.enabled,
     }"
     tabindex="0"
-    @keyup.esc="close"
+    @keydown.esc="close"
   >
     <div
       class="flex flex-col min-h-screen transition-all duration-200 bg-white select-none dark:bg-gray-800"
