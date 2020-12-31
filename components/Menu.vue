@@ -22,6 +22,8 @@
           <div
             v-show="$store.state.menu.open && $store.state.menu.name === name"
             class="relative flex flex-col flex-1 w-full px-3 pt-4 pb-6 bg-white sm:shadow-2xl dark:bg-gray-800 sm:max-w-xs"
+            @mousemove="touchMove"
+            @touchmove="touchMove"
           >
             <div class="">
               <!-- <div
@@ -53,7 +55,7 @@
                   </svg>
                 </button>
               </div> -->
-              <div class="p-2" @mousemove="touchMove" @touchmove="touchMove">
+              <div class="p-2">
                 {{ touchX }}
                 <slot></slot>
               </div>
