@@ -13,7 +13,9 @@
             aria-hidden="true"
             @click="$store.commit('menu/toggle')"
           >
-            <div class="absolute inset-0 bg-gray-500 opacity-90"></div>
+            <div
+              class="absolute inset-0 bg-gray-500 dark:bg-gray-800 opacity-90"
+            ></div>
           </div>
         </transition>
         <transition :name="`slide-${$store.state.menu.direction}`">
