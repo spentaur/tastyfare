@@ -118,8 +118,8 @@ export default {
   created() {
     this.$nuxt.$on('open-modal', ({ menuItem }) => {
       this.open = true
-      setTimeout(() => (this.$refs.modal.scrollTop = 0), 0)
       this.menuItem = menuItem
+      setTimeout(() => (this.$refs.modal.scrollTop = 0), 0)
     })
     this.$nuxt.$on('close-modal', () => {
       this.open = false
