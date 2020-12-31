@@ -2,7 +2,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
     <transition duration="300" @after-leave="menuItem = false">
-      <div v-show="open" ref="modal" class="fixed inset-0 z-50 overflow-y-auto">
+      <div v-show="open" ref="modal" class="fixed inset-0 z-20 overflow-y-auto">
         <div
           id="modal"
           class="flex items-center justify-center min-h-screen text-center sm:p-0"

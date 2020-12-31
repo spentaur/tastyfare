@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col w-full mx-auto transition-all duration-300 lg:flex-row max-w-screen-2xl"
-  >
+  <div class="flex flex-col w-full mx-auto lg:flex-row max-w-screen-2xl">
     <div
       class="hidden w-full p-4 text-white bg-indigo-500 border-8 border-indigo-300 lg:block lg:shadow-2xl lg:ml-4 lg:w-1/3 dark:text-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-2xl xl:w-1/4"
     >

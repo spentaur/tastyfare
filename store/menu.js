@@ -5,8 +5,8 @@ export const state = () => ({
 })
 
 export const mutations = {
-  toggle(state, [direction, name] = [state.direction, state.name]) {
-    state.open = !state.open
+  open(state, [direction, name] = [state.direction, state.name]) {
+    state.open = true
     state.name = name
     state.direction = direction
   },

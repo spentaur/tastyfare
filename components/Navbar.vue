@@ -5,9 +5,9 @@
     >
       <div
         :class="{
-          'translate-x-80 transform':
+          'sm:translate-x-80 sm:transform-gpu':
             $store.state.menu.open && $store.state.menu.direction === 'left',
-          '-translate-x-80 transform':
+          'sm:-translate-x-80 sm:transform-gpu':
             $store.state.menu.open && $store.state.menu.direction === 'right',
         }"
         class="mx-auto transition-all duration-300 max-w-screen-2xl"
@@ -21,7 +21,7 @@
                 id="side-menu"
                 class="p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
-                @click="$store.commit('menu/toggle', ['left', 'main'])"
+                @click="$store.commit('menu/open', ['left', 'main'])"
               >
                 <span class="sr-only">Open side menu</span>
                 <svg
@@ -45,7 +45,11 @@
             class="flex items-center justify-center sm:flex-grow sm:items-stretch sm:justify-start"
           >
             <div class="flex items-center pt-1">
-              <nuxt-link class="focus:outline-none" to="/">
+              <nuxt-link
+                class="focus:outline-none"
+                to="/"
+                @click.native="$store.commit('menu/close')"
+              >
                 <Logo />
               </nuxt-link>
             </div>
@@ -57,7 +61,7 @@
               <span class="relative inline-block">
                 <button
                   class="block p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none"
-                  @click="$store.commit('menu/toggle', ['right', 'bag'])"
+                  @click="$store.commit('menu/open', ['right', 'bag'])"
                 >
                   <span class="sr-only">View shopping bag</span>
                   <svg
