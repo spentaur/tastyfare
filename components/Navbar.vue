@@ -28,7 +28,7 @@
                   :class="[
                     ($store.state.menu.name != 'bag') & $store.state.menu.open
                       ? 'opacity-100'
-                      : 'opacity-75',
+                      : 'opacity-50',
                   ]"
                   class="w-7 h-7 sm:h-6 sm:opacity-100 sm:w-6 dark:filter-logo-dark filter-logo"
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@
             <div class="flex items-center pt-1">
               <nuxt-link
                 class="focus:outline-none sm:opacity-100"
-                :class="[$store.state.menu.open ? 'opacity-75' : 'opacity-100']"
+                :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
                 to="/"
                 @click.native="$store.commit('menu/close')"
               >
@@ -75,7 +75,7 @@
                       ($store.state.menu.name != 'main') &
                       $store.state.menu.open
                         ? 'opacity-100'
-                        : 'opacity-75',
+                        : 'opacity-50',
                     ]"
                     class="w-7 h-7 sm:h-6 sm:opacity-100 sm:w-6 dark:filter-logo-dark filter-logo"
                     xmlns="http://www.w3.org/2000/svg"
