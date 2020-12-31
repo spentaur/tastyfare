@@ -14,7 +14,7 @@
             @click="$store.commit('menu/close')"
           >
             <div
-              class="absolute inset-0 hidden bg-gray-500 sm:block dark:bg-gray-900 opacity-90"
+              class="absolute inset-0 hidden bg-gray-500 opacity-75 sm:block dark:bg-gray-800"
             ></div>
           </div>
         </transition>
