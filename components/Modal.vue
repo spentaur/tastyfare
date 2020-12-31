@@ -159,9 +159,17 @@ export default {
   @apply transition duration-500 ease-in-out transform;
 }
 
-.modal-leave-to,
+.modal-enter,
+.modal-leave-to {
+  @apply opacity-0;
+}
+
+.modal-leave-to {
+  @apply scale-110;
+}
+
 .modal-enter {
-  @apply opacity-0 scale-95;
+  @apply scale-90;
 }
 
 .modal-enter-to,
