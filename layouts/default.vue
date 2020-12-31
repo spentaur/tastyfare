@@ -13,8 +13,8 @@
       <Nuxt
         :class="{
           transform: $store.state.menu.open,
-          'sm:translate-x-80': $store.state.menu.direction === 'left',
-          'sm:-translate-x-80': $store.state.menu.direction === 'right',
+          'translate-x-80': $store.state.menu.direction === 'left',
+          '-translate-x-80': $store.state.menu.direction === 'right',
         }"
         class="flex-grow pt-6 pb-32 transition-all duration-300 bg-white dark:bg-gray-800 sm:pb-12 sm:pt-22"
       />

@@ -14,7 +14,7 @@
             @click="$store.commit('menu/toggle')"
           >
             <div
-              class="absolute inset-0 bg-gray-500 dark:bg-gray-800 opacity-90"
+              class="absolute inset-0 hidden bg-gray-500 sm:block dark:bg-gray-800 opacity-90"
             ></div>
           </div>
         </transition>
@@ -95,21 +95,21 @@ export default {
 
 .slide-right-enter,
 .slide-right-leave-to {
-  @apply translate-y-full sm:translate-y-0 sm:translate-x-full;
+  @apply translate-x-full;
 }
 
 .slide-right-enter-to,
 .slide-right-leave {
-  @apply -translate-y-0 sm:translate-x-0;
+  @apply translate-x-0;
 }
 
 .slide-left-enter,
 .slide-left-leave-to {
-  @apply translate-y-full sm:translate-y-0 sm:-translate-x-full;
+  @apply -translate-x-full;
 }
 
 .slide-left-enter-to,
 .slide-left-leave {
-  @apply -translate-y-0 sm:-translate-x-0;
+  @apply -translate-x-0;
 }
 </style>

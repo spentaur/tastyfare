@@ -7,9 +7,9 @@
     >
       <div
         :class="{
-          'sm:translate-x-80 transform':
+          'translate-x-80 transform':
             $store.state.menu.open && $store.state.menu.direction === 'left',
-          'sm:-translate-x-80 transform':
+          '-translate-x-80 transform':
             $store.state.menu.open && $store.state.menu.direction === 'right',
         }"
         class="mx-auto transition-all duration-300 max-w-screen-2xl"
