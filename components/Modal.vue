@@ -1,7 +1,7 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
-    <transition duration="500">
+    <transition duration="300">
       <div v-show="open" ref="modal" class="fixed inset-0 z-50 overflow-y-auto">
         <div
           id="modal"
@@ -21,7 +21,7 @@
           <transition name="modal">
             <div
               v-show="open"
-              class="relative flex flex-col flex-1 w-full px-3 pt-4 pb-6 bg-white rounded-md sm:shadow-2xl dark:bg-gray-700 sm:max-w-xl"
+              class="relative flex flex-col flex-1 w-full px-3 pt-4 pb-6 bg-white rounded-xl sm:shadow-2xl dark:bg-gray-700 sm:max-w-xl"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
@@ -67,7 +67,7 @@
                   <div class="mt-4">
                     <img
                       v-if="menuItem"
-                      class="object-cover w-full mx-auto transition-all duration-500 bg-transparent shadow-md rounded-xl sm:w-auto h-60"
+                      class="object-cover w-full mx-auto transition-all duration-300 bg-transparent shadow-md rounded-xl sm:w-auto h-60"
                       :src="menuItem.imgUrl"
                       alt=""
                     />
@@ -141,7 +141,7 @@ export default {
 }
 .overlay-enter-active,
 .overlay-leave-active {
-  @apply transition duration-500 ease-in-out;
+  @apply transition duration-300 ease-in-out;
 }
 
 .overlay-leave-to,
@@ -156,7 +156,7 @@ export default {
 
 .modal-enter-active,
 .modal-leave-active {
-  @apply transition duration-500 ease-in-out transform-gpu;
+  @apply transition duration-300 ease-in-out transform-gpu;
 }
 
 .modal-enter,
@@ -169,7 +169,7 @@ export default {
 }
 
 .modal-enter {
-  @apply scale-75;
+  @apply scale-90;
 }
 
 .modal-enter-to,

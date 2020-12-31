@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition duration="500">
+    <transition duration="300">
       <div
         v-show="$store.state.menu.open && $store.state.menu.name === name"
         class="fixed inset-0 z-40 flex"
@@ -71,7 +71,7 @@ export default {
 <style lang="postcss" scoped>
 .overlay-enter-active,
 .overlay-leave-active {
-  @apply transition-opacity duration-500;
+  @apply transition-opacity duration-300;
 }
 
 .overlay-leave-to,
@@ -88,7 +88,7 @@ export default {
 .slide-right-leave-active,
 .slide-left-leave-active,
 .slide-left-enter-active {
-  @apply transition duration-500 ease-in-out transform-gpu;
+  @apply transition duration-300 ease-in-out transform-gpu;
 }
 
 .slide-right-enter,
