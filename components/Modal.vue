@@ -141,10 +141,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-#modal {
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
 .overlay-enter-active,
 .overlay-leave-active {
   @apply transition duration-500 ease-in-out;
