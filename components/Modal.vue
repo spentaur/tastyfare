@@ -71,12 +71,12 @@
                       ></div>
                     </transition>
                     <div class="mt-4">
-                      <img
+                      <!-- <img
                         v-if="menuItem"
                         class="object-cover w-full mx-auto transition-all duration-500 bg-transparent shadow-md rounded-xl transform-none sm:transform-gpu sm:w-44 h-44"
                         :src="menuItem.imgUrl"
                         alt=""
-                      />
+                      /> -->
                     </div>
                     <div v-if="menuItem.name === 'Salads'">
                       <div class="w-full my-3 bg-red-200 h-96">test</div>
