@@ -99,7 +99,7 @@
                       'opacity-0': bag.items.length == 0,
                       'opacity-100': bag.items.length > 0,
                     }"
-                    class="absolute w-2 h-2 transition-all duration-300 bg-red-400 rounded-full top-1 right-1 ring-2 ring-pink-200"
+                    class="absolute top-1.5 right-1.5 w-2 h-2 transition-all duration-300 bg-red-400 rounded-full ring-2 ring-pink-200"
                   ></span>
                 </button>
               </span>
