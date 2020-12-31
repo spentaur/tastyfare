@@ -19,7 +19,7 @@
         <transition :name="`slide-${$store.state.menu.direction}`">
           <div
             v-show="$store.state.menu.open && $store.state.menu.name === name"
-            class="relative flex flex-col flex-1 w-full px-3 pt-4 pb-6 bg-white rounded-t-3xl sm:rounded-none sm:shadow-2xl dark:bg-gray-700 sm:max-w-xs"
+            class="relative flex flex-col flex-1 w-full px-3 pt-4 pb-6 bg-white sm:shadow-2xl dark:bg-gray-700 sm:max-w-xs"
           >
             <div class="">
               <div>
