@@ -24,7 +24,7 @@
                     ? 'opacity-100'
                     : 'opacity-50',
                 ]"
-                class="p-1 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
+                class="p-1 text-indigo-500 transition-opacity duration-300 rounded-full sm:opacity-100 dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
                 @click="$store.commit('menu/open', ['left', 'main'])"
               >
@@ -51,7 +51,7 @@
           >
             <div class="flex items-center pt-1">
               <nuxt-link
-                class="focus:outline-none"
+                class="focus:outline-none sm:opacity-100"
                 :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
                 to="/"
                 @click.native="$store.commit('menu/close')"
@@ -71,7 +71,7 @@
                       ? 'opacity-100'
                       : 'opacity-50',
                   ]"
-                  class="block p-1 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
+                  class="block p-1 text-indigo-500 transition-opacity duration-300 rounded-full sm:opacity-100 dark:text-indigo-200 focus:outline-none"
                   @click="$store.commit('menu/open', ['right', 'bag'])"
                 >
                   <span class="sr-only">View shopping bag</span>
