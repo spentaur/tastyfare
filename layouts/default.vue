@@ -4,6 +4,8 @@
     :class="{
       dark: $store.state.dark.enabled,
     }"
+    tabindex="0"
+    @keyup.esc="close"
   >
     <div
       class="flex flex-col min-h-screen transition-all duration-200 bg-white select-none dark:bg-gray-800"
@@ -55,6 +57,16 @@ export default {
     this.$nuxt.$on('close-modal', () => {
       this.modalOpen = false
     })
+  },
+  methods: {
+    close() {
+      if (this.modalOpen) {
+        this.$nuxt.$emit('close-modal')
+      }
+      if (this.$store.state.menu.open) {
+        this.$store.commit('menu/close')
+      }
+    },
   },
   head() {
     return {
