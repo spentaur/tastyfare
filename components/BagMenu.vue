@@ -1,10 +1,11 @@
 <template>
   <Menu
-    v-touch:swipe.left="
+    v-touch:swipe.right="
       () => {
         $store.commit('menu/close')
       }
     "
+    v-touch-options="{ swipeTolerance: 10 }"
     name="bag"
   >
     <div
