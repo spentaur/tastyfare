@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @mousemove="touchMove" @touchmove="touchMove">
     <transition duration="300">
       <div
         v-show="$store.state.menu.open && $store.state.menu.name === name"
@@ -54,6 +54,8 @@
                 </button>
               </div> -->
               <div class="p-2">
+                {{ touchX }}
+                {{ touchY }}
                 <slot></slot>
               </div>
             </div>
@@ -70,6 +72,18 @@ export default {
     name: {
       type: String,
       default: 'right',
+    },
+  },
+  data() {
+    return {
+      touchX: 0,
+      touchY: 0,
+    }
+  },
+  methods: {
+    touchMove(e) {
+      this.touchX = e.clientX
+      this.touchY = e.clientY
     },
   },
 }
