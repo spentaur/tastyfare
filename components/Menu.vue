@@ -1,5 +1,5 @@
 <template>
-  <div @mousemove="touchMove" @touchmove="touchMove">
+  <div>
     <transition duration="300">
       <div
         v-show="$store.state.menu.open && $store.state.menu.name === name"
@@ -53,7 +53,7 @@
                   </svg>
                 </button>
               </div> -->
-              <div class="p-2">
+              <div class="p-2" @mousemove="touchMove" @touchmove="touchMove">
                 {{ touchX }}
                 <slot></slot>
               </div>
