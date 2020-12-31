@@ -1,7 +1,7 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
-    <transition duration="300">
+    <transition duration="300" @after-leave="menuItem = false">
       <div v-show="open" ref="modal" class="fixed inset-0 z-50 overflow-y-auto">
         <div
           id="modal"
@@ -118,7 +118,6 @@ export default {
     })
     this.$nuxt.$on('close-modal', () => {
       this.open = false
-      setTimeout(() => (this.menuItem = false), 500)
     })
   },
   beforeDestroy() {
