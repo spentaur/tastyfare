@@ -67,7 +67,7 @@
                   <div class="mt-4">
                     <img
                       v-if="menuItem"
-                      class="object-cover w-full mx-auto transition-all duration-500 bg-transparent shadow-md rounded-xl transform-none sm:transform-gpu sm:w-auto h-60"
+                      class="object-cover w-full mx-auto transition-all duration-500 bg-transparent shadow-md rounded-xl sm:w-auto h-60"
                       :src="menuItem.imgUrl"
                       alt=""
                     />
@@ -156,7 +156,7 @@ export default {
 
 .modal-enter-active,
 .modal-leave-active {
-  @apply transition duration-500 ease-in-out transform;
+  @apply transition duration-500 ease-in-out transform-gpu;
 }
 
 .modal-enter,
@@ -169,7 +169,7 @@ export default {
 }
 
 .modal-enter {
-  @apply scale-90;
+  @apply scale-75;
 }
 
 .modal-enter-to,
