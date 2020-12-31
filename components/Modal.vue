@@ -31,7 +31,7 @@
               aria-modal="true"
               aria-labelledby="modal-headline"
             >
-              <div>
+              <div id="modal">
                 <div>
                   <div>
                     <button
@@ -85,7 +85,7 @@
                     <div v-else>stuff</div>
                   </div>
                 </div>
-                <div id="modal" class="mt-5 sm:mt-6">
+                <div class="mt-5 sm:mt-6">
                   <button
                     type="button"
                     :class="{
@@ -142,7 +142,7 @@ export default {
 
 <style lang="postcss" scoped>
 #modal {
-  margin: env(safe-area-inset-top) env(safe-area-inset-right)
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 .overlay-enter-active,
