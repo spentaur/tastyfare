@@ -16,7 +16,8 @@
     "@nuxtjs/pwa": "^3.0.2",
     "nuxt": "^2.14.6",
     "nuxt-lazy-load": "^1.2.4",
-    "nuxt-vuex-localstorage": "^1.2.7"
+    "nuxt-vuex-localstorage": "^1.2.7",
+    "vue2-touch-events": "^3.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

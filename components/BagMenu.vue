@@ -1,5 +1,5 @@
 <template>
-  <Menu name="bag">
+  <Menu v-touch:swipe.right="$store.commit('menu/close')" name="bag">
     <div
       class="text-xl font-semibold text-gray-900 dark:text-gray-200 text-shadow-sm"
     >
