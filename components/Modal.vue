@@ -2,7 +2,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
     <transition duration="500">
-      <div v-show="open" class="fixed inset-0 z-50 overflow-y-auto">
+      <div v-show="open" ref="modal" class="fixed inset-0 z-50 overflow-y-auto">
         <div
           class="flex items-end justify-center min-h-screen text-center sm:px-4 sm:pt-4 sm:pb-20 sm:block sm:p-0"
         >
@@ -26,18 +26,17 @@
           <transition name="modal">
             <div
               v-show="open"
-              ref="modal"
-              class="inline-block w-full px-3 pt-4 pb-6 overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl rounded-t-3xl sm:rounded-lg sm:my-2 sm:align-middle sm:max-w-lg sm:p-6"
+              class="inline-block w-full px-3 pt-4 pb-6 overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl dark:bg-gray-700 rounded-t-3xl sm:rounded-lg sm:my-2 sm:align-middle sm:max-w-lg sm:p-6"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
             >
-              <div id="modal">
+              <div>
                 <div>
                   <div>
                     <button
                       class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                      @click="$store.commit('menu/toggle')"
+                      @click="$nuxt.$emit('close-modal')"
                     >
                       <span class="sr-only">Close sidebar</span>
                       <!-- Heroicon name: x -->
@@ -78,23 +77,15 @@
                         :src="menuItem.imgUrl"
                         alt=""
                       />
-                      <!-- <transition name="fade" mode="out-in">
-                        <img
-                          v-if="menuItem"
-                          class="object-cover w-full mx-auto transition-all duration-500 bg-transparent shadow-md rounded-xl transform-none sm:transform-gpu sm:w-44 h-44"
-                          :src="menuItem.imgUrl"
-                          alt=""
-                        />
-                        <div
-                          v-else
-                          class="mx-auto bg-indigo-200 w-44 animate-pulse h-44 rounded-xl"
-                        ></div>
-                      </transition> -->
                     </div>
-                    <div>stuff</div>
+                    <div v-if="menuItem.name === 'Salads'">
+                      <div class="w-full my-3 bg-red-200 h-96">test</div>
+                      <div class="w-full my-3 bg-green-200 h-96">test</div>
+                    </div>
+                    <div v-else>stuff</div>
                   </div>
                 </div>
-                <div class="mt-5 sm:mt-6">
+                <div id="modal" class="mt-5 sm:mt-6">
                   <button
                     type="button"
                     :class="{
@@ -127,7 +118,7 @@ export default {
   created() {
     this.$nuxt.$on('open-modal', ({ menuItem }) => {
       this.open = true
-      this.$refs.modal.scrollIntoView()
+      setTimeout(() => (this.$refs.modal.scrollTop = 0), 0)
       this.menuItem = menuItem
     })
     this.$nuxt.$on('close-modal', () => {
