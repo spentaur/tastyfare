@@ -5,7 +5,6 @@
         $store.commit('menu/close')
       }
     "
-    v-touch-options="{ swipeTolerance: 10 }"
     name="bag"
   >
     <div
