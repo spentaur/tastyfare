@@ -19,7 +19,12 @@
             <div class="flex items-center h-full px-2 sm:px-6">
               <button
                 id="side-menu"
-                class="p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none"
+                :class="[
+                  ($store.state.menu.name != 'bag') & $store.state.menu.open
+                    ? 'opacity-100'
+                    : 'opacity-50',
+                ]"
+                class="p-1 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
                 @click="$store.commit('menu/open', ['left', 'main'])"
               >
@@ -47,6 +52,7 @@
             <div class="flex items-center pt-1">
               <nuxt-link
                 class="focus:outline-none"
+                :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
                 to="/"
                 @click.native="$store.commit('menu/close')"
               >
@@ -60,7 +66,12 @@
             <div class="flex items-center h-full px-2 sm:px-6">
               <span class="relative inline-block">
                 <button
-                  class="block p-1 text-indigo-500 rounded-full dark:text-indigo-200 focus:outline-none"
+                  :class="[
+                    ($store.state.menu.name != 'main') & $store.state.menu.open
+                      ? 'opacity-100'
+                      : 'opacity-50',
+                  ]"
+                  class="block p-1 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
                   @click="$store.commit('menu/open', ['right', 'bag'])"
                 >
                   <span class="sr-only">View shopping bag</span>
