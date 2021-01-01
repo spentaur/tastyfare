@@ -2,7 +2,13 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
     <transition duration="300" @after-leave="menuItem = false">
-      <div v-show="open" ref="modal" class="fixed inset-0 z-20 overflow-y-auto">
+      <div
+        v-show="open"
+        ref="modal"
+        tabindex="0"
+        class="fixed inset-0 z-20 overflow-y-auto"
+        @keydown.esc="$nuxt.$emit('close-modal')"
+      >
         <div
           id="modal"
           class="flex items-center justify-center min-h-screen text-center sm:p-0"
@@ -114,7 +120,10 @@ export default {
     this.$nuxt.$on('open-modal', ({ menuItem }) => {
       this.open = true
       this.menuItem = menuItem
-      setTimeout(() => (this.$refs.modal.scrollTop = 0), 100)
+      setTimeout(() => {
+        this.$refs.modal.scrollTop = 0
+        this.$refs.modal.focus()
+      }, 100)
     })
     this.$nuxt.$on('close-modal', () => {
       this.open = false

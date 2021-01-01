@@ -3,8 +3,11 @@
     <transition duration="300">
       <div
         v-show="$store.state.menu.open && $store.state.menu.name === name"
+        ref="menu"
+        tabindex="0"
         class="fixed inset-0 z-10 flex sm:z-20"
         :class="{ 'flex-row-reverse': $store.state.menu.direction === 'right' }"
+        @keydown.esc="$store.commit('menu/close')"
       >
         <transition name="overlay">
           <div
@@ -70,6 +73,21 @@ export default {
     name: {
       type: String,
       default: 'right',
+    },
+  },
+  computed: {
+    open() {
+      return this.$store.state.menu.open
+    },
+  },
+  watch: {
+    open(newValue, oldValue) {
+      if (this.$store.state.menu.name === this.name) {
+        setTimeout(() => {
+          this.$refs.menu.scrollTop = 0
+          this.$refs.menu.focus()
+        }, 100)
+      }
     },
   },
 }
