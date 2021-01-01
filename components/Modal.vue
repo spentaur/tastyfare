@@ -1,7 +1,7 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
-    <transition duration="300" @after-leave="menuItem = false">
+    <transition duration="300" @after-leave="menuItem = {}">
       <div
         v-show="open"
         ref="modal"
@@ -59,46 +59,7 @@
                     </svg>
                   </button>
                 </div>
-                <div class="">
-                  <transition name="fade" mode="out-in">
-                    <div
-                      v-if="menuItem"
-                      class="flex-grow text-2xl font-semibold text-center text-gray-900 dark:text-gray-200 text-shadow-sm"
-                    >
-                      {{ menuItem.name }}
-                    </div>
-                    <div
-                      v-else
-                      class="h-6 mx-auto bg-indigo-200 rounded-xl w-36 animate-pulse"
-                    ></div>
-                  </transition>
-                  <div class="mt-4">
-                    <img
-                      v-if="menuItem"
-                      class="object-cover w-full mx-auto transition-all duration-300 bg-transparent shadow-md rounded-xl sm:w-auto h-60"
-                      :src="menuItem.imgUrl"
-                      alt=""
-                    />
-                  </div>
-                  <div v-if="menuItem.name === 'Salads'">
-                    <div class="w-full my-3 bg-red-200 h-96">test</div>
-                    <div class="w-full my-3 bg-green-200 h-96">test</div>
-                  </div>
-                  <div v-else>stuff</div>
-                </div>
-                <div class="mt-5 sm:mt-6">
-                  <button
-                    type="button"
-                    :class="{
-                      'animate-pulse bg-indigo-200': !menuItem,
-                      'bg-indigo-500': menuItem,
-                    }"
-                    class="inline-flex items-center justify-center w-full h-12 px-6 py-2 text-lg font-semibold text-center transition-all duration-300 rounded-full shadow text-pink-50 hover:bg-indigo-600"
-                    @click="addToBag"
-                  >
-                    {{ menuItem ? 'Add to order' : '' }}
-                  </button>
-                </div>
+                <MenuItem :item="menuItem" />
               </div>
             </div>
           </transition>
@@ -113,11 +74,11 @@ export default {
   data() {
     return {
       open: false,
-      menuItem: false,
+      menuItem: {},
     }
   },
   created() {
-    this.$nuxt.$on('open-modal', ({ menuItem }) => {
+    this.$nuxt.$on('open-modal', (menuItem) => {
       this.open = true
       this.menuItem = menuItem
       setTimeout(() => {
@@ -125,19 +86,17 @@ export default {
         this.$refs.modal.focus()
       }, 100)
     })
-    this.$nuxt.$on('close-modal', () => {
-      this.open = false
-    })
+    this.$nuxt.$on('close-modal', () => this.closeModal())
   },
   beforeDestroy() {
     this.$nuxt.$off('open-modal')
     this.$nuxt.$off('close-modal')
-    this.menuItem = false
+    this.menuItem = {}
   },
   methods: {
-    addToBag() {
-      this.$store.commit('bag/add', this.menuItem.name)
-      this.$nuxt.$emit('close-modal', this.menuItem)
+    closeModal() {
+      this.open = false
+      window.history.pushState({}, null, this.$route.path)
     },
   },
 }

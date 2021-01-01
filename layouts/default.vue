@@ -29,7 +29,7 @@
           '-translate-x-80 transform-gpu':
             $store.state.menu.open && $store.state.menu.direction === 'right',
         }"
-        class="pt-6 pb-32 transition-all duration-300 bg-white dark:bg-gray-800 sm:pb-12 sm:pt-22"
+        class="flex-grow pt-6 pb-32 transition-all duration-300 bg-white dark:bg-gray-800 sm:pb-12 sm:pt-22"
       />
       <Footer />
     </div>
