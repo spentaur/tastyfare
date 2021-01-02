@@ -2,7 +2,7 @@
   <div
     v-show="$store.state.dark.status"
     :class="{
-      dark: $store.state.dark.enabled,
+      dark: dark,
     }"
   >
     <div
@@ -47,6 +47,9 @@ export default {
   computed: {
     opened() {
       return this.$store.state.menu.open || this.$store.state.modal.open
+    },
+    dark() {
+      return this.$store.state.dark.enabled
     },
   },
   head() {
