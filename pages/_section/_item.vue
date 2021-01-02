@@ -11,10 +11,11 @@
 <script>
 export default {
   async asyncData({ $content, app, params, error }) {
-    const item = await $content(
-      params.section.toLowerCase(),
-      params.item.toLowerCase()
-    )
+    const [item] = await $content('menu')
+      .where({
+        section: params.section.toLowerCase(),
+        slug: params.item.toLowerCase(),
+      })
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Item not found' })
