@@ -19,9 +19,17 @@ body {
 .page-slide-left-enter-active,
 .page-slide-left-leave-active,
 .page-slide-right-enter-active,
-.page-slide-right-leave-active {
+.page-slide-right-leave-active,
+.page-slide-down-enter-active,
+.page-slide-down-leave-active,
+.page-slide-up-enter-active,
+.page-slide-up-leave-active,
+.page-shrink-enter-active,
+.page-shrink-leave-active,
+.page-expand-enter-active,
+.page-expand-leave-active {
   @apply transition-all;
-  @apply duration-200;
+  @apply duration-100;
   @apply overflow-hidden;
   @apply ease-in;
 }
@@ -29,35 +37,36 @@ body {
 .page-slide-left-enter,
 .page-slide-right-leave-active {
   @apply opacity-0;
-  @apply transform;
+  @apply transform-gpu;
   @apply translate-x-8;
 }
 
 .page-slide-left-leave-active,
 .page-slide-right-enter {
   @apply opacity-0;
-  @apply transform;
+  @apply transform-gpu;
   @apply -translate-x-8;
 }
 
-.page-enter-active,
-.page-leave-active {
-  @apply transition-opacity;
-  @apply duration-200;
-}
-.page-enter,
-.page-leave-to {
+.page-slide-up-enter,
+.page-slide-down-leave-active {
   @apply opacity-0;
+  @apply transform-gpu;
+  @apply translate-y-8;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  @apply transition-opacity;
-  @apply duration-500;
-}
-.fade-enter,
-.fade-leave-to {
+.page-slide-up-leave-active,
+.page-slide-down-enter {
   @apply opacity-0;
+  @apply transform-gpu;
+  @apply -translate-y-8;
+}
+
+.page-shrink-enter,
+.page-shrink-leave-active {
+  @apply opacity-0;
+  @apply transform-gpu;
+  @apply scale-75;
 }
 
 .lazyLoad {

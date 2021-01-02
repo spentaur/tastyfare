@@ -35,7 +35,9 @@
 
 <script>
 export default {
-  loading: false,
+  transition: {
+    name: 'page-shrink',
+  },
   computed: {
     query() {
       return this.$store.state.search.query

@@ -77,7 +77,6 @@
 
 <script>
 export default {
-  loading: false,
   async asyncData({ $content, route, error }) {
     const sections = await $content('sections')
       .sortBy('position')

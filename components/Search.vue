@@ -23,6 +23,7 @@
         id="search"
         v-model="query"
         name="search"
+        autocomplete="off"
         class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-400 transition-colors duration-300 bg-gray-200 border border-gray-200 rounded-full shadow focus:text-gray-800 dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 focus:ring-indigo-500 dark:focus:bg-white focus:bg-gray-50"
         placeholder="Search for Your Favorites"
         type="search"
