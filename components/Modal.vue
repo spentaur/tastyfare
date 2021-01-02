@@ -1,13 +1,13 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
-    <transition duration="300" @after-leave="menuItem = {}">
+    <transition duration="300" @after-leave="$store.commit('modal/removeData')">
       <div
         v-show="open"
         ref="modal"
         tabindex="0"
         class="fixed inset-0 z-20 overflow-y-auto"
-        @keydown.esc="$nuxt.$emit('close-modal')"
+        @keydown.esc="$store.commit('modal/close')"
       >
         <div
           id="modal"
@@ -18,7 +18,7 @@
               v-show="open"
               class="fixed inset-0 transition-opacity"
               aria-hidden="true"
-              @click="$nuxt.$emit('close-modal')"
+              @click="$store.commit('modal/close')"
             >
               <div
                 class="absolute inset-0 bg-gray-500 opacity-75 dark:bg-gray-800"
@@ -38,7 +38,7 @@
                 <div>
                   <button
                     class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    @click="$nuxt.$emit('close-modal')"
+                    @click="$store.commit('modal/close')"
                   >
                     <span class="sr-only">Close sidebar</span>
                     <!-- Heroicon name: x -->
@@ -59,7 +59,7 @@
                     </svg>
                   </button>
                 </div>
-                <MenuItem :item="menuItem" />
+                <MenuItem :item="$store.state.modal.data" />
               </div>
             </div>
           </transition>
@@ -71,32 +71,19 @@
 
 <script>
 export default {
-  data() {
-    return {
-      open: false,
-      menuItem: {},
-    }
+  computed: {
+    open() {
+      return this.$store.state.modal.open
+    },
   },
-  created() {
-    this.$nuxt.$on('open-modal', (menuItem) => {
-      this.open = true
-      this.menuItem = menuItem
-      setTimeout(() => {
-        this.$refs.modal.scrollTop = 0
-        this.$refs.modal.focus()
-      }, 100)
-    })
-    this.$nuxt.$on('close-modal', () => this.closeModal())
-  },
-  beforeDestroy() {
-    this.$nuxt.$off('open-modal')
-    this.$nuxt.$off('close-modal')
-    this.menuItem = {}
-  },
-  methods: {
-    closeModal() {
-      this.open = false
-      window.history.pushState({}, null, this.$route.path)
+  watch: {
+    open(value) {
+      if (value === true) {
+        setTimeout(() => {
+          this.$refs.modal.scrollTop = 0
+          this.$refs.modal.focus()
+        }, 100)
+      }
     },
   },
 }

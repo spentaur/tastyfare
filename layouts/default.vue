@@ -12,7 +12,7 @@
       <LeftMenu />
       <BagMenu />
       <Navbar />
-      <Nuxt
+      <div
         v-touch:swipe.right="
           () => {
             $store.commit('menu/open', ['left', 'main'])
@@ -29,8 +29,14 @@
           '-translate-x-80 transform-gpu':
             $store.state.menu.open && $store.state.menu.direction === 'right',
         }"
-        class="flex-grow pt-6 pb-32 transition-all duration-300 bg-white dark:bg-gray-800 sm:pb-12 sm:pt-22"
-      />
+        class="flex flex-col flex-grow w-full pt-6 pb-32 mx-auto transition-all duration-300 bg-white lg:flex-row max-w-screen-2xl dark:bg-gray-800 sm:pb-12 sm:pt-22"
+      >
+        <LeftSide />
+        <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+          <Search />
+          <Nuxt />
+        </div>
+      </div>
       <Footer />
     </div>
   </div>
@@ -38,32 +44,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      modalOpen: false,
-    }
-  },
   computed: {
     opened() {
-      return this.$store.state.menu.open || this.modalOpen
-    },
-  },
-  created() {
-    this.$nuxt.$on('open-modal', () => {
-      this.modalOpen = true
-    })
-    this.$nuxt.$on('close-modal', () => {
-      this.modalOpen = false
-    })
-  },
-  methods: {
-    close() {
-      if (this.modalOpen) {
-        this.$nuxt.$emit('close-modal')
-      }
-      if (this.$store.state.menu.open) {
-        this.$store.commit('menu/close')
-      }
+      return this.$store.state.menu.open || this.$store.state.modal.open
     },
   },
   head() {
