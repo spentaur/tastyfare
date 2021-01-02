@@ -12,6 +12,9 @@ export default {
       .catch(() => {
         error({ statusCode: 404, message: 'Section not found' })
       })
+    if (!section) {
+      return error({ statusCode: 404, message: 'Section not found' })
+    }
     const items = await $content('menu')
       .where({ section: section.slug })
       .fetch()
