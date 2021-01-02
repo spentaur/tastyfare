@@ -35,6 +35,7 @@
 
 <script>
 export default {
+  loading: false,
   computed: {
     query() {
       return this.$store.state.search.query
