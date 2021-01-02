@@ -59,7 +59,7 @@ export default {
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {
-    nestedProperties: ['items.slug'],
+    fullTextSearchFields: ['name', 'section'],
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

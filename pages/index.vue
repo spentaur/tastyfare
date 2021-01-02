@@ -38,30 +38,29 @@
     <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <label for="search" class="sr-only">Search</label>
       <div class="relative">
-        <div
-          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+        <button
+          class="block w-full py-2 pl-10 pr-3 font-semibold text-left text-gray-400 placeholder-gray-400 transition-colors duration-300 bg-gray-200 border border-gray-200 rounded-full shadow dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 focus:ring-indigo-500 dark:focus:bg-white"
+          @click="$router.push('search')"
         >
-          <svg
-            class="w-5 h-5 text-gray-400"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
+          <div
+            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
           >
-            <path
-              fill-rule="evenodd"
-              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <input
-          id="search"
-          name="search"
-          class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-400 transition-colors duration-300 bg-gray-200 border border-gray-200 rounded-full shadow focus:text-gray-800 dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 focus:ring-indigo-500 dark:focus:bg-white focus:bg-gray-50"
-          placeholder="Search for Your Favorites"
-          type="search"
-        />
+            <svg
+              class="w-5 h-5 text-gray-400"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          Search for Your Favorites
+        </button>
       </div>
       <div v-for="section in sections" :key="section.title">
         <div class="flex items-center mt-10">
@@ -74,7 +73,7 @@
             v-if="section.title != 'Desserts 🍪'"
             :to="{
               name: 'section',
-              params: { section: section.path },
+              params: { section: section.slug },
             }"
             class="flex items-center justify-center font-bold text-gray-900 transition-all duration-300 bg-gray-300 rounded-full shadow dark:text-gray-300 dark:bg-gray-700 w-9 h-9 sm:hover:bg-indigo-600 sm:dark:bg-gray-700 sm:dark:hover:bg-gray-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
           >
@@ -142,21 +141,19 @@
 <script>
 export default {
   async asyncData({ $content, route, error }) {
-    const sections = await $content()
+    const sections = await $content('sections')
       .sortBy('position')
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' })
       })
+    sections.forEach(async (section) => {
+      section.items = await $content('menu')
+        .where({ section: section.slug })
+        .fetch()
+    })
     return {
       sections,
-    }
-  },
-  data() {
-    return {
-      bag: false,
-      animated: false,
-      clicked: '',
     }
   },
   beforeRouteLeave(to, from, next) {
@@ -175,7 +172,6 @@ export default {
         (element) => element.slug === route.params.item
       )
       this.$nuxt.$emit('open-modal', menuItem)
-      window.history.pushState({}, null, route.path)
     },
   },
 }

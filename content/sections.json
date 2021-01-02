@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Drinks 🥤",
+        "slug": "drinks",
+        "position": 0
+    },
+    {
+        "title": "Entrées 🍽",
+        "slug": "entrees",
+        "position": 1
+    },
+    {
+        "title": "Sides 🍟",
+        "slug": "sides",
+        "position": 2
+    },
+    {
+        "title": "Desserts 🍪",
+        "slug": "desserts",
+        "position": 3
+    }
+]
