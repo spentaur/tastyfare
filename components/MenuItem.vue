@@ -56,7 +56,7 @@ export default {
   methods: {
     addToBag() {
       this.$store.commit('bag/add', this.item.name)
-      this.$nuxt.$emit('close-modal')
+      this.$store.commit('modal/close')
     },
   },
 }
