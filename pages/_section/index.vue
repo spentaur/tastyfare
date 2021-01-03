@@ -57,7 +57,7 @@ export default {
     }
   },
   middleware({ store }) {
-    setTimeout(() => store.commit('search/hideSearch'), 50)
+    setTimeout(() => store.commit('search/hideSearch'), 0)
   },
   transition: {
     name: 'page-slide-left',
