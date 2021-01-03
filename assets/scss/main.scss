@@ -69,6 +69,41 @@ body {
   @apply scale-75;
 }
 
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  @apply transition;
+  @apply duration-100;
+  @apply ease-in-out;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  @apply transform-gpu;
+  @apply -translate-x-8;
+  @apply opacity-0;
+}
+
+.search-slide-enter-active,
+.search-slide-leave-active {
+  @apply transition-all;
+  @apply duration-100;
+  @apply overflow-hidden;
+  @apply ease-in;
+}
+
+.search-slide-enter {
+  @apply opacity-0;
+  @apply transform-gpu;
+  @apply translate-x-8;
+}
+
+.search-slide-leave-active {
+  @apply opacity-0;
+  @apply transform-gpu;
+  @apply -translate-x-8;
+}
+
 .lazyLoad {
   @apply opacity-0;
   @apply transition-opacity;

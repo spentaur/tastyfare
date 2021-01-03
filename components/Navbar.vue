@@ -50,14 +50,13 @@
             class="flex items-center justify-center sm:flex-grow sm:items-stretch sm:justify-start"
           >
             <div class="flex items-center pt-1">
-              <nuxt-link
+              <button
                 class="p-2 focus:outline-none sm:opacity-100"
                 :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
-                to="/"
-                @click.native="$store.commit('menu/close')"
+                @click="$store.commit('menu/close')"
               >
                 <Logo />
-              </nuxt-link>
+              </button>
             </div>
           </div>
           <div

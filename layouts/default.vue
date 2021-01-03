@@ -1,9 +1,12 @@
 <template>
   <div
     v-show="$store.state.dark.status"
+    ref="main"
+    tabindex="0"
     :class="{
       dark: dark,
     }"
+    @keydown.prevent.191="$nuxt.$emit('focus-search')"
   >
     <div
       class="flex flex-col min-h-screen transition-all duration-200 bg-white select-none dark:bg-gray-800"
@@ -33,7 +36,11 @@
       >
         <LeftSide />
         <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <Search />
+          <transition name="search-slide">
+            <Search
+              v-show="$route.name === 'index' || $route.name === 'search'"
+            />
+          </transition>
           <Nuxt />
         </div>
       </div>
@@ -51,6 +58,9 @@ export default {
     dark() {
       return this.$store.state.dark.enabled
     },
+  },
+  mounted() {
+    this.$refs.main.focus()
   },
   head() {
     return {

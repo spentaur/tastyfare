@@ -1,7 +1,27 @@
 <template>
-  <div>
+  <div class="flex items-center mb-10">
+    <transition name="slide-fade">
+      <div v-if="$route.name === 'search'">
+        <nuxt-link to="/">
+          <svg
+            class="w-6 h-6 mr-4 text-gray-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </nuxt-link>
+      </div>
+    </transition>
     <label for="search" class="sr-only">Search</label>
-    <div class="relative">
+    <div class="relative flex-grow transition-all duration-300">
       <div
         class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
       >
@@ -21,12 +41,14 @@
       </div>
       <input
         id="search"
+        ref="search"
         v-model="query"
         name="search"
         autocomplete="off"
         class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-400 transition-colors duration-300 bg-gray-200 border border-gray-200 rounded-full shadow focus:text-gray-800 dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 focus:ring-indigo-500 dark:focus:bg-white focus:bg-gray-50"
         placeholder="Search for Your Favorites"
         type="search"
+        @keydown.esc="home"
         @click="$router.push('search')"
       />
     </div>
@@ -43,6 +65,21 @@ export default {
       set(value) {
         this.$store.commit('search/updateQuery', value)
       },
+    },
+  },
+  created() {
+    this.$nuxt.$on('focus-search', () => {
+      this.$refs.search.focus()
+      this.$router.push('search')
+    })
+  },
+  beforeDestroy() {
+    this.$nuxt.$off('focus-search')
+  },
+  methods: {
+    home() {
+      this.$router.push('/')
+      this.$refs.search.blur()
     },
   },
 }
