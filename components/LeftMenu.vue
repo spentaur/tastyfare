@@ -1,12 +1,5 @@
 <template>
-  <Menu
-    v-touch:swipe.left="
-      () => {
-        $store.commit('menu/close')
-      }
-    "
-    name="main"
-  >
+  <Menu name="main">
     <div>
       <button
         class="text-indigo-200 hover:text-indigo-100 focus:outline-none"

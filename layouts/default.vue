@@ -16,16 +16,6 @@
       <BagMenu />
       <Navbar />
       <div
-        v-touch:swipe.right="
-          () => {
-            $store.commit('menu/open', ['left', 'main'])
-          }
-        "
-        v-touch:swipe.left="
-          () => {
-            $store.commit('menu/open', ['right', 'bag'])
-          }
-        "
         :class="{
           'translate-x-80 transform-gpu':
             $store.state.menu.open && $store.state.menu.direction === 'left',
