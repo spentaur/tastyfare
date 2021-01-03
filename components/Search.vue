@@ -7,7 +7,7 @@
           @click="$router.back()"
         >
           <svg
-            class="mr-3 w-7 h-7 dark:filter-logo-dark filter-logo"
+            class="mr-2 w-7 h-7 dark:filter-logo-dark filter-logo"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
