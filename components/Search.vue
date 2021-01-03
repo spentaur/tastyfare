@@ -1,8 +1,8 @@
 <template>
-  <div class="flex items-center mb-10">
+  <div class="flex items-center">
     <transition name="slide-fade">
       <div v-if="$route.name === 'search'">
-        <nuxt-link to="/">
+        <button @click="$router.back()">
           <svg
             class="w-6 h-6 mr-4 text-gray-400"
             xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@
               d="M15 19l-7-7 7-7"
             />
           </svg>
-        </nuxt-link>
+        </button>
       </div>
     </transition>
     <label for="search" class="sr-only">Search</label>

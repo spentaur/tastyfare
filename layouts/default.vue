@@ -37,9 +37,7 @@
         <LeftSide />
         <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <transition name="search-slide">
-            <Search
-              v-show="$route.name === 'index' || $route.name === 'search'"
-            />
+            <Search v-if="showSearch" />
           </transition>
           <Nuxt />
         </div>
@@ -57,6 +55,9 @@ export default {
     },
     dark() {
       return this.$store.state.dark.enabled
+    },
+    showSearch() {
+      return this.$store.state.search.show
     },
   },
   mounted() {

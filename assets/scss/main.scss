@@ -87,7 +87,7 @@ body {
 .search-slide-enter-active,
 .search-slide-leave-active {
   @apply transition-all;
-  @apply duration-100;
+  @apply duration-200;
   @apply overflow-hidden;
   @apply ease-in;
 }
