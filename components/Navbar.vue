@@ -51,12 +51,20 @@
           >
             <div class="flex items-center pt-1">
               <button
-                class="p-2 focus:outline-none sm:opacity-100"
+                class="p-2 sm:hidden focus:outline-none sm:opacity-100"
                 :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
-                @click="$store.commit('menu/close')"
+                @click="homeClick"
               >
                 <Logo />
               </button>
+              <nuxt-link
+                to="/"
+                class="hidden p-2 sm:block focus:outline-none sm:opacity-100"
+                :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
+                @click.native="$store.commit('menu/close')"
+              >
+                <Logo />
+              </nuxt-link>
             </div>
           </div>
           <div
@@ -115,6 +123,14 @@ export default {
   computed: {
     bag() {
       return this.$store.state.bag
+    },
+  },
+  methods: {
+    homeClick() {
+      if (!this.$store.state.menu.open) {
+        this.$router.push('/')
+      }
+      this.$store.commit('menu/close')
     },
   },
 }

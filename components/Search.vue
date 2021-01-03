@@ -2,9 +2,12 @@
   <div class="flex items-center">
     <transition name="slide-fade">
       <div v-if="$route.name === 'search'">
-        <button @click="$router.back()">
+        <button
+          class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
+          @click="$router.back()"
+        >
           <svg
-            class="w-6 h-6 mr-4 text-gray-400"
+            class="mr-3 w-7 h-7 dark:filter-logo-dark filter-logo"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
