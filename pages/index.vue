@@ -81,6 +81,8 @@ export default {
       const section = this.sections.find(
         (element) => element.slug === route.params.section
       )
+      // eslint-disable-next-line no-console
+      console.log(route.params.item)
       const menuItem = section.items.find(
         (element) => element.slug === route.params.item
       )

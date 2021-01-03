@@ -10,7 +10,7 @@
       <nuxt-link
         :to="{
           name: 'section-item',
-          params: { section: menuItem.slug, item: menuItem.slug },
+          params: { section: menuItem.section, item: menuItem.slug },
         }"
         class="text-gray-900 transition duration-100 transform dark:text-gray-200"
       >

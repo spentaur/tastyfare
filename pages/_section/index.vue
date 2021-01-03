@@ -25,7 +25,7 @@
         {{ section.title }}
       </div>
     </div>
-    <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-6xl">
       <div>
         <Items :items="items" />
       </div>
@@ -57,12 +57,27 @@ export default {
     }
   },
   middleware({ store }) {
-    setTimeout(() => store.commit('search/hideSearch'), 0)
+    store.commit('search/hideSearch')
   },
   transition: {
     name: 'page-slide-left',
     afterLeave(el) {
       this.$store.commit('search/showSearch')
+    },
+  },
+  beforeRouteLeave(to, from, next) {
+    if (to.name === 'section-item') {
+      this.displayProductModal(to)
+    } else {
+      next()
+    }
+  },
+  methods: {
+    displayProductModal(route) {
+      const menuItem = this.items.find(
+        (element) => element.slug === route.params.item
+      )
+      this.$store.commit('modal/open', menuItem)
     },
   },
 }
