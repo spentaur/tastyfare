@@ -30,7 +30,7 @@
     </div>
     <div class="w-full max-w-6xl">
       <div>
-        <Items :items="items" />
+        <Items :items="items" :section="section" />
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@ export default {
       return error({ statusCode: 404, message: 'Section not found' })
     }
     const items = await $content('menu')
-      .where({ section: section.slug })
+      .where({ section: { $contains: section.slug } })
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Items not found' })

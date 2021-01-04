@@ -43,7 +43,7 @@ export default {
   async asyncData({ $content, app, params, error }) {
     const [item] = await $content('menu')
       .where({
-        section: params.section.toLowerCase(),
+        section: { $contains: params.section.toLowerCase() },
         slug: params.item.toLowerCase(),
       })
       .fetch()

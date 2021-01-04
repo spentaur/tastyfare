@@ -61,7 +61,7 @@ export default {
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {
-    fullTextSearchFields: ['name', 'section'],
+    fullTextSearchFields: ['name'],
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

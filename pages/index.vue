@@ -32,7 +32,7 @@
           </svg>
         </nuxt-link>
       </div>
-      <Items :items="section.items" />
+      <Items :items="section.items" :section="section" />
     </div>
     <div
       class="w-full mt-12 mb-2 text-lg font-bold text-center text-indigo-500 dark:text-indigo-400"
@@ -64,7 +64,7 @@ export default {
       })
     sections.forEach(async (section) => {
       section.items = await $content('menu')
-        .where({ section: section.slug })
+        .where({ section: { $contains: section.slug } })
         .limit(5)
         .fetch()
     })

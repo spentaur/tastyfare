@@ -10,7 +10,10 @@
       <nuxt-link
         :to="{
           name: 'section-item',
-          params: { section: menuItem.section, item: menuItem.slug },
+          params: {
+            section: section.slug || menuItem.section[0],
+            item: menuItem.slug,
+          },
         }"
         class="text-gray-900 transition duration-100 transform dark:text-gray-200"
       >
@@ -36,6 +39,12 @@ export default {
       type: Array,
       default() {
         return []
+      },
+    },
+    section: {
+      type: Object,
+      default() {
+        return {}
       },
     },
   },
