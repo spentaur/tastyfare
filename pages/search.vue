@@ -6,7 +6,7 @@
         v-else-if="query && items.length === 0 && loading === false"
         class="flex items-center justify-center mt-8 text-2xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
       >
-        No matching items.
+        No matching items
       </div>
     </transition>
   </div>
