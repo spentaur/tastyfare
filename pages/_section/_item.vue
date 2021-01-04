@@ -30,7 +30,7 @@
     </div>
     <div class="flex items-center justify-center text-center sm:p-0">
       <div
-        class="relative flex flex-col flex-1 w-full px-3 pt-4 pb-6 bg-white dark:bg-gray-700 sm:max-w-xl"
+        class="relative flex flex-col flex-1 w-full px-3 pt-4 pb-6 sm:max-w-xl"
       >
         <MenuItem :item="item" />
       </div>
