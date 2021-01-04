@@ -1,21 +1,25 @@
 [
     {
-        "title": "Drinks 🥤",
+        "title": "Drinks",
+        "emoji": "🥤",
         "slug": "drinks",
         "position": 0
     },
     {
-        "title": "Entrées 🍽",
+        "title": "Entrées",
+        "emoji": "🍽",
         "slug": "entrees",
         "position": 1
     },
     {
-        "title": "Sides 🍟",
+        "title": "Sides",
+        "emoji": "🍟",
         "slug": "sides",
         "position": 2
     },
     {
-        "title": "Desserts 🍪",
+        "title": "Desserts",
+        "emoji": "🍪",
         "slug": "desserts",
         "position": 3
     }

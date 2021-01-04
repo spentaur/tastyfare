@@ -1,18 +1,6 @@
 <template>
   <div>
-    <div class="">
-      <transition name="fade" mode="out-in">
-        <div
-          v-if="item"
-          class="flex-grow text-2xl font-semibold text-center text-gray-900 dark:text-gray-200 text-shadow-sm"
-        >
-          {{ item.name }}
-        </div>
-        <div
-          v-else
-          class="h-6 mx-auto bg-indigo-200 rounded-xl w-36 animate-pulse"
-        ></div>
-      </transition>
+    <div>
       <div class="mt-4">
         <img
           v-if="item"

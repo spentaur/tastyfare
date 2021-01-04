@@ -32,20 +32,8 @@ export default {
       this.$store.commit('search/addItems', items)
     },
   },
-  beforeRouteLeave(to, from, next) {
-    if (to.name === 'section-item') {
-      this.displayProductModal(to)
-    } else {
-      next()
-    }
-  },
-  methods: {
-    displayProductModal(route) {
-      const menuItem = this.items.find(
-        (element) => element.slug === route.params.item
-      )
-      this.$store.commit('modal/open', menuItem)
-    },
+  middleware({ store }) {
+    store.commit('search/showSearch')
   },
 }
 </script>

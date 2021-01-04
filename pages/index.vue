@@ -5,10 +5,10 @@
         <div
           class="flex-grow text-3xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
         >
-          {{ section.title }}
+          {{ section.title }} {{ section.emoji }}
         </div>
         <nuxt-link
-          v-if="section.title != 'Desserts 🍪'"
+          v-if="section.title != 'Desserts'"
           :to="{
             name: 'section',
             params: { section: section.slug },
@@ -52,6 +52,9 @@
 
 <script>
 export default {
+  middleware({ store }) {
+    setTimeout(() => store.commit('search/showSearch'), 150)
+  },
   async asyncData({ $content, route, error }) {
     const sections = await $content('sections')
       .sortBy('position')
@@ -68,26 +71,6 @@ export default {
     return {
       sections,
     }
-  },
-  beforeRouteLeave(to, from, next) {
-    if (to.name === 'section-item') {
-      this.displayProductModal(to)
-    } else {
-      next()
-    }
-  },
-  methods: {
-    displayProductModal(route) {
-      const section = this.sections.find(
-        (element) => element.slug === route.params.section
-      )
-      // eslint-disable-next-line no-console
-      console.log(route.params.item)
-      const menuItem = section.items.find(
-        (element) => element.slug === route.params.item
-      )
-      this.$store.commit('modal/open', menuItem)
-    },
   },
 }
 </script>
