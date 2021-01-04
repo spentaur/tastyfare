@@ -29,7 +29,7 @@ module.exports = {
         },
         'small-ping': {
           '0%': { transform: 'scale(1)' },
-          '75%, 100%': { transform: 'scale(1.1)' },
+          '75%, 100%': { transform: 'scale(1.07)' },
         },
       },
       padding: {
