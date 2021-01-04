@@ -25,7 +25,7 @@
       <div
         class="flex-grow text-2xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
       >
-        {{ section.title }} {{ section.emoji }} / {{ item.name }}
+        {{ item.name }}
       </div>
     </div>
     <div class="flex items-center justify-center text-center sm:p-0">
