@@ -23,7 +23,7 @@
         </button>
       </div>
       <div
-        class="flex-grow text-xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
+        class="flex-grow text-2xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
       >
         {{ section.title }} {{ section.emoji }} / {{ item.name }}
       </div>
