@@ -21,8 +21,10 @@
         :class="{
           'animate-pulse bg-indigo-200': !item,
           'bg-indigo-500': item,
+          'animate-small-ping-1-100': animated,
         }"
         class="inline-flex items-center justify-center w-full h-12 px-6 py-2 text-lg font-semibold text-center transition-all duration-300 rounded-full shadow text-pink-50 hover:bg-indigo-600"
+        @animationend="animated = false"
         @click="addToBag"
       >
         {{ item ? 'Add to order' : '' }}
@@ -41,10 +43,16 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      animated: false,
+    }
+  },
   methods: {
     addToBag() {
       this.$store.commit('bag/add', this.item.name)
       this.$store.commit('modal/close')
+      this.animated = true
     },
   },
 }
