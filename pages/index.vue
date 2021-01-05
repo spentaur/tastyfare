@@ -139,16 +139,6 @@
           class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
-            src="emojis/shrimp.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
-            alt=""
-          />
-          Seafood
-        </li>
-        <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
-        >
-          <img
             src="emojis/salt.svg"
             class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
