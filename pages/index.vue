@@ -6,151 +6,151 @@
         @scroll="scrolled"
       >
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/chicken.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Chicken
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/burger.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Burgers
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/pizza.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Pizza
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/sandwich.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Sandwiches
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/burrito.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Burritos
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/taco.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Tacos
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/noodles.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Noodles
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/fries.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Sides
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/ice-cream.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Sweets
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
-            src="emojis/drink.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            src="emojis/juice-box.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Drinks
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/salad.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Salads
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/pancakes.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Breakfast
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/soup.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Soups
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/shrimp.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Seafood
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
         >
           <img
             src="emojis/salt.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
             alt=""
           />
           Extras
@@ -158,7 +158,7 @@
       </ul>
       <transition name="fade">
         <div
-          v-if="unscrolled"
+          v-if="unscrolled && !$store.state.dark.enabled"
           class="absolute top-0 right-0 hidden w-32 h-full transition duration-300 sm:flex overflow-button"
         ></div>
       </transition>
