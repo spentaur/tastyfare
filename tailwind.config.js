@@ -62,6 +62,7 @@ module.exports = {
           '0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
         'lg-top':
           '0 -10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05);',
+        logo: '3px 3px 0px rgba(249, 168, 212, 0.5);',
       },
       translate: { '-1/25': '-4%' },
       rotate: {
