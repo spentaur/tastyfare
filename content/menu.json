@@ -95,5 +95,18 @@
     "name": "Cookies",
     "slug": "cookies",
     "section": ["desserts"]
+  },
+  {
+    "imgUrl": "https://images.unsplash.com/photo-1601391554611-2b4b90b0d364?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+    "name": "Shakes",
+    "other-names": "Ice cream shake",
+    "slug": "shakes",
+    "section": ["desserts"]
+  },
+  {
+    "imgUrl": "https://images.unsplash.com/photo-1602079185145-8de7ba0b4353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80",
+    "name": "Cupcakes",
+    "slug": "cupcakes",
+    "section": ["desserts"]
   }
 ]
