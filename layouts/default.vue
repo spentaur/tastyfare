@@ -22,9 +22,9 @@
           '-translate-x-80 transform-gpu':
             $store.state.menu.open && $store.state.menu.direction === 'right',
         }"
-        class="flex flex-col flex-grow w-full pt-6 pb-32 mx-auto transition-all duration-300 bg-white lg:flex-row max-w-screen-2xl dark:bg-gray-800 sm:pb-12 sm:pt-22"
+        class="flex flex-col justify-center flex-grow w-full pt-6 pb-32 mx-auto transition-all duration-300 bg-white lg:flex-row max-w-screen-2xl dark:bg-gray-800 sm:pb-12 sm:pt-22"
       >
-        <LeftSide />
+        <!-- <LeftSide /> -->
         <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <transition name="search-slide">
             <Search v-if="showSearch" />

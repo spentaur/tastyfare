@@ -1,6 +1,101 @@
 <template>
   <div>
-    <div v-for="section in sections" :key="section.title">
+    <div v-for="(section, index) in sections" :key="section.title">
+      <ul
+        v-if="index === 1"
+        class="grid grid-cols-1 gap-4 my-10 mt-4 sm:grid-cols-3"
+      >
+        <li
+          class="flex flex-col justify-center w-full col-span-1 p-2 mx-auto transition-all duration-300 border-8 border-indigo-200 shadow sm:shadow-2xl dark:text-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1606788075765-42f69501a452?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            class="object-cover object-center rounded-lg h-44"
+            alt=""
+          />
+          <div class="flex items-center mt-2 mb-1">
+            <img
+              class="inline-block w-8 h-8 mr-2 rounded-full"
+              src="https://images.unsplash.com/profile-1600897570640-2237a383bacdimage?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff"
+              alt=""
+            />
+            <div class="flex-grow text-lg font-extrabold text-shadow-sm">
+              Jimmy Dean
+            </div>
+            <div
+              class="flex items-center text-sm text-gray-400 dark:text-gray-600"
+            >
+              Ad
+            </div>
+          </div>
+          <nuxt-link
+            to="https://ad.doubleclick.net/ddm/trackclk/N470801.3286893UNSPLASH/B25023030.288613513;dc_trk_aid=481873727;dc_trk_cid=131547872;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua="
+            class="text-gray-500 dark:text-gray-400"
+          >
+            Today’s Your Day to Shine On
+          </nuxt-link>
+        </li>
+        <li
+          class="flex flex-col justify-center w-full col-span-1 p-2 mx-auto transition-all duration-300 border-8 border-indigo-200 shadow sm:shadow-2xl dark:text-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-2xl"
+        >
+          <img
+            src="https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/800x450/format/jpg/quality/85/https://s.aolcdn.com/os/ab/_cms/2019/12/26025833/rivian-r1t-proto-blue-tofino.jpg"
+            class="object-cover object-center rounded-lg h-44"
+            alt=""
+          />
+          <div class="flex items-center mt-2 mb-1">
+            <img
+              class="inline-block w-8 h-8 mr-2 rounded-full"
+              src="https://pbs.twimg.com/profile_images/1199724774613606402/ZTAmKeoe_400x400.jpg"
+              alt=""
+            />
+            <div class="flex-grow text-lg font-extrabold text-shadow-sm">
+              Rivian
+            </div>
+            <div
+              class="flex items-center text-sm text-gray-400 dark:text-gray-600"
+            >
+              Ad
+            </div>
+          </div>
+          <nuxt-link
+            to="https://t.co/9CoF88T80b?amp=1"
+            class="text-gray-500 dark:text-gray-400"
+          >
+            Keep the world adventurous forever.
+          </nuxt-link>
+        </li>
+        <li
+          class="flex flex-col justify-center w-full col-span-1 p-2 mx-auto transition-all duration-300 border-8 border-indigo-200 shadow sm:shadow-2xl dark:text-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-2xl"
+        >
+          <img
+            src="https://photos5.appleinsider.com/gallery/33342-58359-191025-iPhonePrivacy-xl.jpg"
+            class="object-cover object-center rounded-lg h-44"
+            alt=""
+          />
+          <div class="flex items-center mt-2 mb-1">
+            <img
+              class="inline-block w-8 h-8 mr-2 rounded-full"
+              src="https://pbs.twimg.com/profile_images/1283958620359516160/p7zz5dxZ_400x400.jpg"
+              alt=""
+            />
+            <div class="flex-grow text-lg font-extrabold text-shadow-sm">
+              Apple
+            </div>
+            <div
+              class="flex items-center text-sm text-gray-400 dark:text-gray-600"
+            >
+              Ad
+            </div>
+          </div>
+          <nuxt-link
+            to="https://ad.doubleclick.net/ddm/trackclk/N470801.3286893UNSPLASH/B25023030.288613513;dc_trk_aid=481873727;dc_trk_cid=131547872;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua="
+            class="text-gray-500 dark:text-gray-400"
+          >
+            Privacy. That's iPhone.
+          </nuxt-link>
+        </li>
+      </ul>
       <div class="flex items-center mt-10">
         <div
           class="flex-grow text-3xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
