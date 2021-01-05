@@ -3,7 +3,7 @@
     <div v-for="(section, index) in sections" :key="section.title">
       <ul
         v-if="index === 1"
-        class="grid grid-cols-1 gap-4 my-10 sm:grid-cols-3"
+        class="grid grid-cols-1 gap-4 mt-10 mb-16 sm:grid-cols-3"
       >
         <Ad v-for="ad in ads" :key="ad.name" :ad="ad" />
       </ul>

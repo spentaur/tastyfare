@@ -1,6 +1,6 @@
 <template>
   <li
-    class="flex flex-col justify-center w-full col-span-1 p-2 mx-auto transition-all duration-300 border-8 border-indigo-200 shadow sm:shadow-2xl dark:text-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-2xl"
+    class="flex flex-col justify-center w-full col-span-1 p-2 mx-auto transition-all duration-300 border-8 border-indigo-200 shadow-md sm:shadow-2xl dark:text-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-2xl"
   >
     <img
       :src="ad.img"
