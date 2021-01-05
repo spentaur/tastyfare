@@ -1,5 +1,96 @@
 <template>
   <div>
+    <div class="relative w-full mt-5">
+      <ul
+        class="grid grid-flow-col overflow-y-scroll sections auto-cols-max"
+        @scroll="scrolled"
+      >
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/chicken.svg" class="w-12 h-12" alt="" />
+          Chicken
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/burger.svg" class="w-12 h-12" alt="" />
+          Burgers
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/pizza.svg" class="w-12 h-12" alt="" />
+          Pizza
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/sandwich.svg" class="w-12 h-12" alt="" />
+          Sandwiches
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/burrito.svg" class="w-12 h-12" alt="" />
+          Mexican
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/noodles.svg" class="w-12 h-12" alt="" />
+          Noodles
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/fries.svg" class="w-12 h-12" alt="" />
+          Sides
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/ice-cream.svg" class="w-12 h-12" alt="" />
+          Sweets
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/drink.svg" class="w-12 h-12" alt="" />
+          Drinks
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/salad.svg" class="w-12 h-12" alt="" />
+          Salads
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/pancakes.svg" class="w-12 h-12" alt="" />
+          Breakfast
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/soup.svg" class="w-12 h-12" alt="" />
+          Soups
+        </li>
+        <li
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+        >
+          <img src="emojis/shrimp.svg" class="w-12 h-12" alt="" />
+          Seafood
+        </li>
+      </ul>
+      <transition name="fade">
+        <div
+          v-if="unscrolled"
+          class="absolute top-0 right-0 hidden w-32 h-full transition duration-300 sm:flex overflow-button"
+        ></div>
+      </transition>
+    </div>
     <div v-for="(section, index) in sections" :key="section.title">
       <ul
         v-if="index === 1"
@@ -7,7 +98,7 @@
       >
         <Ad v-for="ad in ads" :key="ad.name" :ad="ad" />
       </ul>
-      <div class="flex items-center mt-10">
+      <div class="flex items-center mt-5">
         <div
           class="flex-grow text-3xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
         >
@@ -85,6 +176,18 @@ export default {
       ads,
     }
   },
+  data() {
+    return {
+      unscrolled: true,
+    }
+  },
+  methods: {
+    scrolled(e) {
+      if (e.target.scrollLeft > 80) {
+        this.unscrolled = false
+      }
+    },
+  },
 }
 </script>
 
@@ -93,5 +196,14 @@ export default {
   img {
     @apply sm:shadow-xl scale-105;
   }
+}
+
+.overflow-button {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 40%,
+    rgb(255, 255, 255) 100%
+  );
 }
 </style>
