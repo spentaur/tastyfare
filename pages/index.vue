@@ -10,7 +10,7 @@
         >
           <img
             src="emojis/chicken.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Chicken
@@ -20,7 +20,7 @@
         >
           <img
             src="emojis/burger.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Burgers
@@ -30,7 +30,7 @@
         >
           <img
             src="emojis/pizza.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Pizza
@@ -40,7 +40,7 @@
         >
           <img
             src="emojis/sandwich.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Sandwiches
@@ -50,7 +50,7 @@
         >
           <img
             src="emojis/burrito.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Burritos
@@ -60,7 +60,7 @@
         >
           <img
             src="emojis/taco.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Tacos
@@ -70,7 +70,7 @@
         >
           <img
             src="emojis/noodles.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Noodles
@@ -80,7 +80,7 @@
         >
           <img
             src="emojis/fries.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Sides
@@ -90,7 +90,7 @@
         >
           <img
             src="emojis/ice-cream.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Sweets
@@ -100,7 +100,7 @@
         >
           <img
             src="emojis/juice-box.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Drinks
@@ -110,7 +110,7 @@
         >
           <img
             src="emojis/salad.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Salads
@@ -120,7 +120,7 @@
         >
           <img
             src="emojis/pancakes.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Breakfast
@@ -130,7 +130,7 @@
         >
           <img
             src="emojis/soup.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Soups
@@ -140,7 +140,7 @@
         >
           <img
             src="emojis/shrimp.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Seafood
@@ -150,7 +150,7 @@
         >
           <img
             src="emojis/salt.svg"
-            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo dark:filter-logo-dark"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 filter-logo opacity-70 hover:opacity-100 dark:filter-logo-dark"
             alt=""
           />
           Extras

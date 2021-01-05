@@ -1,6 +1,6 @@
 <template>
   <div class="w-full max-w-6xl">
-    <transition name="fade" mode="out-in">
+    <transition name="fade-fast" mode="out-in">
       <Items v-if="query && items.length > 0" :items="items" />
       <div
         v-else-if="query && items.length === 0 && loading === false"
