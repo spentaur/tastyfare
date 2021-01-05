@@ -6,93 +6,153 @@
         @scroll="scrolled"
       >
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/chicken.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/chicken.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Chicken
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/burger.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/burger.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Burgers
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/pizza.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/pizza.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Pizza
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/sandwich.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/sandwich.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Sandwiches
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/burrito.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/burrito.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Burritos
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/taco.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/taco.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Tacos
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/noodles.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/noodles.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Noodles
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/fries.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/fries.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Sides
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/ice-cream.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/ice-cream.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Sweets
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/drink.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/drink.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Drinks
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/salad.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/salad.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Salads
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/pancakes.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/pancakes.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Breakfast
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/soup.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/soup.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Soups
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/shrimp.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/shrimp.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Seafood
         </li>
         <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm text-shadow-sm"
+          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer text-shadow-sm"
         >
-          <img src="emojis/salt.svg" class="w-12 h-12 mb-2" alt="" />
+          <img
+            src="emojis/salt.svg"
+            class="w-12 h-12 mb-2 transform-gpu hover:scale-110 hover:rotate-3 opacity-70 filter-logo hover:opacity-100"
+            alt=""
+          />
           Extras
         </li>
       </ul>

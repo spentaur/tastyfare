@@ -91,7 +91,7 @@ module.exports = {
         },
       }
 
-      addUtilities(newUtilities, ['responsive', 'dark'])
+      addUtilities(newUtilities, ['responsive', 'dark', 'hover'])
     }),
   ],
 }
