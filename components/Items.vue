@@ -1,10 +1,9 @@
 <template>
-  <ul
-    class="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5"
-  >
+  <ul class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-4 lg:grid-cols-5">
     <li
-      v-for="menuItem in items"
+      v-for="(menuItem, index) in items"
       :key="menuItem.name"
+      :class="{ 'hidden lg:block': index === 4 && $route.name === 'index' }"
       class="flex flex-col col-span-1 text-center transition-all duration-300 card"
     >
       <nuxt-link
@@ -19,7 +18,7 @@
       >
         <div class="flex flex-col flex-1 sm:p-4">
           <img
-            class="object-cover w-full mx-auto transition duration-100 bg-transparent shadow-md rounded-xl transform-gpu sm:w-44 h-44"
+            class="object-cover w-full mx-auto transition duration-100 bg-transparent shadow-md rounded-xl transform-gpu md:w-44 h-44"
             :src="menuItem.imgUrl"
             alt=""
           />
