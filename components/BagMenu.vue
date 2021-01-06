@@ -1,6 +1,6 @@
 <template>
   <Menu name="bag">
-    <div>
+    <div class="main">
       <div
         class="text-xl font-semibold text-gray-900 dark:text-gray-200 text-shadow-sm"
       >

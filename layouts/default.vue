@@ -56,7 +56,7 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: this.opened ? 'overflow-hidden' : '',
+        class: this.opened ? 'overflow-hidden h-screen w-screen' : '',
       },
     }
   },
