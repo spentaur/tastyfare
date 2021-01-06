@@ -17,7 +17,7 @@
             <div class="flex items-center h-full px-2 sm:px-6">
               <button
                 id="side-menu"
-                class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
+                class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
                 @click="$store.commit('menu/open', ['left', 'main'])"
               >
@@ -49,7 +49,7 @@
           >
             <div class="flex items-center pt-1">
               <button
-                class="p-2 sm:hidden focus:outline-none sm:opacity-100"
+                class="p-2 nav-button sm:hidden focus:outline-none sm:opacity-100"
                 :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
                 @click="homeClick"
               >
@@ -57,7 +57,7 @@
               </button>
               <nuxt-link
                 to="/"
-                class="hidden p-2 sm:block focus:outline-none sm:opacity-100"
+                class="hidden p-2 nav-button sm:block focus:outline-none sm:opacity-100"
                 :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
                 @click.native="$store.commit('menu/close')"
               >
@@ -72,7 +72,7 @@
               <span class="relative inline-block">
                 <button
                   id="bag"
-                  class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full dark:text-indigo-200 focus:outline-none"
+                  class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                   aria-haspopup="true"
                   @click="$store.commit('menu/open', ['right', 'bag'])"
                 >
@@ -139,10 +139,10 @@ export default {
 nav {
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
-  background-color: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(3px);
 }
 .dark nav {
-  background-color: rgba(31, 41, 55, 0.88);
+  background-color: rgba(31, 41, 55, 0.86);
 }
 </style>

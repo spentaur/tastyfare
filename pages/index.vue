@@ -25,9 +25,6 @@
         ></div>
       </transition>
     </div>
-    <div
-      class="w-full h-32 mt-5 bg-green-100 border-8 border-green-50 rounded-2xl"
-    ></div>
 
     <div v-for="(section, index) in sections" :key="section.title">
       <ul

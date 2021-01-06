@@ -48,7 +48,7 @@
         v-model="query"
         name="search"
         autocomplete="off"
-        class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-500 transition-colors duration-300 bg-gray-100 border-2 border-transparent rounded-full shadow-lg dark:placeholder-gray-300 focus:text-gray-800 dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 dark:focus:placeholder-gray-500 focus:ring-indigo-100 focus:border-indigo-100 dark:focus:bg-white focus:bg-gray-50"
+        class="block w-full py-2 pl-10 pr-3 font-semibold text-gray-400 placeholder-gray-500 transition-colors duration-300 bg-gray-200 border-2 border-transparent rounded-full shadow-lg dark:placeholder-gray-300 focus:text-gray-800 dark:border-transparent dark:bg-gray-700 dark:focus:ring-gray-600 dark:focus:placeholder-gray-500 focus:ring-indigo-100 focus:border-indigo-100 dark:focus:bg-white focus:bg-gray-50"
         placeholder="Search for Your Favorites"
         type="search"
         @keydown.esc="home"
