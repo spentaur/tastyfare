@@ -17,20 +17,16 @@
           />
           {{ section.title }}
         </li>
-        <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
-        ></li>
-        <li
-          class="flex flex-col items-center justify-center px-6 py-3 text-sm cursor-pointer dark:text-gray-200 text-shadow-sm"
-        ></li>
       </ul>
       <transition name="fade">
         <div
-          v-show="unscrolled"
+          v-if="unscrolled"
           class="absolute top-0 right-0 hidden w-32 h-full transition duration-300 sm:flex overflow-button"
         ></div>
       </transition>
     </div>
+
+    <Ads :ads="ads" />
 
     <div
       class="w-full mt-12 mb-2 text-lg font-bold text-center text-indigo-500 dark:text-gray-200"
@@ -112,7 +108,7 @@ export default {
 .dark .overflow-button {
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0) 0%,
+    rgba(31, 41, 55, 0) 0%,
     rgba(31, 41, 55, 0.8) 40%,
     rgb(31, 41, 55) 100%
   );
