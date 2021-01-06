@@ -1,26 +1,86 @@
 [
-    {
-        "title": "Drinks",
-        "emoji": "🥤",
-        "slug": "drinks",
-        "position": 0
-    },
-    {
-        "title": "Entrées",
-        "emoji": "🍽",
-        "slug": "entrees",
-        "position": 1
-    },
-    {
-        "title": "Sides",
-        "emoji": "🍟",
-        "slug": "sides",
-        "position": 2
-    },
-    {
-        "title": "Desserts",
-        "emoji": "🍪",
-        "slug": "desserts",
-        "position": 3
-    }
+  {
+    "title": "Chicken",
+    "emoji": "chicken",
+    "slug": "chicken",
+    "position": 0
+  },
+  {
+    "title": "Burgers",
+    "emoji": "burger",
+    "slug": "burgers",
+    "position": 1
+  },
+  {
+    "title": "Pizza",
+    "emoji": "pizza",
+    "slug": "pizza",
+    "position": 2
+  },
+  {
+    "title": "Sandwiches",
+    "emoji": "sandwich",
+    "slug": "sandwiches",
+    "position": 3
+  },
+  {
+    "title": "Burritos",
+    "emoji": "burrito",
+    "slug": "burritos",
+    "position": 4
+  },
+  {
+    "title": "Tacos",
+    "emoji": "taco",
+    "slug": "tacos",
+    "position": 5
+  },
+  {
+    "title": "Noodles",
+    "emoji": "noodles",
+    "slug": "noodles",
+    "position": 6
+  },
+  {
+    "title": "Sides",
+    "emoji": "fries",
+    "slug": "sides",
+    "position": 7
+  },
+  {
+    "title": "Sweets",
+    "emoji": "ice-cream",
+    "slug": "sweets",
+    "position": 8
+  },
+  {
+    "title": "Drinks",
+    "emoji": "juice-box",
+    "slug": "drinks",
+    "position": 9
+  },
+  {
+    "title": "Salads",
+    "emoji": "salad",
+    "slug": "salads",
+    "position": 10
+  },
+  {
+    "title": "Breakfast",
+    "emoji": "pancakes",
+    "slug": "breakfast",
+    "position": 11
+  },
+  {
+    "title": "Soups",
+    "emoji": "soup",
+    "slug": "soups",
+    "position": 12
+  },
+  {
+    "title": "Extras",
+    "emoji": "salt",
+    "slug": "extras",
+    "position": 13
+  }
 ]

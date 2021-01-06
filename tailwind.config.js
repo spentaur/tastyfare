@@ -64,6 +64,7 @@ module.exports = {
           '0 -10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05);',
         logo: '3px 3px 0px rgba(249, 168, 212, 0.5);',
         'logo-dark': '3px 3px 0px rgba(252, 231, 243, 0.25);',
+        'inner-lg': 'inset 0 10px 5px 0px rgba(0, 0, 0, 0.1)',
       },
       translate: { '-1/25': '-4%' },
       rotate: {
@@ -76,6 +77,7 @@ module.exports = {
       transform: ['hover'],
       opacity: ['dark'],
       boxShadow: ['dark'],
+      rotate: ['even'],
     },
   },
   plugins: [

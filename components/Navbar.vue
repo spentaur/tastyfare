@@ -1,8 +1,6 @@
 <template>
   <div>
-    <nav
-      class="fixed bottom-0 z-10 w-screen bg-white border-t-2 border-gray-200 sm:top-0 dark:border-gray-700 sm:bottom-auto dark:bg-gray-700 sm:border-t-0 sm:border-b sm:shadow-md"
-    >
+    <nav class="fixed bottom-0 z-10 w-screen sm:top-0 sm:bottom-auto">
       <div
         :class="{
           'sm:translate-x-80 sm:transform-gpu':
@@ -141,5 +139,10 @@ export default {
 nav {
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(5px);
+}
+.dark nav {
+  background-color: rgba(31, 41, 55, 0.88);
 }
 </style>
