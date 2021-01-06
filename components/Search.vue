@@ -71,7 +71,6 @@ export default {
     },
   },
   created() {
-    setTimeout(() => (this.on = true), 0)
     this.$nuxt.$on('focus-search', () => {
       this.$refs.search.focus()
       this.$router.push('search')
