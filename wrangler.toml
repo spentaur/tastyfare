@@ -1,0 +1,7 @@
+name = "tastyfare"
+type = "webpack"
+route = "tastyfare.app/*"
+
+[site]
+bucket = "dist"
+entry-point = "workers-site"
