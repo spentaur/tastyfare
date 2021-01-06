@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="fixed bottom-0 z-10 w-screen sm:top-0 sm:bottom-auto">
+    <nav class="fixed bottom-0 z-10 w-screen portrait sm:top-0 sm:bottom-auto">
       <div
         :class="{
           'sm:translate-x-80 sm:transform-gpu':
@@ -118,6 +118,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      portrait: true,
+    }
+  },
   computed: {
     bag() {
       return this.$store.state.bag
@@ -135,10 +140,11 @@ export default {
 </script>
 
 <style scoped>
+.portrait {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
 /* TODO I need to find a better way to handle this stupid notch */
 nav {
-  padding-bottom: 0;
-  padding-bottom: env(safe-area-inset-bottom, 0);
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(3px);
 }

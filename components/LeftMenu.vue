@@ -1,6 +1,6 @@
 <template>
   <Menu name="main">
-    <div>
+    <div class="main">
       <button
         class="text-indigo-200 hover:text-indigo-100 focus:outline-none"
         @click.prevent="$store.commit('dark/toggle')"
