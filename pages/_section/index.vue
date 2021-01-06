@@ -23,9 +23,9 @@
         </button>
       </div>
       <div
-        class="flex items-center flex-grow text-2xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
+        class="flex-grow text-2xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
       >
-        {{ section.title }}
+        {{ section.title }} {{ section.emoji }}
       </div>
     </div>
     <div class="w-full max-w-6xl">
