@@ -1,5 +1,5 @@
 <template>
-  <div v-if="on" class="flex items-center">
+  <div class="flex items-center">
     <transition name="slide-fade">
       <div v-if="$route.name === 'search'">
         <button
@@ -60,11 +60,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      on: false,
-    }
-  },
   computed: {
     query: {
       get() {
