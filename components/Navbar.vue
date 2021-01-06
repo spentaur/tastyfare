@@ -137,12 +137,12 @@ export default {
 <style scoped>
 /* TODO I need to find a better way to handle this stupid notch */
 nav {
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
-  background-color: rgba(255, 255, 255, 0.86);
+  padding-bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(3px);
 }
 .dark nav {
-  background-color: rgba(31, 41, 55, 0.86);
+  background-color: rgba(31, 41, 55, 0.85);
 }
 </style>
