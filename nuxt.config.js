@@ -46,7 +46,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    ['nuxt-lazy-load', { native: true }],
+    ['nuxt-lazy-load'],
     [
       'nuxt-vuex-localstorage',
       {
