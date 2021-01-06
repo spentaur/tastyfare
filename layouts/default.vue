@@ -1,11 +1,11 @@
 <template>
   <div
-    v-show="$store.state.dark.status"
     ref="main"
     tabindex="0"
     :class="{
       dark: dark,
     }"
+    class=""
     @keydown.prevent.191="$nuxt.$emit('focus-search')"
   >
     <div

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center">
+  <div v-if="on" class="flex items-center">
     <transition name="slide-fade">
       <div v-if="$route.name === 'search'">
         <button
@@ -60,6 +60,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      on: false,
+    }
+  },
   computed: {
     query: {
       get() {
@@ -71,6 +76,7 @@ export default {
     },
   },
   created() {
+    setTimeout(() => (this.on = true), 0)
     this.$nuxt.$on('focus-search', () => {
       this.$refs.search.focus()
       this.$router.push('search')
