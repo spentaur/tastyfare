@@ -25,7 +25,7 @@
       <div
         class="flex-grow text-2xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
       >
-        {{ section.title }} {{ section.emoji }}
+        {{ section.title }}
       </div>
     </div>
     <div class="w-full max-w-6xl">

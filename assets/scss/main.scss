@@ -91,7 +91,6 @@ body {
 .search-slide-leave-active {
   @apply transition-all;
   @apply duration-150;
-  @apply overflow-hidden;
   @apply ease-in;
 }
 
@@ -121,22 +120,4 @@ body {
 }
 .fade-fast-enter, .fade-fast-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-}
-
-.lazyLoad {
-  @apply opacity-0;
-  @apply transition-opacity;
-  @apply duration-300;
-  img {
-    @apply opacity-0;
-    @apply transition-opacity;
-    @apply duration-300;
-  }
-}
-
-.lazyLoad.isLoaded {
-  @apply opacity-100;
-  img {
-    @apply opacity-100;
-  }
 }

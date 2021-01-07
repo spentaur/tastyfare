@@ -1,6 +1,6 @@
 export const state = () => ({
   query: '',
-  show: true,
+  show: false,
   items: [],
   expire: 12, // 1 = 1 hour, 12 = 12 hours,
 })
