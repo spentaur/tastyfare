@@ -19,7 +19,7 @@
                 id="side-menu"
                 to="menu"
                 event=""
-                class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
+                class="block p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
                 @click.native="$store.commit('menu/open', ['left', 'main'])"
               >
@@ -77,7 +77,7 @@
                   id="bag"
                   to="bag"
                   event=""
-                  class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
+                  class="block p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                   aria-haspopup="true"
                   @click.native="$store.commit('menu/open', ['right', 'bag'])"
                 >
