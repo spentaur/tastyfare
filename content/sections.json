@@ -78,9 +78,15 @@
     "position": 12
   },
   {
+    "title": "Pitas",
+    "emoji": "pita",
+    "slug": "pita",
+    "position": 13
+  },
+  {
     "title": "Extras",
     "emoji": "salt",
     "slug": "extras",
-    "position": 13
+    "position": 14
   }
 ]
