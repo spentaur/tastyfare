@@ -11,7 +11,9 @@
       class="flex flex-col min-h-screen transition-all duration-200 bg-white select-none dark:bg-gray-800"
     >
       <Modal />
-      <LeftMenu />
+      <Menu name="main">
+        <LeftMenu />
+      </Menu>
       <BagMenu />
       <Navbar />
       <div

@@ -15,16 +15,19 @@
             class="flex items-center justify-center flex-grow sm:justify-start"
           >
             <div class="flex items-center h-full px-2 sm:px-6">
-              <button
+              <nuxt-link
                 id="side-menu"
+                to="menu"
+                event=""
                 class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
-                @click="$store.commit('menu/open', ['left', 'main'])"
+                @click.native="$store.commit('menu/open', ['left', 'main'])"
               >
                 <span class="sr-only">Open side menu</span>
                 <svg
                   :class="[
-                    ($store.state.menu.name != 'bag') & $store.state.menu.open
+                    ($store.state.menu.name != 'bag') &
+                      $store.state.menu.open || $route.name === 'menu'
                       ? 'opacity-100'
                       : 'opacity-50',
                   ]"
@@ -41,25 +44,25 @@
                     d="M4 6h16M4 12h8m-8 6h16"
                   />
                 </svg>
-              </button>
+              </nuxt-link>
             </div>
           </div>
           <div
             class="flex items-center justify-center sm:flex-grow sm:items-stretch sm:justify-start"
           >
             <div class="flex items-center pt-1">
-              <button
-                class="p-2 nav-button sm:hidden focus:outline-none sm:opacity-100"
-                :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
-                @click="homeClick"
-              >
-                <Logo />
-              </button>
               <nuxt-link
                 to="/"
-                class="hidden p-2 nav-button sm:block focus:outline-none sm:opacity-100"
-                :class="[$store.state.menu.open ? 'opacity-50' : 'opacity-100']"
-                @click.native="$store.commit('menu/close')"
+                event=""
+                class="p-2 nav-button focus:outline-none sm:opacity-100"
+                :class="[
+                  $store.state.menu.open ||
+                  $route.name === 'bag' ||
+                  $route.name === 'menu'
+                    ? 'opacity-50'
+                    : 'opacity-100',
+                ]"
+                @click.native="homeClick"
               >
                 <Logo />
               </nuxt-link>
@@ -70,17 +73,19 @@
           >
             <div class="flex items-center h-full px-2 sm:px-6">
               <span class="relative inline-block">
-                <button
+                <nuxt-link
                   id="bag"
+                  to="bag"
+                  event=""
                   class="p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                   aria-haspopup="true"
-                  @click="$store.commit('menu/open', ['right', 'bag'])"
+                  @click.native="$store.commit('menu/open', ['right', 'bag'])"
                 >
                   <span class="sr-only">View shopping bag</span>
                   <svg
                     :class="[
                       ($store.state.menu.name != 'main') &
-                      $store.state.menu.open
+                        $store.state.menu.open || $route.name === 'bag'
                         ? 'opacity-100'
                         : 'opacity-50',
                     ]"
@@ -106,7 +111,7 @@
                     }"
                     class="absolute top-1.5 right-1.5 w-2 h-2 transition-all duration-300 bg-red-400 rounded-full ring-2 ring-pink-200"
                   ></span>
-                </button>
+                </nuxt-link>
               </span>
             </div>
           </div>
