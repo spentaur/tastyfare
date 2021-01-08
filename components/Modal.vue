@@ -112,7 +112,7 @@ export default {
 
 .modal-enter-active,
 .modal-leave-active {
-  @apply transition duration-300 ease-in-out transform-gpu;
+  @apply transition duration-300 ease-in-out transform;
 }
 
 .modal-enter,

@@ -18,7 +18,7 @@
       >
         <div class="flex flex-col flex-1 sm:p-4">
           <img
-            class="object-cover w-full mx-auto transition duration-100 bg-transparent shadow-md rounded-xl transform-gpu md:w-44 h-44"
+            class="object-cover w-full mx-auto transition duration-100 bg-transparent shadow-md rounded-xl transform md:w-44 h-44"
             :src="menuItem.imgUrl"
             alt=""
           />

@@ -8,7 +8,7 @@
         <li
           v-for="section in sections"
           :key="section.title"
-          class="px-6 py-3 text-sm dark:text-gray-200 text-shadow-sm"
+          class="px-6 py-3 text-sm last:pr-36 dark:text-gray-200 text-shadow-sm"
         >
           <nuxt-link
             class="flex flex-col items-center justify-center"
@@ -16,14 +16,12 @@
           >
             <img
               :src="`emojis/${section.emoji}.svg`"
-              class="w-12 h-12 mb-2 transition duration-75 opacity-80 hover:opacity-100 transform-gpu hover:scale-110 hover:rotate-6 filter-logo dark:filter-logo-dark"
+              class="w-12 h-12 mb-2 transition duration-75 transform opacity-80 hover:opacity-100 hover:scale-110 hover:rotate-6 filter-logo dark:filter-logo-dark"
               alt=""
             />
             {{ section.title }}
           </nuxt-link>
         </li>
-        <li class="px-6 py-3"></li>
-        <li class="px-6 py-3"></li>
       </ul>
       <transition name="fade">
         <div

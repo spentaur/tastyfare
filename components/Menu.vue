@@ -84,7 +84,7 @@ export default {
 .slide-right-leave-active,
 .slide-left-leave-active,
 .slide-left-enter-active {
-  @apply sm:transition sm:duration-300 sm:ease-in-out sm:transform-gpu;
+  @apply sm:transition sm:duration-300 sm:ease-in-out sm:transform;
 }
 
 .slide-right-enter,

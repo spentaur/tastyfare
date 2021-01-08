@@ -3,9 +3,9 @@
     <nav class="fixed bottom-0 z-10 w-screen portrait sm:top-0 sm:bottom-auto">
       <div
         :class="{
-          'sm:translate-x-80 sm:transform-gpu':
+          'sm:translate-x-80 sm:transform':
             $store.state.menu.open && $store.state.menu.direction === 'left',
-          'sm:-translate-x-80 sm:transform-gpu':
+          'sm:-translate-x-80 sm:transform':
             $store.state.menu.open && $store.state.menu.direction === 'right',
         }"
         class="mx-auto transition-all duration-300 max-w-screen-2xl"
