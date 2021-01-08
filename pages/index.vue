@@ -22,6 +22,8 @@
             {{ section.title }}
           </nuxt-link>
         </li>
+        <li class="px-6 py-3"></li>
+        <li class="px-6 py-3"></li>
       </ul>
       <transition name="fade">
         <div
