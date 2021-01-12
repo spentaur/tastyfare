@@ -38,6 +38,12 @@
 
 <script>
 export default {
+  middleware({ store }) {
+    store.commit('search/hideSearch')
+  },
+  transition: {
+    name: 'page-slide-left',
+  },
   async asyncData({ $content, app, params, error }) {
     const section = await $content('sections', params.section.toLowerCase())
       .fetch()
@@ -58,12 +64,6 @@ export default {
       items,
       section,
     }
-  },
-  middleware({ store }) {
-    store.commit('search/hideSearch')
-  },
-  transition: {
-    name: 'page-slide-left',
   },
 }
 </script>

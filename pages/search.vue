@@ -14,13 +14,16 @@
 
 <script>
 export default {
+  middleware({ store }) {
+    store.commit('search/showSearch')
+  },
+  transition: {
+    name: 'page-shrink',
+  },
   data() {
     return {
       loading: false,
     }
-  },
-  transition: {
-    name: 'page-shrink',
   },
   computed: {
     query() {
@@ -41,9 +44,6 @@ export default {
       this.$store.commit('search/addItems', items)
       this.loading = false
     },
-  },
-  middleware({ store }) {
-    store.commit('search/showSearch')
   },
 }
 </script>

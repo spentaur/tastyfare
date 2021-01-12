@@ -41,6 +41,13 @@
 
 <script>
 export default {
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.opened ? 'overflow-hidden h-screen w-screen' : '',
+      },
+    }
+  },
   computed: {
     opened() {
       return this.$store.state.menu.open || this.$store.state.modal.open
@@ -54,13 +61,6 @@ export default {
   },
   mounted() {
     this.$refs.main.focus()
-  },
-  head() {
-    return {
-      bodyAttrs: {
-        class: this.opened ? 'overflow-hidden h-screen w-screen' : '',
-      },
-    }
   },
 }
 </script>

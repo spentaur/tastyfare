@@ -40,6 +40,12 @@
 
 <script>
 export default {
+  middleware({ store }) {
+    store.commit('search/hideSearch')
+  },
+  transition: {
+    name: 'page-slide-left',
+  },
   async asyncData({ $content, app, params, error }) {
     const [item] = await $content('menu')
       .where({
@@ -64,12 +70,6 @@ export default {
       item,
       section,
     }
-  },
-  middleware({ store }) {
-    store.commit('search/hideSearch')
-  },
-  transition: {
-    name: 'page-slide-left',
   },
 }
 </script>
