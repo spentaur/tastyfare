@@ -1,93 +1,37 @@
 <template>
-  <nav
-    class="fixed w-full bg-gray-50 z-10 border-gray-200 border-t-2 sm:border-t-0 sm:border-b sm:shadow bottom-0 sm:bottom-auto"
-  >
-    <!-- menu on mobile? -->
-    <div :class="{ block: open, hidden: !open }" class="sm:hidden">
-      <div class="pt-2 pb-4 space-y-1">
-        <a
-          href="#"
-          class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-          >Dashboard</a
-        >
-      </div>
-    </div>
-    <!-- end of mobile menu? -->
-    <div class="max-w-screen-2xl poof mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex justify-between h-12 sm:h-14">
-        <div class="flex flex-grow justify-center items-center sm:hidden">
-          <button
-            class="p-1 rounded-full text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            aria-expanded="false"
-            @click="open = !open"
+  <div>
+    <nav class="fixed bottom-0 z-10 w-screen portrait sm:top-0 sm:bottom-auto">
+      <div
+        :class="{
+          'sm:translate-x-80 sm:transform':
+            $store.state.menu.open && $store.state.menu.direction === 'left',
+          'sm:-translate-x-80 sm:transform':
+            $store.state.menu.open && $store.state.menu.direction === 'right',
+        }"
+        class="mx-auto transition-all duration-300 max-w-screen-2xl"
+      >
+        <div class="relative flex justify-between h-12 sm:h-14">
+          <div
+            class="flex items-center justify-center flex-grow sm:justify-start"
           >
-            <span class="sr-only">Open user menu</span>
-            <svg
-              class="h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div
-          class="flex sm:flex-grow items-center justify-center sm:items-stretch sm:justify-start"
-        >
-          <div class="flex items-center pt-1">
-            <nuxt-link to="/">
-              <Logo class="h-6 lg:h-7 w-auto" />
-            </nuxt-link>
-          </div>
-        </div>
-        <div
-          class="flex sm:flex-grow-0 flex-grow justify-center items-center sm:ml-6 sm:pr-0"
-        >
-          <span class="inline-block relative">
-            <button
-              class="p-1 rounded-full text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              <span class="sr-only">View shopping bag</span>
-              <svg
-                class="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                />
-              </svg>
-            </button>
-            <span
-              :class="{ hidden: !bag, block: bag }"
-              class="absolute top-0 right-0 h-2 w-2 rounded-full ring-2 ring-white bg-red-400"
-            ></span>
-          </span>
-
-          <div class="hidden sm:block ml-3 relative">
-            <div>
-              <button
-                id="user-menu"
-                class="p-1 rounded-full text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            <div class="flex items-center h-full px-2 sm:px-6">
+              <nuxt-link
+                id="side-menu"
+                to="menu"
+                event=""
+                class="block p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
+                @click.native="$store.commit('menu/open', ['left', 'main'])"
               >
-                <span class="sr-only">Open user menu</span>
+                <span class="sr-only">Open side menu</span>
                 <svg
-                  class="h-6 w-6"
+                  :class="[
+                    ($store.state.menu.name != 'bag') &
+                      $store.state.menu.open || $route.name === 'menu'
+                      ? 'opacity-100'
+                      : 'opacity-50',
+                  ]"
+                  class="w-7 h-7 sm:h-6 sm:opacity-100 sm:w-6 dark:filter-logo-dark filter-logo"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -97,37 +41,119 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M4 6h16M4 12h8m-8 6h16"
                   />
                 </svg>
-              </button>
+              </nuxt-link>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center sm:flex-grow sm:items-stretch sm:justify-start"
+          >
+            <div class="flex items-center pt-1">
+              <nuxt-link
+                to="/"
+                event=""
+                class="p-2 nav-button focus:outline-none sm:opacity-100"
+                :class="[
+                  $store.state.menu.open ||
+                  $route.name === 'bag' ||
+                  $route.name === 'menu'
+                    ? 'opacity-50'
+                    : 'opacity-100',
+                ]"
+                @click.native="homeClick"
+              >
+                <Logo />
+              </nuxt-link>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center flex-grow sm:flex-grow-0"
+          >
+            <div class="flex items-center h-full px-2 sm:px-6">
+              <span class="relative inline-block">
+                <nuxt-link
+                  id="bag"
+                  to="bag"
+                  event=""
+                  class="block p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
+                  aria-haspopup="true"
+                  @click.native="$store.commit('menu/open', ['right', 'bag'])"
+                >
+                  <span class="sr-only">View shopping bag</span>
+                  <svg
+                    :class="[
+                      ($store.state.menu.name != 'main') &
+                        $store.state.menu.open || $route.name === 'bag'
+                        ? 'opacity-100'
+                        : 'opacity-50',
+                    ]"
+                    class="w-7 h-7 sm:h-6 sm:opacity-100 sm:w-6 dark:filter-logo-dark filter-logo"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                    />
+                  </svg>
+                  <span
+                    v-show="$store.state.bag.status"
+                    :class="{
+                      'opacity-0': bag.items.length == 0,
+                      'opacity-100': bag.items.length > 0,
+                    }"
+                    class="absolute top-1.5 right-1.5 w-2 h-2 transition-all duration-300 bg-red-400 rounded-full ring-2 ring-pink-200"
+                  ></span>
+                </nuxt-link>
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </template>
 
 <script>
 export default {
-  props: {
-    bag: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
-      open: false,
+      portrait: true,
     }
+  },
+  computed: {
+    bag() {
+      return this.$store.state.bag
+    },
+  },
+  methods: {
+    homeClick() {
+      if (!this.$store.state.menu.open) {
+        this.$router.push('/')
+      }
+      this.$store.commit('menu/close')
+    },
   },
 }
 </script>
 
 <style scoped>
+.portrait {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+/* TODO I need to find a better way to handle this stupid notch */
 nav {
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(3px);
+}
+.dark nav {
+  background-color: rgba(31, 41, 55, 0.85);
 }
 </style>

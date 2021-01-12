@@ -1,0 +1,23 @@
+[
+  {
+    "img": "https://images.unsplash.com/photo-1606788075765-42f69501a452?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+    "avatar": "https://images.unsplash.com/profile-1600897570640-2237a383bacdimage?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff",
+    "name": "Jimmy Dean",
+    "description": "Today’s Your Day to Shine On",
+    "link": "https://spentaur.com"
+  },
+  {
+    "img": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/800x450/format/jpg/quality/85/https://s.aolcdn.com/os/ab/_cms/2019/12/26025833/rivian-r1t-proto-blue-tofino.jpg",
+    "avatar": "https://pbs.twimg.com/profile_images/1199724774613606402/ZTAmKeoe_400x400.jpg",
+    "name": "Rivian",
+    "description": "Keep the world adventurous forever.",
+    "link": "https://spentaur.com"
+  },
+  {
+    "img": "https://photos5.appleinsider.com/gallery/33342-58359-191025-iPhonePrivacy-xl.jpg",
+    "avatar": "https://pbs.twimg.com/profile_images/1283958620359516160/p7zz5dxZ_400x400.jpg",
+    "name": "Apple",
+    "description": "Privacy. That's iPhone.",
+    "link": "https://spentaur.com"
+  }
+]
