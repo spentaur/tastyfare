@@ -2,6 +2,8 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
+  loading: false,
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'tastyfare',
@@ -12,16 +14,16 @@ export default {
         content:
           'width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover',
       },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'this is a test' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['@/assets/main.scss'],
+  css: ['@/assets/scss/main.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['@/plugins/vue2-touch-events'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -44,17 +46,28 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    ['nuxt-lazy-load', {}],
+    ['nuxt-lazy-load', { native: true }],
+    [
+      'nuxt-vuex-localstorage',
+      {
+        localStorage: ['dark', 'bag'],
+      },
+    ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    fullTextSearchFields: ['name', 'other-names'],
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    splitChunks: {
+      layouts: true,
+    },
     postcss: {
       plugins: {
         'postcss-nested': {},
@@ -78,6 +91,7 @@ export default {
   pwa: {
     meta: {
       nativeUI: true,
+      appleStatusBarStyle: 'black-translucent',
     },
     manifest: {
       theme_color: '#f3f4f6',
