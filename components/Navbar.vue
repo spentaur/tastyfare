@@ -151,7 +151,7 @@ export default {
 /* TODO I need to find a better way to handle this stupid notch */
 nav {
   background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
 }
 .dark nav {
   background-color: rgba(31, 41, 55, 0.85);
