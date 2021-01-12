@@ -1,36 +1,39 @@
 <template>
   <div
-    v-show="$store.state.dark.status"
+    ref="main"
+    tabindex="0"
     :class="{
-      dark: $store.state.dark.enabled,
+      dark: dark,
     }"
+    @keydown.prevent.191="$nuxt.$emit('focus-search')"
   >
     <div
       class="flex flex-col min-h-screen transition-all duration-200 bg-white select-none dark:bg-gray-800"
     >
       <Modal />
-      <LeftMenu />
+      <Menu name="main">
+        <LeftMenu />
+      </Menu>
       <BagMenu />
       <Navbar />
-      <Nuxt
-        v-touch:swipe.right="
-          () => {
-            $store.commit('menu/open', ['left', 'main'])
-          }
-        "
-        v-touch:swipe.left="
-          () => {
-            $store.commit('menu/open', ['right', 'bag'])
-          }
-        "
+      <div
         :class="{
-          'translate-x-80 transform-gpu':
+          'sm:translate-x-80 transform':
             $store.state.menu.open && $store.state.menu.direction === 'left',
-          '-translate-x-80 transform-gpu':
+          'sm:-translate-x-80 transform':
             $store.state.menu.open && $store.state.menu.direction === 'right',
         }"
-        class="pt-6 pb-32 transition-all duration-300 bg-white dark:bg-gray-800 sm:pb-12 sm:pt-22"
-      />
+        class="flex justify-center flex-grow w-full pt-6 pb-32 mx-auto transition-all duration-300 bg-white max-w-screen-2xl dark:bg-gray-800 sm:pb-12 sm:pt-18"
+      >
+        <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="main">
+            <transition name="search-slide">
+              <Search v-if="showSearch" />
+            </transition>
+            <Nuxt />
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   </div>
@@ -38,30 +41,28 @@
 
 <script>
 export default {
-  data() {
-    return {
-      modalOpen: false,
-    }
-  },
   computed: {
     opened() {
-      return this.$store.state.menu.open || this.modalOpen
+      return this.$store.state.menu.open || this.$store.state.modal.open
+    },
+    dark() {
+      return this.$store.state.dark.enabled
+    },
+    showSearch() {
+      return this.$store.state.search.show
     },
   },
-  created() {
-    this.$nuxt.$on('open-modal', () => {
-      this.modalOpen = true
-    })
-    this.$nuxt.$on('close-modal', () => {
-      this.modalOpen = false
-    })
+  mounted() {
+    this.$refs.main.focus()
   },
   head() {
     return {
       bodyAttrs: {
-        class: this.opened ? 'overflow-hidden h-full' : '',
+        class: this.opened ? 'overflow-hidden h-screen w-screen' : '',
       },
     }
   },
 }
 </script>
+
+<style scoped></style>

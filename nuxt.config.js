@@ -2,6 +2,8 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
+  loading: false,
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'tastyfare',
@@ -44,11 +46,10 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    ['nuxt-lazy-load', {}],
+    ['nuxt-lazy-load', { native: true }],
     [
       'nuxt-vuex-localstorage',
       {
-        mode: 'debug',
         localStorage: ['dark', 'bag'],
       },
     ],
@@ -58,10 +59,15 @@ export default {
   axios: {},
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    fullTextSearchFields: ['name', 'other-names'],
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    splitChunks: {
+      layouts: true,
+    },
     postcss: {
       plugins: {
         'postcss-nested': {},

@@ -1,26 +1,5 @@
 <template>
-  <Menu
-    v-touch:swipe.right="
-      () => {
-        $store.commit('menu/close')
-      }
-    "
-    name="bag"
-  >
-    <div
-      class="text-xl font-semibold text-gray-900 dark:text-gray-200 text-shadow-sm"
-    >
-      Your order
-    </div>
-    <div class="text-gray-900 dark:text-gray-200">
-      <div>{{ $store.state.bag.items }}</div>
-      <button
-        type="button"
-        class="inline-flex items-center px-6 py-2 font-semibold transition-all duration-300 bg-indigo-500 rounded-full shadow focus:outline-none text-pink-50 hover:bg-indigo-600"
-        @click.prevent="$store.commit('bag/empty')"
-      >
-        Empty Cart
-      </button>
-    </div>
+  <Menu name="bag">
+    <Bag />
   </Menu>
 </template>

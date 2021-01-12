@@ -1,8 +1,14 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
-    <transition duration="300" @after-leave="menuItem = false">
-      <div v-show="open" ref="modal" class="fixed inset-0 z-20 overflow-y-auto">
+    <transition duration="300" @after-leave="$store.commit('modal/removeData')">
+      <div
+        v-show="open"
+        ref="modal"
+        tabindex="0"
+        class="fixed inset-0 z-20 overflow-y-auto"
+        @keydown.esc="$store.commit('modal/close')"
+      >
         <div
           id="modal"
           class="flex items-center justify-center min-h-screen text-center sm:p-0"
@@ -12,7 +18,7 @@
               v-show="open"
               class="fixed inset-0 transition-opacity"
               aria-hidden="true"
-              @click="$nuxt.$emit('close-modal')"
+              @click="$store.commit('modal/close')"
             >
               <div
                 class="absolute inset-0 bg-gray-500 opacity-75 dark:bg-gray-800"
@@ -32,7 +38,7 @@
                 <div>
                   <button
                     class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    @click="$nuxt.$emit('close-modal')"
+                    @click="$store.commit('modal/close')"
                   >
                     <span class="sr-only">Close sidebar</span>
                     <!-- Heroicon name: x -->
@@ -53,46 +59,7 @@
                     </svg>
                   </button>
                 </div>
-                <div class="">
-                  <transition name="fade" mode="out-in">
-                    <div
-                      v-if="menuItem"
-                      class="flex-grow text-2xl font-semibold text-center text-gray-900 dark:text-gray-200 text-shadow-sm"
-                    >
-                      {{ menuItem.name }}
-                    </div>
-                    <div
-                      v-else
-                      class="h-6 mx-auto bg-indigo-200 rounded-xl w-36 animate-pulse"
-                    ></div>
-                  </transition>
-                  <div class="mt-4">
-                    <img
-                      v-if="menuItem"
-                      class="object-cover w-full mx-auto transition-all duration-300 bg-transparent shadow-md rounded-xl sm:w-auto h-60"
-                      :src="menuItem.imgUrl"
-                      alt=""
-                    />
-                  </div>
-                  <div v-if="menuItem.name === 'Salads'">
-                    <div class="w-full my-3 bg-red-200 h-96">test</div>
-                    <div class="w-full my-3 bg-green-200 h-96">test</div>
-                  </div>
-                  <div v-else>stuff</div>
-                </div>
-                <div class="mt-5 sm:mt-6">
-                  <button
-                    type="button"
-                    :class="{
-                      'animate-pulse bg-indigo-200': !menuItem,
-                      'bg-indigo-500': menuItem,
-                    }"
-                    class="inline-flex items-center justify-center w-full h-12 px-6 py-2 text-lg font-semibold text-center transition-all duration-300 rounded-full shadow text-pink-50 hover:bg-indigo-600"
-                    @click="addToBag"
-                  >
-                    {{ menuItem ? 'Add to order' : '' }}
-                  </button>
-                </div>
+                <MenuItem :item="$store.state.modal.data" />
               </div>
             </div>
           </transition>
@@ -104,31 +71,19 @@
 
 <script>
 export default {
-  data() {
-    return {
-      open: false,
-      menuItem: false,
-    }
+  computed: {
+    open() {
+      return this.$store.state.modal.open
+    },
   },
-  created() {
-    this.$nuxt.$on('open-modal', ({ menuItem }) => {
-      this.open = true
-      this.menuItem = menuItem
-      setTimeout(() => (this.$refs.modal.scrollTop = 0), 100)
-    })
-    this.$nuxt.$on('close-modal', () => {
-      this.open = false
-    })
-  },
-  beforeDestroy() {
-    this.$nuxt.$off('open-modal')
-    this.$nuxt.$off('close-modal')
-    this.menuItem = false
-  },
-  methods: {
-    addToBag() {
-      this.$store.commit('bag/add', this.menuItem.name)
-      this.$nuxt.$emit('close-modal', this.menuItem)
+  watch: {
+    open(value) {
+      if (value === true) {
+        setTimeout(() => {
+          this.$refs.modal.scrollTop = 0
+          this.$refs.modal.focus()
+        }, 100)
+      }
     },
   },
 }
@@ -157,7 +112,7 @@ export default {
 
 .modal-enter-active,
 .modal-leave-active {
-  @apply transition duration-300 ease-in-out transform-gpu;
+  @apply transition duration-300 ease-in-out transform;
 }
 
 .modal-enter,

@@ -3,9 +3,9 @@
   <footer class="hidden pb-12 bg-indigo-500 sm:block dark:bg-gray-900 sm:pb-0">
     <div
       :class="{
-        'sm:translate-x-80 sm:transform-gpu':
+        'sm:translate-x-80 sm:transform':
           $store.state.menu.open && $store.state.menu.direction === 'left',
-        'sm:-translate-x-80 sm:transform-gpu':
+        'sm:-translate-x-80 sm:transform':
           $store.state.menu.open && $store.state.menu.direction === 'right',
       }"
       class="px-4 py-12 mx-auto overflow-hidden transition-all duration-300 max-w-7xl sm:px-6 lg:px-8"
