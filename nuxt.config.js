@@ -46,11 +46,10 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    ['nuxt-lazy-load', {}],
+    ['nuxt-lazy-load', { native: true }],
     [
       'nuxt-vuex-localstorage',
       {
-        mode: 'debug',
         localStorage: ['dark', 'bag'],
       },
     ],
@@ -61,7 +60,7 @@ export default {
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {
-    fullTextSearchFields: ['name', 'section'],
+    fullTextSearchFields: ['name', 'other-names'],
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

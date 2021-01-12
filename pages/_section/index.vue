@@ -23,14 +23,14 @@
         </button>
       </div>
       <div
-        class="flex-grow text-3xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
+        class="flex-grow text-2xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
       >
         {{ section.title }}
       </div>
     </div>
     <div class="w-full max-w-6xl">
       <div>
-        <Items :items="items" />
+        <Items :items="items" :section="section" />
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@ export default {
       return error({ statusCode: 404, message: 'Section not found' })
     }
     const items = await $content('menu')
-      .where({ section: section.slug })
+      .where({ section: { $contains: section.slug } })
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Items not found' })
@@ -64,24 +64,6 @@ export default {
   },
   transition: {
     name: 'page-slide-left',
-    afterLeave(el) {
-      this.$store.commit('search/showSearch')
-    },
-  },
-  beforeRouteLeave(to, from, next) {
-    if (to.name === 'section-item') {
-      this.displayProductModal(to)
-    } else {
-      next()
-    }
-  },
-  methods: {
-    displayProductModal(route) {
-      const menuItem = this.items.find(
-        (element) => element.slug === route.params.item
-      )
-      this.$store.commit('modal/open', menuItem)
-    },
   },
 }
 </script>

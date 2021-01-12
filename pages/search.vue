@@ -1,15 +1,24 @@
 <template>
-  <div>
-    <div class="w-full max-w-6xl">
-      <div>
-        <Items :items="items" />
+  <div class="w-full max-w-6xl">
+    <transition name="fade-fast" mode="out-in">
+      <Items v-if="query && items.length > 0" class="mt-10" :items="items" />
+      <div
+        v-else-if="query && items.length === 0 && loading === false"
+        class="flex items-center justify-center mt-8 text-2xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
+      >
+        No matching items
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      loading: false,
+    }
+  },
   transition: {
     name: 'page-shrink',
   },
@@ -27,25 +36,14 @@ export default {
         this.$store.commit('search/removeItems')
         return
       }
-
+      this.loading = true
       const items = await this.$content('menu').limit(12).search(query).fetch()
       this.$store.commit('search/addItems', items)
+      this.loading = false
     },
   },
-  beforeRouteLeave(to, from, next) {
-    if (to.name === 'section-item') {
-      this.displayProductModal(to)
-    } else {
-      next()
-    }
-  },
-  methods: {
-    displayProductModal(route) {
-      const menuItem = this.items.find(
-        (element) => element.slug === route.params.item
-      )
-      this.$store.commit('modal/open', menuItem)
-    },
+  middleware({ store }) {
+    store.commit('search/showSearch')
   },
 }
 </script>

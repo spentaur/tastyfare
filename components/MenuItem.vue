@@ -1,18 +1,6 @@
 <template>
   <div>
-    <div class="">
-      <transition name="fade" mode="out-in">
-        <div
-          v-if="item"
-          class="flex-grow text-2xl font-semibold text-center text-gray-900 dark:text-gray-200 text-shadow-sm"
-        >
-          {{ item.name }}
-        </div>
-        <div
-          v-else
-          class="h-6 mx-auto bg-indigo-200 rounded-xl w-36 animate-pulse"
-        ></div>
-      </transition>
+    <div>
       <div class="mt-4">
         <img
           v-if="item"
@@ -33,8 +21,10 @@
         :class="{
           'animate-pulse bg-indigo-200': !item,
           'bg-indigo-500': item,
+          'animate-small-ping-1-100': animated,
         }"
-        class="inline-flex items-center justify-center w-full h-12 px-6 py-2 text-lg font-semibold text-center transition-all duration-300 rounded-full shadow text-pink-50 hover:bg-indigo-600"
+        class="inline-flex items-center justify-center w-full h-12 px-6 py-2 text-lg font-semibold text-center transition-all duration-300 rounded-full shadow-logo text-pink-50 hover:bg-indigo-600"
+        @animationend="animated = false"
         @click="addToBag"
       >
         {{ item ? 'Add to order' : '' }}
@@ -53,10 +43,16 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      animated: false,
+    }
+  },
   methods: {
     addToBag() {
       this.$store.commit('bag/add', this.item.name)
       this.$store.commit('modal/close')
+      this.animated = true
     },
   },
 }

@@ -1,48 +1,47 @@
 <template>
   <div>
-    <div v-for="section in sections" :key="section.title">
-      <div class="flex items-center mt-10">
-        <div
-          class="flex-grow text-3xl font-extrabold text-gray-900 dark:text-gray-200 text-shadow-sm"
+    <div class="relative w-full mt-5">
+      <ul
+        class="grid grid-flow-col overflow-y-scroll sections auto-cols-max"
+        @scroll="scrolled"
+      >
+        <li
+          v-for="section in sections"
+          :key="section.title"
+          class="px-6 py-3 text-sm last:pr-36 dark:text-gray-200 text-shadow-sm"
         >
-          {{ section.title }}
-        </div>
-        <nuxt-link
-          v-if="section.title != 'Desserts 🍪'"
-          :to="{
-            name: 'section',
-            params: { section: section.slug },
-          }"
-          class="flex items-center justify-center font-bold text-gray-900 transition-all duration-300 bg-gray-300 rounded-full shadow dark:text-gray-300 dark:bg-gray-700 w-9 h-9 sm:hover:bg-indigo-600 sm:dark:bg-gray-700 sm:dark:hover:bg-gray-600 sm:bg-indigo-500 sm:px-3 sm:py-2 sm:h-auto sm:w-auto sm:text-pink-50"
-        >
-          <div class="hidden sm:block">See all</div>
-          <svg
-            class="w-4 h-4 sm:ml-2"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <nuxt-link
+            class="flex flex-col items-center justify-center"
+            :to="{ name: 'section', params: { section: section.slug } }"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="4"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            <img
+              :src="`emojis/${section.emoji}.svg`"
+              class="w-12 h-12 mb-2 transition duration-75 transform opacity-80 hover:opacity-100 hover:scale-110 hover:rotate-6 filter-logo dark:filter-logo-dark"
+              alt=""
             />
-          </svg>
-        </nuxt-link>
-      </div>
-      <Items :items="section.items" />
+            {{ section.title }}
+          </nuxt-link>
+        </li>
+      </ul>
+      <transition name="fade">
+        <div
+          v-if="unscrolled"
+          class="absolute top-0 right-0 hidden w-32 h-full transition duration-300 sm:flex overflow-button"
+        ></div>
+      </transition>
     </div>
+
+    <Ads :ads="ads" />
+
     <div
-      class="w-full mt-12 mb-2 text-lg font-bold text-center text-indigo-500 dark:text-indigo-400"
+      class="w-full mt-12 mb-2 text-lg font-bold text-center text-indigo-500 dark:text-gray-200"
     >
       Feeling Lucky?
     </div>
     <div class="flex justify-center">
       <button
         type="button"
-        class="inline-flex items-center px-6 py-2 font-semibold transition-all duration-300 bg-indigo-500 rounded-full shadow text-pink-50 hover:bg-indigo-600"
+        class="inline-flex items-center px-6 py-2 font-semibold transition-all duration-300 bg-indigo-500 rounded-full dark:text-gray-300 dark:bg-gray-700 shadow-logo dark:shadow-logo-dark text-pink-50 sm:dark:hover:bg-gray-600 hover:bg-indigo-600"
       >
         Random Meal
       </button>
@@ -61,32 +60,35 @@ export default {
       })
     sections.forEach(async (section) => {
       section.items = await $content('menu')
-        .where({ section: section.slug })
+        .where({ section: { $contains: section.slug } })
         .limit(5)
         .fetch()
     })
+    const ads = await $content()
+      .where({ slug: 'ads' })
+      .limit(3)
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: 'Ads not found' })
+      })
     return {
       sections,
+      ads,
     }
   },
-  beforeRouteLeave(to, from, next) {
-    if (to.name === 'section-item') {
-      this.displayProductModal(to)
-    } else {
-      next()
+  data() {
+    return {
+      unscrolled: true,
     }
+  },
+  mounted() {
+    this.$store.commit('search/showSearch')
   },
   methods: {
-    displayProductModal(route) {
-      const section = this.sections.find(
-        (element) => element.slug === route.params.section
-      )
-      // eslint-disable-next-line no-console
-      console.log(route.params.item)
-      const menuItem = section.items.find(
-        (element) => element.slug === route.params.item
-      )
-      this.$store.commit('modal/open', menuItem)
+    scrolled(e) {
+      if (e.target.scrollLeft > 80) {
+        this.unscrolled = false
+      }
     },
   },
 }
@@ -97,5 +99,23 @@ export default {
   img {
     @apply sm:shadow-xl scale-105;
   }
+}
+
+.overflow-button {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 40%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.dark .overflow-button {
+  background: linear-gradient(
+    90deg,
+    rgba(31, 41, 55, 0) 0%,
+    rgba(31, 41, 55, 0.8) 40%,
+    rgb(31, 41, 55) 100%
+  );
 }
 </style>
