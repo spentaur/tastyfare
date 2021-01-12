@@ -17,8 +17,8 @@
             <div class="flex items-center h-full px-2 sm:px-6">
               <nuxt-link
                 id="side-menu"
-                to="menu"
-                event=""
+                :to="{ name: 'menu' }"
+                event
                 class="block p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                 aria-haspopup="true"
                 @click.native="$store.commit('menu/open', ['left', 'main'])"
@@ -52,8 +52,8 @@
           >
             <div class="flex items-center pt-1">
               <nuxt-link
-                to="/"
-                event=""
+                :to="{ name: 'index' }"
+                event
                 class="p-2 nav-button focus:outline-none sm:opacity-100"
                 :class="[
                   $store.state.menu.open ||
@@ -75,8 +75,8 @@
               <span class="relative inline-block">
                 <nuxt-link
                   id="bag"
-                  to="bag"
-                  event=""
+                  :to="{ name: 'bag' }"
+                  event
                   class="block p-2 text-indigo-500 transition-opacity duration-300 rounded-full nav-button dark:text-indigo-200 focus:outline-none"
                   aria-haspopup="true"
                   @click.native="$store.commit('menu/open', ['right', 'bag'])"
