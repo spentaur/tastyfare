@@ -77,7 +77,7 @@ module.exports = {
       transform: ['hover'],
       opacity: ['dark'],
       boxShadow: ['dark'],
-      rotate: ['even'],
+      padding: ['first', 'last'],
     },
   },
   plugins: [

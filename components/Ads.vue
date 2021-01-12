@@ -23,9 +23,9 @@
           Ad
         </div>
       </div>
-      <nuxt-link :to="ad.link" class="text-gray-500 dark:text-gray-400">
+      <a :href="ad.link" class="text-gray-500 dark:text-gray-400">
         {{ ad.description }}
-      </nuxt-link>
+      </a>
     </li>
   </ul>
 </template>
