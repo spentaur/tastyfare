@@ -31,7 +31,7 @@
       </transition>
     </div>
 
-    <Ads :ads="ads" />
+    <!-- <Ads :ads="ads" /> -->
 
     <div
       class="w-full mt-12 mb-2 text-lg font-bold text-center text-indigo-500 dark:text-gray-200"
