@@ -124,15 +124,28 @@ export default {
   @apply bg-transparent;
 }
 
+.scroll::-webkit-scrollbar-thumb {
+  @apply rounded-md;
+  @apply opacity-50;
+}
+
 /* Handle */
 .scroll::-webkit-scrollbar-thumb {
-  @apply opacity-50;
   @apply bg-gray-200;
-  @apply rounded-md;
 }
 
 /* Handle on hover */
 .scroll::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-500;
+}
+
+/* Handle */
+.dark .scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-600;
+}
+
+/* Handle on hover */
+.dark .scroll::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-200;
 }
 </style>
