@@ -8,7 +8,7 @@
         <li
           v-for="section in sections"
           :key="section.title"
-          class="px-6 py-3 text-sm last:pr-36 dark:text-gray-200 text-shadow-sm"
+          class="px-6 py-3 text-sm dark:text-gray-200 text-shadow-sm"
         >
           <nuxt-link
             class="flex flex-col items-center justify-center"
@@ -23,12 +23,6 @@
           </nuxt-link>
         </li>
       </ul>
-      <transition name="fade">
-        <div
-          v-if="unscrolled"
-          class="absolute top-0 right-0 hidden w-32 h-full transition duration-300 sm:flex overflow-button"
-        ></div>
-      </transition>
     </div>
 
     <!-- <Ads :ads="ads" /> -->
@@ -121,6 +115,7 @@ export default {
 
 /* width */
 .scroll::-webkit-scrollbar {
+  @apply block;
   @apply h-2;
 }
 
