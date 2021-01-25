@@ -2,7 +2,7 @@
   <div>
     <div class="relative w-full mt-5">
       <ul
-        class="grid grid-flow-col overflow-y-scroll sections auto-cols-max"
+        class="grid grid-flow-col overflow-x-scroll overflow-y-hidden scroll sections auto-cols-max"
         @scroll="scrolled"
       >
         <li
@@ -117,5 +117,27 @@ export default {
     rgba(31, 41, 55, 0.8) 40%,
     rgb(31, 41, 55) 100%
   );
+}
+
+/* width */
+.scroll::-webkit-scrollbar {
+  @apply h-2;
+}
+
+/* Track */
+.scroll::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+/* Handle */
+.scroll::-webkit-scrollbar-thumb {
+  @apply opacity-50;
+  @apply bg-gray-200;
+  @apply rounded-md;
+}
+
+/* Handle on hover */
+.scroll::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
 }
 </style>
